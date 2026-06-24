@@ -1,0 +1,13 @@
+{
+  "name": "tollens",
+  "owner": {
+    "name": "Tollens"
+  },
+  "plugins": [
+    {
+      "name": "effective-comms",
+      "source": ".",
+      "description": "Effective communication checks for agent-written user-facing outputs."
+    }
+  ]
+}
