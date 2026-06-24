@@ -10,6 +10,5 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 
-# Local Claude/Hermes artifacts
+# Local Claude artifacts
 .claude/local/
-.hermes/
