@@ -8,11 +8,11 @@ when_to_use: Before finalizing any non-trivial user-facing output you want check
 
 Make an agent's user-facing output land with its reader. Run a **prepare → review → revise** pass over a draft — or over raw findings about to become one — checking judgment, not prose style. Product-neutral: assume no specific project, company, or tool.
 
-Run it before finalizing any non-trivial output: report, update, strategy/test-strategy/tooling doc, review finding, audit, handoff, worker report, recommendation, decision note. Skip only for genuinely trivial messages (one-line ack, yes/no) with no audience to model. When in doubt, run it — the brief is cheap.
+Run it before finalizing any non-trivial output: report, update, strategy/test-strategy/tooling doc, review finding, audit, handoff, worker report, recommendation, decision note. Skip only for genuinely trivial messages (one-line ack, yes/no) with no audience to model. When in doubt, run it — the brief (Phase 1) is cheap.
 
 **Two entry points.** A draft to gate, or raw findings with no message yet. From raw findings you produce either a revised message or, if prep is inadequate, a missing-info / assumptions note. Never silently guess your way to a polished-looking output.
 
-**Interactivity.** Live with a user: ask them to resolve any brief gap you cannot answer. Non-interactive (e.g. dispatched subagent): do not block, do not guess — park every unresolved gap in a missing-info / assumptions note at the right place in the output, and finalize the rest.
+**Interactivity.** You are *live* only if you can get a user reply within this turn; otherwise treat yourself as *non-interactive* (dispatched subagent, background or scheduled run, or mid-task with no one to ask). Live: ask the user to resolve any brief gap you cannot answer. Non-interactive: do not block, do not guess — park every unresolved gap in a missing-info / assumptions note, placed where Phase 1 item 4 says uncertainty belongs for this form, and finalize the rest.
 
 **Narrate.** Name the three phases up front; say which you are on. Do not run silently.
 
@@ -26,7 +26,7 @@ Write a short brief. Every line is answered or explicitly marked *unknown — an
 4. **Evidence & uncertainty.** What is solid, an assumption, a guess, blocked, or a decision still needed? Where does uncertainty belong for this form (working note → up front; polished artifact → end/appendix)?
 5. **Form factor.** Short message, full report, checklist, handoff, decision note? A single long async dump is not the default shape.
 
-If objective, audience, knowledge model, evidence, or form factor are not adequately answered, do not produce a polished guess — produce a **missing-info / assumptions note** (ask if live; else flag the gaps in the output).
+If objective, audience, knowledge model, evidence, or form factor are not adequately answered, do not produce a polished guess — produce a **missing-info / assumptions note** (ask if live; else flag the gaps in the output). If prep cannot support any responsible draft, that note is the terminal output and Phases 2–3 are moot; if you can still finalize part, run Phases 2–3 over what you do produce and carry the parked gaps into it.
 
 ## Phase 2 — Review against the rubric
 
@@ -34,35 +34,47 @@ Run **every** check below. For each, find concrete instances in the draft, not a
 
 | # | Check | Catches |
 |---|---|---|
-| C1 | **Names before coordinates.** Every oracle/section/strategy-item/ticket/path/ID is named in plain English before or alongside the coordinate; names lead, coordinates support. | "Oracle 2 fails here" with no meaning. |
-| C2 | **No hidden scratch context.** Self-standing for the brief's audience — no reliance on `.scratch`, unstated reasoning, or anything only the agent saw. Needed decisions explained, or flagged as an assumption. | Output assumes the reader saw internal agent context. |
+| C1 | **Names before coordinates.** Every section/item/ticket/path/ID is named in plain English before or alongside the coordinate; names lead, coordinates support. | "Item 2 fails here" with no meaning. |
+| C2 | **No hidden author context.** Self-standing for the brief's audience — nothing relies on context only the author had: working notes, prior conversation, earlier drafts, or reasoning that was never written down. Each needed fact is stated, or flagged as an assumption. | Output assumes the reader shares context only the author had. |
 | C3 | **No retained rejected ideas.** When the artifact is the accepted strategy/recommendation, rejected ideas are absent — not kept with rejection notes. (Keep them only when the objective *is* audit / provenance / decision-history.) | Current output carries rejected ideas. |
 | C4 | **No process-history leakage.** Tool narration, retries, routing, and the agent's decision history are stripped unless load-bearing for the reader's trust, decision, reproducibility, or handoff. | Reader does not care about your decision history. |
 | C5 | **Purpose/audience fit.** Content matches what the audience needs and the objective. No spurious detail, no assumed knowledge they lack. | Written for the agent's logbook, not the reader. |
 | C6 | **Recommendation not buried.** Where action is part of the objective, findings carry their implication and the next action is explicit and easy to find. | Reader must re-derive "so what?". |
 | C7 | **Uncertainty is legible.** Solid findings, assumptions, guesses, blockers, and open decisions are distinguished and sit in the right place for the form. | Uncertainty hidden, overstated, or misplaced. |
 
-## Phase 3 — Audience-perspective review
+## Phase 3 — Audience review (mandatory; loop until pass)
 
-The author cannot feel the absence of context they hold. For **non-trivial** outputs, take a fresh perspective:
+The author cannot feel the absence of context they hold, so every non-trivial output gets one fresh-perspective review before it is finalized. This is **mandatory** — not optional, not a skim. Run exactly one of the two forms, judged against the **Objective**, **Audience & context**, and audience knowledge model from the brief:
 
-- **Subagent available:** dispatch one told to *stand in for the target audience*. Pass it, inline, only the audience's likely prior knowledge (from the brief) and the draft — **not** your scratch context, decision history, or this rubric. Ask it to flag: assumed knowledge it lacks; IDs/section-numbers it cannot interpret; spurious detail; agent process history; anywhere the output misses its purpose.
-- **No subagent:** still do a distinct, written audience pass yourself — drop the author frame, re-read as the brief's reader, answer the same flags. A same-frame skim does not count.
+- **Sub-agent review** (the default whenever you can dispatch a sub-agent): dispatch one told to *stand in for the target audience*. Pass it, inline, only the audience's likely prior knowledge (from the brief), the objective, and the draft — **not** your working notes, decision history, or this rubric.
+- **Written self-review** (only when you cannot dispatch a sub-agent — state why in the audit record): drop the author frame, re-read the draft as the brief's reader, and **write the findings down**. A same-frame skim or an unwritten "looks fine" does not count and does not satisfy this phase.
 
-Fold what it flags back into Phase 2 and revise.
+Either form answers one question: **does this reader, knowing only what the brief says they know, succeed at the objective?**
+
+**Pass — and only then —** when the communication achieves the objective without confusing the reader with spurious information and without omitting anything the reader needs to act.
+
+**Fail** if any of these is true for the reader. Each is a fail on its own:
+
+- left confused, lost, or frustrated;
+- unclear what a word, term, phrase, or number refers to;
+- unclear why a piece of information is relevant to the objective;
+- unclear what they should do or conclude;
+- any ambiguity that blocks understanding or action.
+
+On any fail: **log the specific finding, fold it into Phase 2, revise, and run Phase 3 again.** Loop until the review passes, or until the only items left are genuine residual risks (irreducible limits, not fixable defects) recorded in the output.
 
 ## Stop / output contract
 
-End with exactly one of:
+Do not finalize until Phase 3 has been run in one of its two forms and either passes or has its open items recorded as residual risk. End with exactly one of:
 
-- a **revised output** that passes the rubric (common case);
-- the output plus a short **residual-risk note** for checks that could not be fully resolved;
+- a **revised output** that passes the rubric and the Phase 3 review (common case);
+- the output plus a short **residual-risk note** for fail-conditions that are genuine irreducible limits, not fixable defects;
 - a **missing-info / assumptions note** when prep was inadequate to finalize responsibly.
 
-Record which phases and checks ran or were waived, so the pass is auditable.
+Record which phases and checks ran or were waived, the Phase 3 form used and its result, so the pass is auditable.
 
 ## Boundaries & friction
 
-- **Voids the pass:** treating the rubric as optional; polishing over an inadequate brief instead of writing the note; doing Phase 3 as a same-frame skim; handing the audience reviewer your rubric/context instead of only the reader's prior knowledge and the draft.
+- **Voids the pass:** treating the rubric as optional; polishing over an inadequate brief instead of writing the note; skipping Phase 3, doing it as a same-frame skim, or passing it on a vibe instead of against the explicit fail-conditions; declaring a pass while any fail-condition still holds; handing the audience reviewer your rubric/context instead of only the reader's prior knowledge and the draft.
 - **Not** a prose-polish or house-style template — it checks judgment, not aesthetics.
 - If a check misfires or doesn't fit the output in hand, surface it to the user rather than silently working around it. To extend, **append** a new failure mode and rubric row; don't redesign.
