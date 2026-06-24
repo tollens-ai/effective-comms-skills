@@ -20,7 +20,7 @@ It is not a prose-polish template. It is a judgment checklist: what is this comm
 
 ## Install
 
-This is a Claude Code plugin. Once published to GitHub, install with:
+This is a public Claude Code plugin. Install with:
 
 ```text
 /plugin marketplace add tollens-ai/effective-comms-skills
