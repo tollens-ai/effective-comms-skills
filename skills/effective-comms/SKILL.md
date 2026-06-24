@@ -1,7 +1,7 @@
 ---
 name: effective-comms
 description: Run a prepare → review → revise pass over an agent-written user-facing output (report, status update, strategy doc, review finding, handoff, recommendation) before it is finalized. Builds a short communications brief, reviews the draft against it and against named agent-writing failure modes (assumed context, numbered references without meaning, retained rejected ideas, leaked process history, buried recommendation), then revises or flags residual risk.
-when_to_use: Before finalizing any non-trivial user-facing output you want checked for its reader. Triggers — "run effective comms", "comms-check this", "is this ready to send/ship?", "review this report/update/handoff for the reader", "did I bury the recommendation?", "turn these findings into a message for X".
+when_to_use: Before finalizing any non-trivial user-facing output you want checked for its reader. Trigger words/phrases include — "run effective comms", "comms-check this", "is this ready to send/ship?", "review this report/update/handoff for the reader", "did I bury the recommendation?", "turn these findings into a message for X".
 ---
 
 # Effective Comms
