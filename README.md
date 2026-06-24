@@ -4,7 +4,7 @@ Claude Code skill for making agent-written communication land with its reader.
 
 `/effective-comms` runs a **prepare → review → revise** pass over a report, update, strategy doc, review finding, handoff, or recommendation before it is finalized. It helps agents check the communication objective, model the audience, remove hidden-context assumptions, name internal references in plain English, and make uncertainty/next actions legible.
 
-> **Status: early alpha.** The v0 skill exists and has been dogfooded through Quality Strategy Skills fixture-level validation. Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
+> **Status: early alpha.** The v0 skill exists and has been dogfooded through [Quality Strategy Skills](https://github.com/tollens-ai/quality-strategy-skills). Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
 
 ## What it is for
 
@@ -62,16 +62,6 @@ The v0 rubric checks for:
 - buried recommendations or unclear next actions;
 - illegible uncertainty.
 
-## Validation model
-
-This repo follows the Quality Strategy Skills model:
-
-- this public repo contains the runtime skill/plugin and public docs;
-- validation fixtures, dogfood runs, regression notes, and harnesses are maintained outside this public runtime repo;
-- public docs summarize validation status without publishing the whole validation system by default.
-
-Current validation status: v0 has fixture-level dogfood coverage for the first three failure modes above through the QSS integration work. It has not yet had a broad public release or a full multi-audience validation run.
-
 ## Roadmap
 
 Planned follow-ups include:
@@ -82,13 +72,14 @@ Planned follow-ups include:
 
 ## Feedback
 
-Please file feedback as GitHub issues in this repository:
+The most useful feedback is a concrete example of where `/effective-comms` helped, got in the way, or missed something important:
 
-- If `/effective-comms` misses a communication failure, include a minimal redacted example of what failed and what a good output should have done instead.
-- If the skill asks for the wrong information or adds too much process, describe the audience and output type.
-- If you want a specific integration with another skill pack, open an issue with the pack and the output it should gate.
+- **Report a misfire publicly:** open a [GitHub issue](https://github.com/tollens-ai/effective-comms-skills/issues) with what you ran, what it produced, and what you expected instead. Redacted examples are ideal.
+- **Share privately:** [join the Tollens mailing list](https://tollens.ai/) and reply through the contact details you receive there.
+- **Tell us where it would land:** what workflow or decision the communication was meant to support, who would read it, and what would make it hard to use.
+- **Ask for an integration:** if another skill pack or workflow should invoke `/effective-comms`, open an issue naming the output it should gate.
 
-Please do not include private project data, credentials, customer data, or non-public agent scratchpads in issues. Redacted snippets are preferred.
+Please do not include private project data, credentials, customer data, or non-public agent scratchpads in public issues.
 
 ## License
 
