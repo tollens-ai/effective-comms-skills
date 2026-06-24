@@ -1,0 +1,18 @@
+{
+  "name": "effective-comms",
+  "version": "0.1.0",
+  "description": "Claude Code skill for running a prepare → review → revise communication pass over agent-written user-facing outputs so they fit the reader, avoid hidden context, and make next actions clear.",
+  "author": {
+    "name": "Tollens"
+  },
+  "homepage": "https://github.com/tollens-ai/effective-comms-skills",
+  "license": "MIT OR Apache-2.0",
+  "keywords": [
+    "effective-comms",
+    "communication",
+    "agent-writing",
+    "technical-writing",
+    "review",
+    "skills"
+  ]
+}

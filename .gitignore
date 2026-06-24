@@ -1,0 +1,15 @@
+# Local scratch / transcripts
+.scratch/
+*.log
+.DS_Store
+
+# Editor/cache files
+.vscode/
+.idea/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# Local Claude/Hermes artifacts
+.claude/local/
+.hermes/

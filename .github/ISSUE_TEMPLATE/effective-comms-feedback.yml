@@ -1,0 +1,42 @@
+name: Effective Comms feedback
+description: Report a missed communication failure, confusing behavior, or integration request
+title: "[effective-comms]: "
+labels: ["feedback", "effective-comms"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Effective Comms Skills. Please use redacted examples only; do not include private project data, credentials, customer data, or non-public scratchpads.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Feedback type
+      options:
+        - Missed communication failure
+        - Confusing or excessive process
+        - Integration request
+        - Documentation issue
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Intended audience
+      description: Who was supposed to understand or act on the communication?
+  - type: textarea
+    id: failure
+    attributes:
+      label: What happened?
+      description: What did the skill miss, assume, obscure, over-include, or ask for unnecessarily?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should a good output or process have done instead?
+  - type: textarea
+    id: minimal-example
+    attributes:
+      label: Minimal redacted example
+      description: Optional. Include only shareable, redacted snippets.
