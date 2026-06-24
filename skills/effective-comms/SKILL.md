@@ -65,11 +65,13 @@ On any fail: **log the specific finding, fold it into Phase 2, revise, and run P
 
 ## Stop / output contract
 
-Do not finalize until Phase 3 has been run in one of its two forms and either passes or has its open items recorded as residual risk. End with exactly one of:
+Do not finalize until Phase 3 has been run in one of its two forms and either passes or has its open items recorded as residual risk.
 
-- a **revised output** that passes the rubric and the Phase 3 review (common case);
-- the output plus a short **residual-risk note** for fail-conditions that are genuine irreducible limits, not fixable defects;
-- a **missing-info / assumptions note** when prep was inadequate to finalize responsibly.
+Final output must include:
+
+- a **revised output** when there is enough information to produce one; it must pass the rubric and Phase 3 review, except for any explicit residual risks below;
+- a short **residual-risk note** only when remaining fail-conditions are genuine irreducible limits, not fixable defects;
+- a **missing-info / assumptions note** only when prep is inadequate to finalize responsibly, either as the terminal output or attached to the partial output it qualifies.
 
 Record which phases and checks ran or were waived, the Phase 3 form used and its result, so the pass is auditable.
 
