@@ -24,7 +24,7 @@ This is a public Claude Code plugin. Install with:
 
 ```text
 /plugin marketplace add tollens-ai/effective-comms-skills
-/plugin install effective-comms@tollens
+/plugin install effective-comms@tollens-effective-comms
 ```
 
 Then run:
