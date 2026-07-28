@@ -43,6 +43,7 @@ Run **every** check below. For each, find concrete instances in the draft, not a
 | C7 | **Uncertainty is legible.** Solid findings, assumptions, guesses, blockers, and open decisions are distinguished and sit in the right place for the form. | Uncertainty hidden, overstated, or misplaced. |
 | C8 | **Starts with why.** Any proposal, design, or decision-request opens with the problem it solves and what changes if accepted — stated in the reader's terms and rooted in observed fact, before any mechanics. | Reader meets mechanisms (tiers, lists, schemas) with no idea what they are for; or a "why" asserting projected costs as current facts. |
 | C9 | **One list, one kind.** Every list, queue, or section contains a single kind of thing; mixed kinds are split into typed groups (or each item is explicitly typed). A mixed list is an ontology failure surfacing as a comms failure. | A giant list mixing decisions, FYIs, defects, and ideas — the reader must re-sort by kind before they can act on anything. |
+| C10 | **Form matches consumption.** Structure, layout, and density are chosen for how the reader will actually consume the artifact: scannable headings, typed lists or tables for parallel/enumerable content, one idea per block, summary before detail. Structure that exists in the content appears on the page. | A wall-of-text paragraph encoding what is really a list or table; a long dump where a layered summary-plus-reference would serve; separator-glyph run-ons standing in for layout. |
 
 ## Phase 3 — Audience review (mandatory; loop until pass)
 
@@ -80,5 +81,5 @@ Record which phases and checks ran or were waived, the Phase 3 form used and its
 ## Boundaries & friction
 
 - **Voids the pass:** treating the rubric as optional; polishing over an inadequate brief instead of writing the note; skipping Phase 3, doing it as a same-frame skim, or passing it on a vibe instead of against the explicit fail-conditions; declaring a pass while any fail-condition still holds; handing the audience reviewer your rubric/context instead of only the reader's prior knowledge and the draft.
-- **Not** a prose-polish or house-style template — it checks judgment, not aesthetics.
+- **Not** a prose-polish or house-style template — it checks judgment, not aesthetics. (Form and layout per C10 ARE judgment — they set the reader's parsing cost; ornament is aesthetics.)
 - If a check misfires or doesn't fit the output in hand, surface it to the user rather than silently working around it. To extend, **append** a new failure mode and rubric row; don't redesign.
