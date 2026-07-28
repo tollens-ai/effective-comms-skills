@@ -41,26 +41,31 @@ Effective Comms has three phases:
 
 1. **Prepare the communications brief** — objective, audience, audience knowledge model, evidence/uncertainty, and form factor.
 2. **Review the draft** — apply the rubric to catch known failure modes.
-3. **Audience-perspective review** — for non-trivial outputs, re-read from the target reader's perspective or dispatch a fresh reviewer with only the audience brief and draft.
+3. **Audience-perspective review** — for non-trivial outputs, dispatch a fresh reviewer with only the reader's prior knowledge, objective, and draft. Written self-review is allowed only when dispatch is genuinely impossible. Revise and re-run until the reviewer passes.
 
 The pass ends with one of:
 
-- a revised user-facing output that passes the rubric;
-- a revised output plus explicit residual-risk notes;
+- a revised user-facing output that passes the rubric and audience review;
+- a revised output plus explicit, non-blocking residual-risk notes;
 - or a missing-info / assumptions note if the brief is too incomplete to finalize responsibly.
+
+The artifact also carries an audit trace naming the phases and checks run, cited instances, audience-review verdicts, and finding dispositions.
 
 ## Core checks
 
-The v0 rubric checks for:
+The rubric checks for:
 
-- numbered/internal references that lack plain-English meaning;
+- coordinate or internal references that lack plain-English meaning;
 - hidden scratch/context assumptions;
 - rejected ideas retained in current accepted outputs;
-- coordinate-before-name references;
 - irrelevant agent process-history leakage;
 - purpose/audience mismatch;
 - buried recommendations or unclear next actions;
-- illegible uncertainty.
+- illegible uncertainty;
+- proposals or decision requests that lead with mechanics instead of why;
+- lists that mix different kinds of information;
+- structure or density that does not match how the reader will consume the artifact;
+- linked or cited artifacts whose required-versus-supplemental role is unstated.
 
 ## Roadmap
 

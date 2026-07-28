@@ -1,6 +1,12 @@
 # Changelog
 
-## 0.1.0 — unreleased
+## 0.2.0 — unreleased
+
+- Add rubric checks for starting with why, single-kind lists, consumption-matched form, and typed references.
+- Require an artifact-attached audit record and a Phase 3 loop that terminates only on a passing audience review.
+- Tighten the skill through a complete self-pass, including a fresh mid-task-agent simulation.
+
+## 0.1.0
 
 - Add `/effective-comms` v0 as a standalone Claude Code skill.
 - Add plugin metadata for `effective-comms`.

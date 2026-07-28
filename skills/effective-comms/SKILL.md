@@ -1,18 +1,21 @@
 ---
 name: effective-comms
-description: Run a prepare → review → revise pass over an agent-written user-facing output (report, status update, strategy doc, review finding, handoff, recommendation) before it is finalized. Builds a short communications brief, reviews the draft against it and against named agent-writing failure modes (assumed context, numbered references without meaning, retained rejected ideas, leaked process history, buried recommendation), then revises or flags residual risk.
+description: Run a prepare → review → revise pass over an agent-written user-facing output (report, status update, strategy doc, review finding, handoff, recommendation) before it is finalized. Builds a communications brief, then checks named failure modes including hidden context, coordinate-first references, retained rejected ideas, leaked process history, buried recommendations, missing why, mixed-kind lists, consumption-mismatched form, and untyped references.
 when_to_use: Before finalizing any non-trivial user-facing output you want checked for its reader. Trigger words/phrases include — "run effective comms", "comms-check this", "is this ready to send/ship?", "review this report/update/handoff for the reader", "did I bury the recommendation?", "turn these findings into a message for X".
 ---
 
 # Effective Comms
 
-Make an agent's user-facing output land with its reader. Run a **prepare → review → revise** pass over a draft — or over raw findings about to become one — checking judgment, not prose style. Product-neutral: assume no specific project, company, or tool.
+Agents write with context their readers do not have; without a deliberate gate, a technically correct output can still hide its purpose, assumptions, or next action. This skill makes the output land with its reader through a **prepare → review → revise** pass over a draft — or over raw findings about to become one — checking judgment, not prose style. Product-neutral: assume no specific project, company, or tool.
 
 Run it before finalizing any non-trivial output: report, update, strategy/test-strategy/tooling doc, review finding, audit, handoff, worker report, recommendation, decision note. Skip only for genuinely trivial messages (one-line ack, yes/no) with no audience to model. When in doubt, run it — the brief (Phase 1) is cheap.
 
 **Two entry points.** A draft to gate, or raw findings with no message yet. From raw findings you produce either a revised message or, if prep is inadequate, a missing-info / assumptions note. Never silently guess your way to a polished-looking output.
 
-**Interactivity.** You are *live* only if you can get a user reply within this turn; otherwise treat yourself as *non-interactive* (dispatched subagent, background or scheduled run, or mid-task with no one to ask). Live: ask the user to resolve any brief gap you cannot answer. Non-interactive: do not block, do not guess — park every unresolved gap in a missing-info / assumptions note, placed where Phase 1 item 4 says uncertainty belongs for this form, and finalize the rest.
+**Interactivity.** Choose one mode before Phase 1:
+
+- **Live** — you can get a user reply within this turn. Ask the user to resolve any brief gap you cannot answer.
+- **Non-interactive** — you are a dispatched subagent, background or scheduled run, or mid-task with no one to ask. Do not block and do not guess: park every unresolved gap in a missing-info / assumptions note, place it where **Evidence & uncertainty** (Phase 1, item 4) says uncertainty belongs for this form, and finalize the rest.
 
 **Narrate.** Name the three phases up front; say which you are on. Do not run silently.
 
@@ -48,10 +51,12 @@ Run **every** check below. For each, find concrete instances in the draft, not a
 
 ## Phase 3 — Audience review (mandatory; loop until pass)
 
-The author cannot feel the absence of context they hold, so every non-trivial output gets one fresh-perspective review before it is finalized. This is **mandatory** — not optional, not a skim. Run exactly one of the two forms, judged against the **Objective**, **Audience & context**, and audience knowledge model from the brief:
+The author cannot feel the absence of context they hold, so every non-trivial output gets one fresh-perspective review before it is finalized. This is **mandatory** — not optional, not a skim. Judge each round against the **Objective**, **Audience & context**, and audience knowledge model from the brief.
 
-- **Sub-agent review** (the default whenever you can dispatch a sub-agent): dispatch one told to *stand in for the target audience*. Pass it, inline, only the audience's likely prior knowledge (from the brief), the objective, and the draft — **not** your working notes, decision history, or this rubric.
-- **Written self-review** (only when you cannot dispatch a sub-agent — state why in the audit record): drop the author frame, re-read the draft as the brief's reader, and **write the findings down**. A same-frame skim or an unwritten "looks fine" does not count and does not satisfy this phase.
+Use exactly one review form in each round:
+
+- **Sub-agent review** (the default whenever you can dispatch a sub-agent) — dispatch one told to *stand in for the target audience*. Pass it, inline, only the audience's likely prior knowledge (from the brief), the objective, and the draft — **not** your working notes, decision history, or this rubric.
+- **Written self-review** (only when you cannot dispatch a sub-agent; state why in the audit record) — drop the author frame, re-read the draft as the brief's reader, and **write the findings down**. A same-frame skim or an unwritten "looks fine" does not count and does not satisfy this phase.
 
 Either form answers one question: **does this reader, knowing only what the brief says they know, succeed at the objective?**
 
@@ -65,24 +70,43 @@ Either form answers one question: **does this reader, knowing only what the brie
 - unclear what they should do or conclude;
 - any ambiguity that blocks understanding or action.
 
-On any fail: **log the specific finding, fold it into Phase 2, revise, and run Phase 3 again.** Loop until the review passes, or until the only items left are genuine residual risks (irreducible limits, not fixable defects) recorded in the output.
+On any fail: **log the specific finding, fold it into Phase 2, revise, and run Phase 3 again.** A residual-risk note does not turn a fail into a pass. The reviewer may pass with a residual-risk note only when the disclosed limit does not trigger a fail-condition or block the reader's understanding or action.
 
 ## Stop / output contract
 
-Do not finalize until Phase 3 has been run in one of its two forms and either passes or has its open items recorded as residual risk.
+Do not finalize until Phase 3 returns a passing review. A passing review may carry explicit residual risks only under the Phase 3 criterion above.
 
-Final output must include:
+Final output must include the applicable output types:
 
-- a **revised output** when there is enough information to produce one; it must pass the rubric and Phase 3 review, except for any explicit residual risks below;
-- a short **residual-risk note** only when remaining fail-conditions are genuine irreducible limits, not fixable defects;
+- a **revised output** when there is enough information to produce one; it must pass the rubric and Phase 3 review;
+- a short **residual-risk note** only for a genuine irreducible limit that does not trigger a Phase 3 fail-condition;
 - a **missing-info / assumptions note** only when prep is inadequate to finalize responsibly, either as the terminal output or attached to the partial output it qualifies.
 
-The audit record ATTACHES TO THE ARTIFACT itself (footer/appendix), not to the delivery chat: phases run, each check marked with a cited instance from the draft (not a bare "pass"), the Phase 3 form used, its verdict, and each finding's disposition. A claim with no trace outside the author's context counts as not run.
+Attach the audit record to the artifact itself — as a footer, appendix, or named companion file linked or bundled with it on the review surface — not only to the delivery chat. Record:
 
-The loop terminates on a PASSING REVIEW, never on the author's judgment: after folding Phase 3 findings, Phase 3 runs again until it passes — a commit landed on folded fixes without re-review is a cut loop, and voids the pass. Written self-review is permitted only when dispatch is genuinely impossible, and the impossibility is stated in the attached record — an instruction forbidding sub-agents does not create impossibility (skill-mandated sub-agents override such fences).
+- the phases run;
+- every check, marked with a cited instance from the draft rather than a bare "pass";
+- the Phase 3 form and verdict for every round;
+- every Phase 3 finding and its disposition.
+
+A pass claim with no trace outside the author's context counts as not run.
+
+After folding any Phase 3 finding, run Phase 3 again. The loop ends only on the reviewer's passing verdict, never on the author's judgment; committing folded fixes without re-review is a **cut loop** and voids the pass.
+
+Written self-review is permitted only when dispatch is genuinely impossible and that impossibility is stated in the attached record. An instruction forbidding sub-agents does not create impossibility: skill-mandated sub-agents override such fences.
 
 ## Boundaries & friction
 
-- **Voids the pass:** treating the rubric as optional; polishing over an inadequate brief instead of writing the note; skipping Phase 3, doing it as a same-frame skim, or passing it on a vibe instead of against the explicit fail-conditions; declaring a pass while any fail-condition still holds; handing the audience reviewer your rubric/context instead of only the reader's prior knowledge and the draft. Also: the cut loop (fixes folded, no re-review); an audit record living only in chat or claiming phases that left no visible trace.
-- **Not** a prose-polish or house-style template — it checks judgment, not aesthetics. (Form and layout per C10 ARE judgment — they set the reader's parsing cost; ornament is aesthetics.)
-- If a check misfires or doesn't fit the output in hand, surface it to the user rather than silently working around it. To extend, **append** a new failure mode and rubric row; don't redesign.
+**Pass-invalidating failures:**
+
+- treating the rubric as optional;
+- polishing over an inadequate brief instead of writing the missing-info / assumptions note;
+- skipping Phase 3, using a same-frame skim, or passing on a vibe rather than the explicit fail-conditions;
+- declaring a pass while any fail-condition still holds;
+- giving the audience reviewer the rubric, working notes, or decision history instead of only the reader's prior knowledge, objective, and draft;
+- cutting the loop by folding fixes without another Phase 3 review;
+- keeping the audit record only in chat or claiming phases that left no visible trace.
+
+**Scope:** This is not a prose-polish or house-style template; it checks judgment, not aesthetics. Form and layout under C10 are judgment because they set the reader's parsing cost. Ornament is aesthetics.
+
+**Extension:** If a check misfires or does not fit the output in hand, surface it to the user rather than silently working around it. To extend the skill, **append** a new failure mode and rubric row; do not redesign it.
