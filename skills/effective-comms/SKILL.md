@@ -77,10 +77,12 @@ Final output must include:
 - a short **residual-risk note** only when remaining fail-conditions are genuine irreducible limits, not fixable defects;
 - a **missing-info / assumptions note** only when prep is inadequate to finalize responsibly, either as the terminal output or attached to the partial output it qualifies.
 
-Record which phases and checks ran or were waived, the Phase 3 form used and its result, so the pass is auditable.
+The audit record ATTACHES TO THE ARTIFACT itself (footer/appendix), not to the delivery chat: phases run, each check marked with a cited instance from the draft (not a bare "pass"), the Phase 3 form used, its verdict, and each finding's disposition. A claim with no trace outside the author's context counts as not run.
+
+The loop terminates on a PASSING REVIEW, never on the author's judgment: after folding Phase 3 findings, Phase 3 runs again until it passes — a commit landed on folded fixes without re-review is a cut loop, and voids the pass. Written self-review is permitted only when dispatch is genuinely impossible, and the impossibility is stated in the attached record — an instruction forbidding sub-agents does not create impossibility (skill-mandated sub-agents override such fences).
 
 ## Boundaries & friction
 
-- **Voids the pass:** treating the rubric as optional; polishing over an inadequate brief instead of writing the note; skipping Phase 3, doing it as a same-frame skim, or passing it on a vibe instead of against the explicit fail-conditions; declaring a pass while any fail-condition still holds; handing the audience reviewer your rubric/context instead of only the reader's prior knowledge and the draft.
+- **Voids the pass:** treating the rubric as optional; polishing over an inadequate brief instead of writing the note; skipping Phase 3, doing it as a same-frame skim, or passing it on a vibe instead of against the explicit fail-conditions; declaring a pass while any fail-condition still holds; handing the audience reviewer your rubric/context instead of only the reader's prior knowledge and the draft. Also: the cut loop (fixes folded, no re-review); an audit record living only in chat or claiming phases that left no visible trace.
 - **Not** a prose-polish or house-style template — it checks judgment, not aesthetics. (Form and layout per C10 ARE judgment — they set the reader's parsing cost; ornament is aesthetics.)
 - If a check misfires or doesn't fit the output in hand, surface it to the user rather than silently working around it. To extend, **append** a new failure mode and rubric row; don't redesign.
