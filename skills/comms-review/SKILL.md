@@ -226,10 +226,9 @@ create impossibility: skill-mandated sub-agents override such fences.
 - skipping Phase 3, using a same-frame skim, or passing on a vibe rather than the explicit
   fail-conditions;
 - declaring a pass while any fail-condition still holds;
-- giving the audience reviewer rubric text, working notes, decision history, or optimistic
-  knowledge claims as EXTRA briefing context beyond the target audience, consumption context,
-  evidenced prior knowledge, objective, and draft — required audit text already visible in the
-  candidate draft is part of the draft, not extra briefing;
+- giving the audience reviewer rubric text, working notes, decision history, the candidate
+  audit record, or optimistic knowledge claims — anything beyond the target audience,
+  consumption context, evidenced prior knowledge, objective, and bare draft;
 - cutting the loop by folding fixes without another Phase 3 review;
 - keeping the audit record only in chat or claiming phases that left no visible trace.
 
