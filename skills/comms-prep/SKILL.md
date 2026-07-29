@@ -75,12 +75,25 @@ and into review.
 skill FIRST, on the draft's intended purpose rather than its text — then hand both to
 `/comms-review`. Name the degradation in the audit record.
 
+## Post-rubric — the brief is done when all six hold (P1–P6)
+
+This table is the skill's exit condition, and BY CONSTRUCTION it is also `/comms-review`'s
+entry rubric — the two are the same rubric stated in both skills; if they ever diverge, that
+divergence is a bug in this pack.
+
+| # | The brief satisfies |
+|---|---|
+| P1 | It exists as a written artifact kept with the draft — not a thought, not a memory. |
+| P2 | Objective: what this is for, and what reader response means it worked. |
+| P3 | Audience & context, including the attention budget. |
+| P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every term the reader hasn't themselves used defaulted into it. |
+| P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
+| P6 | Form factor chosen deliberately and scaled to the artifact. |
+
 ## Eval (all must pass)
 
-- [ ] The brief exists as a written artifact that travels with the draft. **Fail** if it lived only in the author's head.
-- [ ] All five items answered or explicitly parked with how they resolve. **Fail** on a silently skipped line.
-- [ ] The falsely-assuming cell is populated (or its emptiness justified), with unheld terms defaulted into it. **Fail** on an optimistic knowledge model.
-- [ ] If prep was inadequate, the output is a missing-info / assumptions note — not a polished guess.
+- [ ] P1–P6 all hold (the post-rubric above). **Fail** on any silently unmet row.
+- [ ] Unanswerable items are explicitly parked with how they resolve — and if prep is inadequate overall, the output is a missing-info / assumptions note, not a polished guess.
 - [ ] Retroactive runs name the degradation.
 
 ## Pitfalls

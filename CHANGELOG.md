@@ -2,6 +2,7 @@
 
 ## 0.2.0 — unreleased
 
+- P1–P6 unified: comms-prep's post-rubric and comms-review's entry rubric are one rubric stated verbatim in both skills, with divergence declared a pack bug.
 - Liberal prep triggering: comms-prep fires for anything written for people — including commit messages, PR titles/descriptions, help text, error messages, page copy — with the brief scaling to the artifact (three lines for a commit message).
 - Split the pass into two gate skills: `/comms-prep` (the brief, at authoring time) and `/comms-review` (entry rubric P1–P6 confirming preparation, then the C-rubric and audience loop); `/effective-comms` becomes a router. Both gates carry eval checks, pitfalls, and dogfood logs.
 - The pass starts at authoring time: Phase 1 runs before drafting; review-time invocation is named the degraded path.

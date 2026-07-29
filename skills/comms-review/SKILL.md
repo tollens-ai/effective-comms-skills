@@ -18,22 +18,24 @@ the agent. **Falsehood**: claims that do not survive comparison with the thing t
 rather than the referent. A communication passes only when a human can understand it unaided
 and can trust every claim in it.
 
-## Entry rubric — is the preparation satisfied? (check FIRST, all must hold)
+## Entry rubric (P1–P6) — this IS `/comms-prep`'s post-rubric
 
-This skill consumes the communications brief produced by `/comms-prep` (Phase 1). Check each
-row; **any unmet row → go run `/comms-prep` retroactively now** (on the draft's intended
-purpose — the degraded path, named in the audit record), then re-check and continue. Phases
-are numbered across the pair of skills: Phase 1 lives in `/comms-prep`; this skill runs
-Phases 2–3.
+This skill consumes the communications brief produced by `/comms-prep` (Phase 1). The table
+below is `/comms-prep`'s exit condition, stated here verbatim as the entry condition — the
+same rubric BY CONSTRUCTION; if the two skills' tables ever diverge, that divergence is a bug
+in this pack. Check each row FIRST; **any unmet row → go run `/comms-prep` retroactively
+now** (on the draft's intended purpose — the degraded path, named in the audit record), then
+re-check and continue. Phases are numbered across the pair of skills: Phase 1 lives in
+`/comms-prep`; this skill runs Phases 2–3.
 
-| # | Preparation check |
+| # | The brief satisfies |
 |---|---|
-| P1 | The brief exists as a written artifact kept with the draft — not a thought, not a memory. |
-| P2 | Objective answered: what this is for, and what reader response means it worked. |
-| P3 | Audience & context answered, including the attention budget. |
-| P4 | The six-cell knowledge model is filled, and the falsely-assuming cell is non-empty or its emptiness justified — with every term the reader hasn't themselves used defaulted into it. |
+| P1 | It exists as a written artifact kept with the draft — not a thought, not a memory. |
+| P2 | Objective: what this is for, and what reader response means it worked. |
+| P3 | Audience & context, including the attention budget. |
+| P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every term the reader hasn't themselves used defaulted into it. |
 | P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
-| P6 | Form factor chosen deliberately (a long async dump is not a default). |
+| P6 | Form factor chosen deliberately and scaled to the artifact. |
 
 **The artifact is the whole communication.** Its title, subject line, headings, bylines,
 captions, annotations, link text, and any metadata the reader sees are reviewed text, held to
