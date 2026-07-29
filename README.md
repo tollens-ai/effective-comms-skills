@@ -44,7 +44,7 @@ The pass ends with one of:
 - a revised output plus explicit, non-blocking residual-risk notes;
 - or a missing-info / assumptions note if the brief is too incomplete to finalize responsibly; the note itself goes through the same review.
 
-The artifact carries an audit trace — phases and checks run with cited instances, audience-review verdicts, finding dispositions — attached on its review surface (a report's appendix, a PR's description or comment), never shipped inside a deliverable package. It is required for the reviewer verifying the pass and supplemental for the primary reader. The final reviewer-authored seal block is appended verbatim; tool metadata is excluded, and any later authored change reopens review. If the agent cannot attach the audit, the honest result is blocked/partial, not a pass; nonexistent artifact paths are never presented as real.
+The artifact carries an audit trace — phases and checks run with cited instances, audience-review verdicts, finding dispositions — attached on its review surface (a report's appendix, a PR's description or comment), never shipped inside a deliverable package. It is required for the reviewer verifying the pass and supplemental for the primary reader: Phase 2 checks its verifier fitness, while Phase 3 checks that it does not obstruct the primary reader. The final reviewer-authored seal block is appended verbatim; tool metadata is excluded, and any later authored change reopens review. If the agent cannot attach the audit, the honest result is blocked/partial, not a pass; nonexistent artifact paths or people are never presented as real.
 
 ## Core checks
 

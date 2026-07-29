@@ -93,7 +93,7 @@ divergence is a bug in this pack.
 
 | # | The brief satisfies |
 |---|---|
-| P1 | It exists as a written artifact kept with the draft — not a thought, not a memory. |
+| P1 | It exists as inspectable written text kept with the draft — a file, draft body, or clearly delimited section in the current response; not a thought or memory. Durable attachment is a whole-pass completion condition, not this entry condition. |
 | P2 | Objective: what this is for, and what reader response means it worked. |
 | P3 | Audience & context, including the attention budget. |
 | P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |

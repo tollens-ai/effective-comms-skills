@@ -13,6 +13,11 @@
 - Type the audit as required for the reviewer verifying the pass and supplemental for the primary reader, with subordinate placement.
 - Seal the audit with a fixed reviewer-authored block; exclude tool metadata, and reopen review after any later authored change.
 - Make unavailable attachment BLOCKED / PARTIAL, requiring real paths only for persisted artifacts and explicit “not persisted” disclosure otherwise.
+- Let inspectable brief text in a file, draft body, or delimited current response satisfy P1 entry while durable attachment remains a whole-pass completion condition.
+- Treat the mandatory audience-review seal format as response control, outside the `ONLY` limit on audience/context briefing content.
+- Review the audit's verifier fitness in Phase 2; Phase 3 remains the primary-audience check that supplemental audit text does not obstruct.
+- Expand preparation checks (P1–P6) and communication checks (C1–C15) on first use in the audit before using stable identifiers alone.
+- Permit a responsible role or owner in BLOCKED / PARTIAL handoff when the authorized person's identity is unavailable; never invent a name.
 - Treat terminal missing-info / assumptions notes as delivered drafts that still pass through the full review gate.
 - Interactivity and completion hardening: Addressed/no-reply mode; C14 unreachable-source disclosure; C8 explicit N/A path; C4 fact-framed load-bearing narration; audit-record fallback for deliverables without a review surface.
 - P1–P6 unified: comms-prep's completion rubric and comms-review's entry rubric are one rubric stated verbatim in both skills, with divergence declared a pack bug.

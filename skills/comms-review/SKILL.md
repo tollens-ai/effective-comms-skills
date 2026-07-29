@@ -35,7 +35,7 @@ still executes a complete pass.
 
 | # | The brief satisfies |
 |---|---|
-| P1 | It exists as a written artifact kept with the draft — not a thought, not a memory. |
+| P1 | It exists as inspectable written text kept with the draft — a file, draft body, or clearly delimited section in the current response; not a thought or memory. Durable attachment is a whole-pass completion condition, not this entry condition. |
 | P2 | Objective: what this is for, and what reader response means it worked. |
 | P3 | Audience & context, including the attention budget. |
 | P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |
@@ -134,7 +134,8 @@ Blocking findings: <none, or a concise list>
 ```
 
 The seal is reviewer-authored text only. Tool wrappers, transport envelopes, agent IDs, token
-usage, and other system-generated metadata are not part of it.
+usage, and other system-generated metadata are not part of it. The `ONLY` limit above governs
+audience/context CONTENT; this required response format is control, not added audience context.
 
 Either form answers one question: **does this reader, knowing only what the brief says they
 know, succeed at the objective?**
@@ -184,11 +185,15 @@ as a named companion file stored beside the draft's artifacts.
 The audit has a different reader role from the deliverable body: label it **required reading
 for the reviewer verifying the pass** and **supplemental for the primary reader**. Put it after
 the body or collapse it when the surface allows, so the primary communication stands alone.
-Its process trace is load-bearing for verification; review the audit against that reviewer
-objective, and do not let it obstruct the primary reader's objective. Record:
+Its process trace is load-bearing for verification: run Phase 2 over it against the verifier's
+objective. The Phase 3 sub-agent still stands in for the PRIMARY audience and checks that the
+supplemental audit does not obstruct that reader; it is not a second verifier-audience round
+unless the verifier is itself the brief's primary audience. Record:
 
 - the phases run (including whether Phase 1 ran at authoring time or retroactively);
-- every check, marked with a cited instance from the draft rather than a bare "pass";
+- every preparation check (P1–P6) and communication check (C1–C15), marked with a cited
+  instance rather than a bare “pass”; expand those names on first use before relying on P/C
+  identifiers alone;
 - the Phase 3 form and verdict for every round;
 - every Phase 3 finding and its disposition.
 
@@ -196,8 +201,9 @@ Before publication, the brief and candidate audit may live as named companion wo
 beside the draft source. That is a holding state, not completion. If publishing or attaching the
 audit is outside your authority, stop as **BLOCKED / PARTIAL** and name the exact remaining
 action; do not claim the pass. Give actual paths only for artifacts that exist. If persistence
-itself is forbidden, say **not persisted**, name the authorized next actor and proposed storage
-surface, and never present a proposed path as an existing artifact.
+itself is forbidden, say **not persisted** and name the authorized next actor plus proposed
+storage surface. If no person's identity is available, name the responsible role or owner and
+park the identity gap; never invent a person or present a proposed path as an existing artifact.
 
 For Phase 3, the draft includes every item that will be visible on the delivery or review
 surface, including the candidate audit through all PRIOR rounds. The current review's verdict
