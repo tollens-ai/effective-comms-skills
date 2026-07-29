@@ -188,16 +188,7 @@ The audit has a different reader role from the deliverable body: label it **requ
 for the reviewer verifying the pass** and **supplemental for the primary reader**. Put it after
 the body or collapse it when the surface allows, so the primary communication stands alone.
 Its process trace is load-bearing for verification: run Phase 2 over it against the verifier's
-objective. The Phase 3 sub-agent still stands in for the PRIMARY audience and checks that the
-attached record is labeled for auditors and safe to skip, so it never obstructs that
-reader; verifying it is not a second audience round. Record:
-
-- the phases run (including whether Phase 1 ran at authoring time or retroactively);
-- every preparation check (P1–P6) and communication check (C1–C15), marked with a cited
-  instance rather than a bare “pass”; expand those names on first use before relying on P/C
-  identifiers alone;
-- the Phase 3 form and verdict for every round;
-- every Phase 3 finding and its disposition.
+objective. The for-auditors label is satisfied BY CONSTRUCTION at sealing — no reviewer round inspects the attached record, and verifying it is not a second audience round.
 
 Before publication, the brief and candidate audit may live as named companion working files
 beside the draft source. That is a holding state, not completion. If publishing or attaching the
