@@ -121,9 +121,11 @@ Use exactly one review form in each round:
   brief's reader, and **write the findings down**. A same-frame skim or an unwritten "looks
   fine" does not count and does not satisfy this phase.
 
-Here `draft` includes every reader-visible item, including any candidate audit already present
-on the review surface. The no-working-notes rule forbids EXTRA briefing context; it does not
-hide required audit text that the reader will actually see.
+**Attach-last (founder-ruled, 2026-07-29).** While the loop runs, the audit record is a
+side-file the author maintains; it is never part of the draft any reviewer receives —
+reviewers always get the bare artifact. The record attaches to the artifact only when the
+loop closes on the final PASS. This ordering is why the only-listed-inputs rule and the
+attached-record rule never collide: attachment happens after the last reviewer has read.
 
 Ask every reviewer to end their human-readable response with this exact block:
 
@@ -187,8 +189,8 @@ for the reviewer verifying the pass** and **supplemental for the primary reader*
 the body or collapse it when the surface allows, so the primary communication stands alone.
 Its process trace is load-bearing for verification: run Phase 2 over it against the verifier's
 objective. The Phase 3 sub-agent still stands in for the PRIMARY audience and checks that the
-supplemental audit does not obstruct that reader; it is not a second verifier-audience round
-unless the verifier is itself the brief's primary audience. Record:
+attached record is labeled for auditors and safe to skip, so it never obstructs that
+reader; verifying it is not a second audience round. Record:
 
 - the phases run (including whether Phase 1 ran at authoring time or retroactively);
 - every preparation check (P1–P6) and communication check (C1–C15), marked with a cited
@@ -205,12 +207,13 @@ itself is forbidden, say **not persisted** and name the authorized next actor pl
 storage surface. If no person's identity is available, name the responsible role or owner and
 park the identity gap; never invent a person or present a proposed path as an existing artifact.
 
-For Phase 3, the draft includes every item that will be visible on the delivery or review
-surface, including the candidate audit through all PRIOR rounds. The current review's verdict
-cannot exist until the reviewer returns: append only their `AUDIENCE-REVIEW SEAL` block
-verbatim as the final-round record. That mechanical append seals the audit and does not reopen
-Phase 3. Any author-written interpretation of the verdict, or any other change to visible
-material, DOES reopen Phase 3.
+For Phase 3, reviewers receive the bare draft only — the candidate audit is never among
+their inputs (attach-last, above). On the final PASS: append the reviewer's
+`AUDIENCE-REVIEW SEAL` block verbatim as the closing record, then attach the record to the
+artifact, labeled **"audit record — for auditors; safe to skip"** so the primary reader never
+wades through it. The mechanical append-and-attach seals the pass and does not reopen
+Phase 3; any author-written change to the artifact's visible material after sealing DOES
+reopen it.
 
 A pass claim with no trace outside the author's context counts as not run.
 

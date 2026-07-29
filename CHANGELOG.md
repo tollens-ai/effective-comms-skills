@@ -2,6 +2,7 @@
 
 ## 0.2.0 — unreleased
 
+- Attach-last (founder-ruled): the audit record is a side-file during the review loop — reviewers always receive the bare draft — and attaches only at the final PASS, labeled for-auditors-safe-to-skip; a fresh reviewer is required every round.
 - C15: every clause earns its place — brevity by selectivity (cut what doesn't change understanding or action), never by compression into fragments.
 - Correct rubric totals and ranges to C1–C15, and describe the public package as three skills.
 - Translate pack-specific terms at first use and give the skill and README titles reader-effect wording.
