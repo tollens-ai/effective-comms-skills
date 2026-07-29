@@ -2,7 +2,7 @@
 
 ## 0.2.0 — unreleased
 
-- C15: every sentence earns its place — brevity by selectivity (cut what doesn't change understanding or action), never by compression into fragments.
+- C15: every clause earns its place — brevity by selectivity (cut what doesn't change understanding or action), never by compression into fragments.
 - Cold-execution test findings folded: a third interactivity mode (Addressed, no reply channel); C14 no-referent disclosure clause; C8 explicit N/A path; C4 delivery-frame rule for load-bearing narration; audit-record fallback for surface-less deliverables.
 - P1–P6 unified: comms-prep's post-rubric and comms-review's entry rubric are one rubric stated verbatim in both skills, with divergence declared a pack bug.
 - Liberal prep triggering: comms-prep fires for anything written for people — including commit messages, PR titles/descriptions, help text, error messages, page copy — with the brief scaling to the artifact (three lines for a commit message).
