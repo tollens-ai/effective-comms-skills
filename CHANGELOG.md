@@ -2,6 +2,7 @@
 
 ## 0.2.0 — unreleased
 
+- C12 generalized: no jargon the reader has not shown they hold — covers other agents' and tools' vocabulary, not only the author's coinages; audit records live on the review surface, never inside the shipped package (review feedback, 2026-07-29).
 - Mission thesis: the two failure families — claude-ese and falsehood — named in the intro; every check serves one (Qing, 2026-07-29).
 - C14: true against the referent — factual claims derived from inspection of the thing described, not the author's narrative (from a live PR-description miss, 2026-07-29).
 - C13 + scope clause: the artifact includes its furniture — titles, headings, captions, metadata — all held to the rubric (from a live PR-title miss, 2026-07-29).
