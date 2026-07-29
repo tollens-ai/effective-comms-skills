@@ -24,6 +24,12 @@ Determine the state of the communication, then invoke the gate:
 
 The gates carry all rules, rubrics, eval checks, and stop contracts. This router adds none.
 
+**No stack, no return.** Skill invocations are context injections, not a call stack: this
+router holds no state and never regains control after sending you to a gate. The pass's
+completion rubric therefore lives in `/comms-review` — terminal on every path above — and is
+judged over ARTIFACTS (the brief and the audit record), which survive context loss; never
+over remembered router context, which may not.
+
 ## Pitfalls
 
 - Treating this router as the pass: invoking it and doing neither gate's work.

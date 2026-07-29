@@ -191,7 +191,12 @@ cost. Ornament is aesthetics.
 rather than silently working around it. To extend the skill, **append** a new failure mode
 and rubric row; do not redesign it.
 
-## Eval (all must pass)
+## Eval (all must pass) — the completion rubric for the WHOLE pass
+
+This skill is terminal on every routing path, so this checklist is the pass-level completion
+rubric — prep included via the P-rows. Every item is judged over artifacts (the brief, the
+audit record, the delivered output), so it can be checked by anyone at any time, including
+after the running agent's context is gone.
 
 - [ ] Entry rubric P1–P6 checked before Phase 2; any retroactive `/comms-prep` run is named in the audit record.
 - [ ] Every rubric row C1–C14 marked pass / revised / residual-risk with a cited instance. **Fail** on any unmarked row.
