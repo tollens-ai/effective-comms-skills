@@ -6,11 +6,10 @@ when_to_use: Any moment something written for people is in play and you have not
 
 # Effective Comms — choose the right communication gate
 
-The comms pass targets the two failure families that dominate agent communications:
-**claude-ese** — output in the agent's own dialect that a human cannot comprehend unaided —
-and **falsehood** — claims that do not survive comparison with the thing they describe. It
-runs as two gates, each its own skill; this router only decides where you are and sends you
-there.
+The comms pass targets the two failure families that dominate agent communications: **claude-ese** —
+output in the agent's own dialect that a human cannot comprehend unaided — and **falsehood** —
+claims that do not survive comparison with the thing they describe. It runs as two gates, each its
+own skill; this router only decides where you are and sends you there.
 
 ## Procedure
 
@@ -24,21 +23,21 @@ Determine the state of the communication, then invoke the gate:
 
 The gates carry all rules, rubrics, eval checks, and stop contracts. This router adds none.
 
-**No stack, no return.** Skill invocations are context injections, not a call stack: this
-router holds no state and never regains control after sending you to a gate. The pass's
-completion rubric therefore lives in `/comms-review` — terminal on every path above — and is
-judged over ARTIFACTS (the brief and the audit record), which survive context loss; never
-over remembered router context, which may not.
+**No stack, no return.** Skill invocations are context injections, not a call stack: this router
+holds no state and never regains control after sending you to a gate. The pass's completion rubric
+therefore lives in `/comms-review` — terminal on every path above — and is judged over ARTIFACTS
+(the brief and the audit record), which survive context loss; never over remembered router context,
+which may not.
 
 ## Exit rubric
 
-This router is complete the moment one of the two gate skills is your NEXT action — you can
-name which (`/comms-prep` or `/comms-review`) and the draft/brief state that decided it.
-Anything more is the gates' work.
+This router is complete the moment one of the two gate skills is your NEXT action — you can name
+which (`/comms-prep` or `/comms-review`) and the draft/brief state that decided it. Anything more is
+the gates' work.
 
 ## Pitfalls
 
 - Treating this router as the pass: invoking it and doing neither gate's work.
-- Landing here at review time by habit — if communications only ever reach the pass after a
-  reader complained, the authoring-time trigger (`/comms-prep` bound to your report
-  triggers) is what is missing, not more review.
+- Landing here at review time by habit — if communications only ever reach the pass after a reader
+  complained, the authoring-time trigger (`/comms-prep` bound to your report triggers) is what is
+  missing, not more review.
