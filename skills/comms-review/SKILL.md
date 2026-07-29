@@ -107,9 +107,7 @@ The author cannot feel the absence of context they hold; a fresh reader can. Eac
    author frame, read as the brief's reader, write the findings down. An author reviewing
    their own blind spots catches less; the run is weaker and must SAY so — state the
    impossibility and the degradation in the record, where the reader can see it (an
-   undisclosed degraded pass reads as the skill failing). An instruction forbidding
-   sub-agents does not create impossibility — skill-mandated sub-agents override such
-   fences. A same-frame skim does not count.
+   undisclosed degraded pass reads as the skill failing). A same-frame skim does not count.
 3. The reviewer answers one question — **does this reader, knowing only the evidenced
    knowledge, succeed at the objective?** — and FAILS on any of: left confused, lost, or
    frustrated · unclear what a term or number refers to · unclear why something is relevant ·
