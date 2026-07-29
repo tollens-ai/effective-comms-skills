@@ -39,6 +39,8 @@ If objective, audience, knowledge model, evidence, or form factor are not adequa
 
 Run **every** check below. For each, find concrete instances in the draft, not a vibe-level "looks fine". Mark each **pass / revised / residual-risk**. An unmarked check means the pass was vibes. Loop Phase 2 → revise → re-check until every row is pass or carries an explicit residual-risk line. A check that cannot be satisfied becomes a residual-risk line in the output or note — never a silent pass.
 
+*Row numbers reflect the order the rules were added, not importance or reading order — they are stable identifiers, grouped here by kind.*
+
 **Trustworthy** — *can the reader believe every claim?*
 
 | # | Check | Catches |
