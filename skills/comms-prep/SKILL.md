@@ -1,7 +1,7 @@
 ---
 name: comms-prep
 description: Run the moment you are about to write ANYTHING for people — reports, documents, explainers, commit messages, PR titles and descriptions, help text, error messages, READMEs, page copy, announcements. Produces the communications brief (objective, audience, knowledge model, evidence, form factor) the draft is written from; /comms-review requires it as input. The brief scales to the artifact — three lines for a commit message. Running it after a draft exists is the degraded path.
-when_to_use: Any time you are about to write something a person will read — a report, document, explainer, handoff, review finding, recommendation, decision note, commit message, PR title or description, help text, error message, README, page copy — or a report trigger fired (a stakeholder ask, a scheduled digest, a run-out-of-work report). Also retroactively when a draft exists with no brief. Trigger phrases — "write me a report/doc/explainer", "prep this comms", "who is this for?".
+when_to_use: Any time you are about to write something a person will read — a report, document, explainer, handoff, review finding, recommendation, decision note, commit message, PR title or description, help text, error message, README, page copy — or a report trigger fired (a stakeholder ask, a scheduled digest, a run-out-of-work report). Also retroactively when a draft exists with no brief. Trigger phrases — "effective comms" / "run effective comms" (when no draft exists yet, this is the gate), "write me a report/doc/explainer", "prep this comms", "who is this for?".
 ---
 
 # Comms Prep — the authoring-time gate (Phase 1)
