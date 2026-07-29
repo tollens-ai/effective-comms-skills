@@ -1,7 +1,7 @@
 ---
 name: comms-review
 description: Run before delivering any drafted non-trivial user-facing communication. Its Phase 1 locates and verifies the communications brief from /comms-prep — running /comms-prep retroactively if it is missing (the degraded path) — then it reviews the draft against a 14-check rubric in four kinds (trustworthy, reader's language, right content, shaped for consumption), then loops a fresh audience review until it passes; attaches the audit record.
-when_to_use: A draft communication exists and is about to be delivered — report, update, handoff, review finding, recommendation, decision note. Trigger phrases — "effective comms" / "run effective comms" (when a draft exists, this is the gate — its entry rubric routes back to /comms-prep if the brief is missing), "review this for the reader", "is this ready to send/ship?", "did I bury the recommendation?", "comms-check this".
+when_to_use: A draft communication exists and is about to be delivered — report, update, handoff, review finding, recommendation, decision note. Trigger phrases — "review this for the reader", "is this ready to send/ship?", "did I bury the recommendation?", "comms-check this". ("effective comms" routes via /effective-comms.)
 ---
 
 # Comms Review — the pre-delivery gate
