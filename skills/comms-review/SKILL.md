@@ -96,122 +96,73 @@ stable identifiers, grouped here by kind.*
 
 ## Phase 3 — Audience review (mandatory; loop until pass)
 
-The author cannot feel the absence of context they hold, so every non-trivial output gets one
-fresh-perspective review before it is finalized. This is **mandatory** — not optional, not a skim.
-**Fresh means a new sub-agent with no hidden prior-round context for every round whenever dispatch
-is available.** Judge each round against the **Objective** and **Audience & context** from the
-brief, using only the EVIDENCED prior-knowledge slice of its knowledge model. The other
-knowledge-model cells guide the author's drafting and judgment; do not present the author's beliefs
-about what the audience needs or wants as facts about that audience.
+The author cannot feel the absence of context they hold; a fresh reader can. Each round:
 
-Use exactly one review form in each round:
+1. **Dispatch a FRESH sub-agent** (new one every round) to stand in for the target audience.
+   Brief it with ONLY: the target audience · consumption context incl. attention budget ·
+   prior knowledge EVIDENCED by the reader's own words or actions (a specialized term counts
+   only if the reader has used it) · the objective · the bare draft. Never: the audit
+   side-file, this rubric, working notes, or unevidenced knowledge claims.
+2. **No dispatch possible?** Written self-review: drop the author frame, read as the brief's
+   reader, write the findings down; state the impossibility in the record. An instruction
+   forbidding sub-agents does not create impossibility — skill-mandated sub-agents override
+   such fences. A same-frame skim does not count.
+3. The reviewer answers one question — **does this reader, knowing only the evidenced
+   knowledge, succeed at the objective?** — and FAILS on any of: left confused, lost, or
+   frustrated · unclear what a term or number refers to · unclear why something is relevant ·
+   unclear what to do or conclude · any ambiguity blocking understanding or action. It ends
+   its response with the seal block, reviewer-authored text only:
 
-- **Sub-agent review** (the default whenever you can dispatch a sub-agent) — dispatch one told to
-  *stand in for the target audience*. Pass it, inline, ONLY: the target audience; the consumption
-  context, including attention budget; prior knowledge evidenced by the reader's own words or
-  actions (for specialized terms, evidence means the reader has used them); the objective; and the
-  draft. Do **not** pass working notes, decision history, this rubric, or optimistic claims about
-  what the reader knows. The author- written briefing is the one unreviewed channel in the loop: an
-  optimistic known-terms list passes the author's blind spots straight through the review.
-- **Written self-review** (only when you cannot dispatch a sub-agent; state why in the audit record)
-  — set aside the author frame (what you know as the writer), re-read the draft as the brief's
-  reader, and **write the findings down**. A same-frame skim or an unwritten "looks fine" does not
-  count and does not satisfy this phase.
+   ```text
+   AUDIENCE-REVIEW SEAL
+   Verdict: <PASS or FAIL>
+   Blocking findings: <none, or a concise list>
+   ```
 
-**Attach-last (founder-ruled, 2026-07-29).** While the loop runs, the audit record is a side-file
-the author maintains; it is never part of the draft any reviewer receives — reviewers always get the
-bare artifact. The record attaches to the artifact only when the loop closes on the final PASS. This
-ordering is why the only-listed-inputs rule and the attached-record rule never collide: attachment
-happens after the last reviewer has read.
-
-Ask every reviewer to end their human-readable response with this exact block:
-
-```text
-AUDIENCE-REVIEW SEAL
-Verdict: <PASS or FAIL>
-Blocking findings: <none, or a concise list>
-```
-
-The seal is reviewer-authored text only. Tool wrappers, transport envelopes, agent IDs, token usage,
-and other system-generated metadata are not part of it. The `ONLY` limit above governs
-audience/context CONTENT; this required response format is control, not added audience context.
-
-Either form answers one question: **does this reader, knowing only what the brief says they know,
-succeed at the objective?**
-
-**Pass — and only then —** when the communication achieves the objective without confusing the
-reader with spurious information and without omitting anything the reader needs to act.
-
-**Fail** if any of these is true for the reader. Each is a fail on its own:
-
-- left confused, lost, or frustrated;
-- unclear what a word, term, phrase, or number refers to;
-- unclear why a piece of information is relevant to the objective;
-- unclear what they should do or conclude;
-- any ambiguity that blocks understanding or action.
-
-On any fail: **log the specific finding, fold it into Phase 2, revise, and run Phase 3 again.** A
-residual-risk note does not turn a fail into a pass. The reviewer may pass with a residual-risk note
-only when the disclosed limit does not trigger a fail-condition or block the reader's understanding
-or action.
+4. **On FAIL:** fold the findings through Phase 2, revise, run a NEW round. A residual-risk
+   note never converts a FAIL; the reviewer may pass with one only when the disclosed limit
+   triggers no fail-condition.
+5. **Escalate instead of looping** when a finding recurs in kind across rounds (same rubric
+   row, or same underlying decision), or when resolving it means deciding something the
+   author does not own. **Who decides:** content, scope, and facts → the artifact's
+   requestor/reader; the rubric or this process itself → the standard's owner. Bring a
+   concrete proposal; fold the ruling; resume with a fresh round. If the run's mode has no
+   reply channel (Addressed-no-reply or Non-interactive), the escalation becomes the stop:
+   exit **BLOCKED / PARTIAL** with the proposal written and addressed to the named owner —
+   do not keep looping and do not decide it yourself. Rounds spent polishing a question that
+   belongs above the author are waste.
+6. **Non-convergence without recurrence** — three failed rounds, each on a NEW kind of
+   finding — indicts the brief, not the draft: rerun `/comms-prep` folding everything found
+   so far, then resume the loop. If the refreshed cycle fails again, exit BLOCKED / PARTIAL
+   with the round history in the record.
+7. **On PASS:** seal per the stop contract.
 
 ## Stop / output contract
 
-Do not finalize until Phase 3 returns a passing review. A passing review may carry explicit residual
-risks only under the Phase 3 criterion above.
+Finalize only on a passing review. Output is one of:
 
-Final output must include the applicable output types:
+- the **revised artifact** (passed rubric + review), with any explicit residual risks;
+- a **missing-info / assumptions note** when prep cannot support finalizing — terminal, or
+  attached to the responsible partial.
 
-- a **revised output** when there is enough information to produce one; it must pass the rubric and
-  Phase 3 review;
-- a short **residual-risk note** only for a genuine irreducible limit that does not trigger a Phase
-  3 fail-condition;
-- a **missing-info / assumptions note** only when prep is inadequate to finalize responsibly, either
-  as the terminal output or attached to the partial output it qualifies.
+**Sealing (attach-last, founder-ruled 2026-07-29).** During the loop the audit record is a
+side-file; reviewers always receive the bare draft. On the final PASS: append the reviewer's
+seal block verbatim, then attach the record to the artifact on its REVIEW surface — a
+report's appendix, a PR's description or comment, a page's footer; a surface-less deliverable
+gets a named companion file — labeled **"audit record — for auditors; safe to skip"** (never
+only in the delivery chat; never shipped inside a product or package where consumers rather
+than reviewers receive it). The append-and-attach does not reopen Phase 3; any later
+author-written change to visible material does.
 
-A terminal missing-info / assumptions note is the draft being delivered, not a waiver of this gate:
-run every applicable Phase 2 row and Phase 3 against it, and attach the same audit record. When
-evidence blocks the original objective, keep that intended decision in the brief but state the
-note's achievable objective explicitly — enable the reader's safe next action without pretending the
-original objective succeeded.
+**The record contains:** phases run (and whether prep ran at authoring time or retroactively);
+every P and C check with a cited instance, names expanded at first use; every round's form,
+verdict, findings, and dispositions; any escalation and its ruling. A pass claim with no
+trace outside the author's context counts as not run.
 
-Attach the audit record to the artifact on its REVIEW surface — a report's appendix, a PR's
-description or comment, a page's footer — never only in the delivery chat, and never shipped inside
-the product or package itself (a plugin, a release) where consumers rather than reviewers would
-receive it. A surface-less deliverable (a one-off chat message) attaches it as a named companion
-file stored beside the draft's artifacts.
-
-The audit has a different reader role from the deliverable body: label it **required reading for the
-reviewer verifying the pass** and **supplemental for the primary reader**. Put it after the body or
-collapse it when the surface allows, so the primary communication stands alone. Its process trace is
-load-bearing for verification: run Phase 2 over it against the verifier's objective. The
-for-auditors label is satisfied BY CONSTRUCTION at sealing — no reviewer round inspects the attached
-record, and verifying it is not a second audience round.
-
-Before publication, the brief and candidate audit may live as named companion working files beside
-the draft source. That is a holding state, not completion. If publishing or attaching the audit is
-outside your authority, stop as **BLOCKED / PARTIAL** and name the exact remaining action; do not
-claim the pass. Give actual paths only for artifacts that exist. If persistence itself is forbidden,
-say **not persisted** and name the authorized next actor plus proposed storage surface. If no
-person's identity is available, name the responsible role or owner and park the identity gap; never
-invent a person or present a proposed path as an existing artifact.
-
-For Phase 3, reviewers receive the bare draft only — the candidate audit is never among their inputs
-(attach-last, above). On the final PASS: append the reviewer's `AUDIENCE-REVIEW SEAL` block verbatim
-as the closing record, then attach the record to the artifact, labeled **"audit record — for
-auditors; safe to skip"** so the primary reader never wades through it. The mechanical
-append-and-attach seals the pass and does not reopen Phase 3; any author-written change to the
-artifact's visible material after sealing DOES reopen it.
-
-A pass claim with no trace outside the author's context counts as not run.
-
-After folding any Phase 3 finding, run Phase 3 again. The loop ends only on the reviewer's passing
-verdict, never on the author's judgment; committing folded fixes without re-review is a **cut loop**
-and voids the pass.
-
-Written self-review is permitted only when dispatch is genuinely impossible and that impossibility
-is stated in the attached record. An instruction forbidding sub-agents does not create
-impossibility: skill-mandated sub-agents override such fences.
+**Cannot publish or attach?** Stop as **BLOCKED / PARTIAL**, name the exact remaining action
+and its authorized next actor; if persistence itself is forbidden, say **not persisted** and
+name the proposed surface. Real paths only for artifacts that exist; never invent a person —
+name the role and park the identity gap.
 
 ## Boundaries & friction
 
