@@ -99,10 +99,12 @@ are stable identifiers, grouped here by kind.*
 
 The author cannot feel the absence of context they hold, so every non-trivial output gets one
 fresh-perspective review before it is finalized. This is **mandatory** — not optional, not a
-skim. Judge each round against the **Objective** and **Audience & context** from the brief,
-using only the EVIDENCED prior-knowledge slice of its knowledge model. The other knowledge-
-model cells guide the author's drafting and judgment; do not present the author's beliefs about
-what the audience needs or wants as facts about that audience.
+skim. **Fresh means a new sub-agent with no hidden prior-round context for every round
+whenever dispatch is available.** Judge each round against the **Objective** and **Audience &
+context** from the brief, using only the EVIDENCED prior-knowledge slice of its knowledge
+model. The other knowledge-model cells guide the author's drafting and judgment; do not
+present the author's beliefs about what the audience needs or wants as facts about that
+audience.
 
 Use exactly one review form in each round:
 
@@ -118,6 +120,21 @@ Use exactly one review form in each round:
   record) — set aside the author frame (what you know as the writer), re-read the draft as the
   brief's reader, and **write the findings down**. A same-frame skim or an unwritten "looks
   fine" does not count and does not satisfy this phase.
+
+Here `draft` includes every reader-visible item, including any candidate audit already present
+on the review surface. The no-working-notes rule forbids EXTRA briefing context; it does not
+hide required audit text that the reader will actually see.
+
+Ask every reviewer to end their human-readable response with this exact block:
+
+```text
+AUDIENCE-REVIEW SEAL
+Verdict: <PASS or FAIL>
+Blocking findings: <none, or a concise list>
+```
+
+The seal is reviewer-authored text only. Tool wrappers, transport envelopes, agent IDs, token
+usage, and other system-generated metadata are not part of it.
 
 Either form answers one question: **does this reader, knowing only what the brief says they
 know, succeed at the objective?**
@@ -162,7 +179,13 @@ Attach the audit record to the artifact on its REVIEW surface — a report's app
 description or comment, a page's footer — never only in the delivery chat, and never shipped
 inside the product or package itself (a plugin, a release) where consumers rather than
 reviewers would receive it. A surface-less deliverable (a one-off chat message) attaches it
-as a named companion file stored beside the draft's artifacts. Record:
+as a named companion file stored beside the draft's artifacts.
+
+The audit has a different reader role from the deliverable body: label it **required reading
+for the reviewer verifying the pass** and **supplemental for the primary reader**. Put it after
+the body or collapse it when the surface allows, so the primary communication stands alone.
+Its process trace is load-bearing for verification; review the audit against that reviewer
+objective, and do not let it obstruct the primary reader's objective. Record:
 
 - the phases run (including whether Phase 1 ran at authoring time or retroactively);
 - every check, marked with a cited instance from the draft rather than a bare "pass";
@@ -171,14 +194,17 @@ as a named companion file stored beside the draft's artifacts. Record:
 
 Before publication, the brief and candidate audit may live as named companion working files
 beside the draft source. That is a holding state, not completion. If publishing or attaching the
-audit is outside your authority, stop as **BLOCKED / PARTIAL**, name the exact remaining action,
-and give the artifact paths; do not claim the pass.
+audit is outside your authority, stop as **BLOCKED / PARTIAL** and name the exact remaining
+action; do not claim the pass. Give actual paths only for artifacts that exist. If persistence
+itself is forbidden, say **not persisted**, name the authorized next actor and proposed storage
+surface, and never present a proposed path as an existing artifact.
 
 For Phase 3, the draft includes every item that will be visible on the delivery or review
 surface, including the candidate audit through all PRIOR rounds. The current review's verdict
-cannot exist until the reviewer returns: append that response verbatim as the final-round record.
-That mechanical append seals the audit and does not reopen Phase 3. Any author-written
-interpretation of the verdict, or any other change to visible material, DOES reopen Phase 3.
+cannot exist until the reviewer returns: append only their `AUDIENCE-REVIEW SEAL` block
+verbatim as the final-round record. That mechanical append seals the audit and does not reopen
+Phase 3. Any author-written interpretation of the verdict, or any other change to visible
+material, DOES reopen Phase 3.
 
 A pass claim with no trace outside the author's context counts as not run.
 
@@ -200,9 +226,10 @@ create impossibility: skill-mandated sub-agents override such fences.
 - skipping Phase 3, using a same-frame skim, or passing on a vibe rather than the explicit
   fail-conditions;
 - declaring a pass while any fail-condition still holds;
-- giving the audience reviewer the rubric, working notes, decision history, or optimistic
-  knowledge claims instead of only the target audience, consumption context, evidenced prior
-  knowledge, objective, and draft;
+- giving the audience reviewer rubric text, working notes, decision history, or optimistic
+  knowledge claims as EXTRA briefing context beyond the target audience, consumption context,
+  evidenced prior knowledge, objective, and draft — required audit text already visible in the
+  candidate draft is part of the draft, not extra briefing;
 - cutting the loop by folding fixes without another Phase 3 review;
 - keeping the audit record only in chat or claiming phases that left no visible trace.
 
@@ -223,8 +250,8 @@ after the running agent's context is gone.
 
 - [ ] Entry rubric P1–P6 checked before Phase 2; any retroactive `/comms-prep` run is named in the audit record.
 - [ ] Every rubric row C1–C15 marked pass / revised / residual-risk with a cited instance. **Fail** on any unmarked row.
-- [ ] Phase 3 ran in a sanctioned form each round; the final round is a PASS from the reviewer, not the author. **Fail** on a cut loop.
+- [ ] Phase 3 ran in a sanctioned form each round; dispatch-capable runs used a new sub-agent each round, and the final round is a PASS from the reviewer, not the author. **Fail** on a cut loop.
 - [ ] Any terminal missing-info / assumptions note went through Phase 2 and Phase 3 as the delivered draft.
-- [ ] The audit record is attached on the artifact's review surface. **Fail** if it lives only in chat; report BLOCKED / PARTIAL if attachment is outside your authority.
-- [ ] The final reviewer response was appended verbatim to seal the audit, with no later author-written change to visible material.
+- [ ] The audit is typed as required for its reviewer and supplemental for the primary reader, and is attached on the artifact's review surface. **Fail** if it lives only in chat; report BLOCKED / PARTIAL if attachment is outside your authority.
+- [ ] The final `AUDIENCE-REVIEW SEAL` block was appended verbatim, with no later author-written change to visible material.
 - [ ] Every factual claim that has a referent was checked against it (C14). **Fail** on any claim the reader could falsify by opening the referent.

@@ -36,7 +36,7 @@ If a bare skill name collides with another plugin, use the plugin's namespaced f
 Two gates, three phases:
 
 1. **`/comms-prep` (Phase 1)** — the communications brief: objective, audience, audience knowledge model, evidence/uncertainty, form factor. Runs the moment you know the communication will exist; the draft is written from it.
-2. **`/comms-review` (Phases 2–3)** — an entry rubric first confirms the brief is satisfied (missing → run `/comms-prep` retroactively, the named degraded path); then the 15-check rubric; then an audience-perspective review by a fresh reviewer given only the target audience and consumption context, evidenced prior knowledge, objective, and draft — revised and re-run until the reviewer passes.
+2. **`/comms-review` (Phases 2–3)** — an entry rubric first confirms the brief is satisfied (missing → run `/comms-prep` retroactively, the named degraded path); then the 15-check rubric; then an audience-perspective review by a new reviewer each round, given only the target audience and consumption context, evidenced prior knowledge, objective, and complete visible draft — revised and re-run until the reviewer passes.
 
 The pass ends with one of:
 
@@ -44,7 +44,7 @@ The pass ends with one of:
 - a revised output plus explicit, non-blocking residual-risk notes;
 - or a missing-info / assumptions note if the brief is too incomplete to finalize responsibly; the note itself goes through the same review.
 
-The artifact carries an audit trace — phases and checks run with cited instances, audience-review verdicts, finding dispositions — attached on its review surface (a report's appendix, a PR's description or comment), never shipped inside a deliverable package. The final reviewer response is appended verbatim to seal the trace; any later authored change reopens review. If the agent cannot attach the audit, the honest result is blocked/partial, not a pass.
+The artifact carries an audit trace — phases and checks run with cited instances, audience-review verdicts, finding dispositions — attached on its review surface (a report's appendix, a PR's description or comment), never shipped inside a deliverable package. It is required for the reviewer verifying the pass and supplemental for the primary reader. The final reviewer-authored seal block is appended verbatim; tool metadata is excluded, and any later authored change reopens review. If the agent cannot attach the audit, the honest result is blocked/partial, not a pass; nonexistent artifact paths are never presented as real.
 
 ## Core checks
 

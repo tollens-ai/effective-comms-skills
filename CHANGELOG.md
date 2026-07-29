@@ -8,8 +8,11 @@
 - Remove incident-history logs from shipped skills; keep validation evidence on review surfaces.
 - Declare linked license texts as required legal terms.
 - Bound “term” to labels, abbreviations, coined phrases, specialized jargon, and non-ordinary local uses; ordinary language needs no adoption evidence.
-- Define the audience-review briefing as target audience, consumption context, evidenced prior knowledge, objective, and draft.
-- Seal the audit with the final reviewer response verbatim; later authored changes reopen review, while unavailable attachment yields BLOCKED / PARTIAL.
+- Define the audience-review briefing as target audience, consumption context, evidenced prior knowledge, objective, and the complete visible draft; required audit text in that draft is not extra briefing context.
+- Require a new audience-review sub-agent with no hidden prior-round context for every dispatch-capable round.
+- Type the audit as required for the reviewer verifying the pass and supplemental for the primary reader, with subordinate placement.
+- Seal the audit with a fixed reviewer-authored block; exclude tool metadata, and reopen review after any later authored change.
+- Make unavailable attachment BLOCKED / PARTIAL, requiring real paths only for persisted artifacts and explicit “not persisted” disclosure otherwise.
 - Treat terminal missing-info / assumptions notes as delivered drafts that still pass through the full review gate.
 - Interactivity and completion hardening: Addressed/no-reply mode; C14 unreachable-source disclosure; C8 explicit N/A path; C4 fact-framed load-bearing narration; audit-record fallback for deliverables without a review surface.
 - P1–P6 unified: comms-prep's completion rubric and comms-review's entry rubric are one rubric stated verbatim in both skills, with divergence declared a pack bug.
