@@ -65,7 +65,11 @@ resolves* (assume X / ask the user / flag as a gap). An unanswered line is a pre
    still needed? Where does uncertainty belong for this form (working note → up front;
    polished artifact → end/appendix)?
 5. **Form factor.** Short message, full report, checklist, handoff, decision note? A single
-   long async dump is not the default shape.
+   long async dump is not the default shape. The furniture is part of the form — plan here
+   what attached text the reader will see (title, subject line, headings, captions, labels)
+   and what each must do for them; a title describes the artifact's effect for its reader,
+   not the author's task. It is all written from this brief and reviewed under the same
+   rubric as the body (C13).
 
 ## Stop / output contract
 
@@ -98,7 +102,7 @@ divergence is a bug in this pack.
 | P3 | Audience & context, including the attention budget. |
 | P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |
 | P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
-| P6 | Form factor chosen deliberately and scaled to the artifact. |
+| P6 | Form factor chosen deliberately and scaled to the artifact — furniture included (title, headings, captions planned for the reader). |
 
 ## Eval (all must pass)
 

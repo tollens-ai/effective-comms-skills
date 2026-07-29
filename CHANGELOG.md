@@ -2,6 +2,7 @@
 
 ## 0.2.0 — unreleased
 
+- Furniture planned at prep time: form factor (brief item 5, P6) now includes the artifact's attached text — titles, headings, captions — planned for the reader before drafting; C13 remains the review-side check.
 - Attach-last (founder-ruled): the audit record is a side-file during the review loop — reviewers always receive the bare draft — and attaches only at the final PASS, labeled for-auditors-safe-to-skip; a fresh reviewer is required every round.
 - C15: every clause earns its place — brevity by selectivity (cut what doesn't change understanding or action), never by compression into fragments.
 - Correct rubric totals and ranges to C1–C15, and describe the public package as three skills.
