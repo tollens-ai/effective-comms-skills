@@ -1,10 +1,10 @@
-# Effective Comms Skills
+# Effective Comms Skills — make agent-written communication usable and trustworthy
 
-Claude Code skill for making agent-written communication land with its reader.
+Claude Code skills for making agent-written communication land with its reader.
 
-`/effective-comms` runs a **prepare → review → revise** pass over a report, update, strategy doc, review finding, handoff, or recommendation before it is finalized. It helps agents check the communication objective, model the audience, remove hidden-context assumptions, name internal references in plain English, and make uncertainty/next actions legible.
+The pack runs a **prepare → write → review** pass over a report, update, strategy doc, review finding, handoff, or recommendation — as **two gates, each its own skill**: `/comms-prep` produces the communications brief at authoring time, BEFORE drafting; `/comms-review` gates the draft before delivery, and its entry rubric sends you back to `/comms-prep` if the brief is missing. `/effective-comms` remains as a router that picks the right gate. It targets the two failure families that dominate agent communications: **claude-ese** — output in the agent's own dialect that a human can't comprehend unaided — and **falsehood** — claims that don't survive comparison with the thing they describe. A communication passes only when its reader can understand it without help and trust every claim in it.
 
-> **Status: early alpha.** The v0 skill exists and has been dogfooded through [Quality Strategy Skills](https://github.com/tollens-ai/quality-strategy-skills). Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
+> **Status: early alpha.** Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
 
 ## What it is for
 
@@ -27,40 +27,55 @@ This is a public Claude Code plugin. Install with:
 /plugin install effective-comms@tollens-effective-comms
 ```
 
-Then run:
+Then run `/comms-prep` before writing, `/comms-review` before delivering — or `/effective-comms` to be routed to the right gate.
 
-```text
-/effective-comms
-```
-
-If the bare skill name collides with another plugin, use the plugin's namespaced form in Claude Code.
+If a bare skill name collides with another plugin, use the plugin's namespaced form in Claude Code.
 
 ## The pass
 
-Effective Comms has three phases:
+Two gates, three phases:
 
-1. **Prepare the communications brief** — objective, audience, audience knowledge model, evidence/uncertainty, and form factor.
-2. **Review the draft** — apply the rubric to catch known failure modes.
-3. **Audience-perspective review** — for non-trivial outputs, re-read from the target reader's perspective or dispatch a fresh reviewer with only the audience brief and draft.
+1. **`/comms-prep` (Phase 1)** — the communications brief: objective, audience, audience knowledge model, evidence/uncertainty, form factor. Runs the moment you know the communication will exist; the draft is written from it.
+2. **`/comms-review`** — its Phase 1 locates the brief and verifies it against the same rubric (missing → run `/comms-prep` retroactively, the named degraded path); then the 15-check rubric; then an audience-perspective review by a new reviewer each round, given only the target audience and consumption context, evidenced prior knowledge, objective, and the bare draft — revised and re-run until the reviewer passes, with a defined escalation path when a finding belongs to a decision owner rather than another round.
 
 The pass ends with one of:
 
-- a revised user-facing output that passes the rubric;
-- a revised output plus explicit residual-risk notes;
-- or a missing-info / assumptions note if the brief is too incomplete to finalize responsibly.
+- a revised user-facing output that passes the rubric and audience review;
+- a revised output plus explicit, non-blocking residual-risk notes;
+- or a missing-info / assumptions note if the brief is too incomplete to finalize responsibly; the note itself goes through the same review.
+
+The artifact carries an audit trace — the review mode (including any degradation, named), phases and checks run with cited instances, audience-review verdicts, finding dispositions. During the loop it is a side-file and reviewers always receive the bare draft; on the final pass it attaches to the artifact on its review surface (a report's appendix, a PR's description or comment — never shipped inside a deliverable package), labeled for auditors and safe for the primary reader to skip. The final reviewer-authored seal block is appended verbatim, and any later authored change to visible material reopens review. If the agent cannot attach the audit, the honest result is blocked/partial, not a pass; nonexistent artifact paths or people are never presented as real.
 
 ## Core checks
 
-The v0 rubric checks for:
+The rubric is grouped into four kinds of check:
 
-- numbered/internal references that lack plain-English meaning;
+**Trustworthy** — can the reader believe every claim?
+
+- illegible uncertainty;
+- factual claims written from the author's narrative instead of derived from the thing described.
+
+**In the reader's language** — can they understand it without stopping?
+
+- coordinate or internal references that lack plain-English meaning;
+- jargon that is not ready-to-hand for this reader — including other agents' and tools' vocabulary — or new terms introduced without a first-use expansion in the reader's own words.
+
+**The right content** — is this what this reader needs, and nothing else?
+
 - hidden scratch/context assumptions;
 - rejected ideas retained in current accepted outputs;
-- coordinate-before-name references;
-- irrelevant agent process-history leakage;
+- process-history leakage that carries no decision, reproducibility, or handoff value;
 - purpose/audience mismatch;
+- proposals or decision requests that lead with mechanics instead of why.
+- padding, restatement, and sentences that exist to sound thorough — length the objective didn't buy.
+
+**Shaped for consumption** — does the form serve how they will actually read it?
+
 - buried recommendations or unclear next actions;
-- illegible uncertainty.
+- lists that mix different kinds of information;
+- structure or density that does not match how the reader will consume the artifact;
+- linked or cited artifacts whose required-versus-supplemental role is unstated;
+- unreviewed visible framing (“furniture”) — titles, headings, and captions held to a lower bar than the body.
 
 ## Roadmap
 
@@ -83,9 +98,7 @@ Please do not include private project data, credentials, customer data, or non-p
 
 ## License
 
-Licensed under either of:
+Choose either of these required legal terms:
 
-- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE)); or
-- MIT License ([LICENSE-MIT](LICENSE-MIT));
-
-at your option.
+- [Apache License, Version 2.0](LICENSE-APACHE); or
+- [MIT License](LICENSE-MIT).
