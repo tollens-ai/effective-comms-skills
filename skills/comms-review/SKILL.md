@@ -4,7 +4,7 @@ description: Run before delivering any drafted non-trivial user-facing communica
 when_to_use: A draft communication exists and is about to be delivered — report, update, handoff, review finding, recommendation, decision note. Trigger phrases — "effective comms" / "run effective comms" (when a draft exists, this is the gate — its entry rubric routes back to /comms-prep if the brief is missing), "review this for the reader", "is this ready to send/ship?", "did I bury the recommendation?", "comms-check this".
 ---
 
-# Comms Review — the pre-delivery gate (Phases 2–3)
+# Comms Review — the pre-delivery gate
 
 Agents write with context their readers do not have; without a deliberate gate, a technically
 correct output can still hide its purpose, assumptions, or next action. This skill checks
@@ -18,15 +18,20 @@ the agent. **Falsehood**: claims that do not survive comparison with the thing t
 rather than the referent. A communication passes only when a human can understand it unaided
 and can trust every claim in it.
 
-## Entry rubric (P1–P6) — this IS `/comms-prep`'s post-rubric
+## Phase 1 — Pick up the prep, or do it now
 
-This skill consumes the communications brief produced by `/comms-prep` (Phase 1). The table
-below is `/comms-prep`'s exit condition, stated here verbatim as the entry condition — the
-same rubric BY CONSTRUCTION; if the two skills' tables ever diverge, that divergence is a bug
-in this pack. Check each row FIRST; **any unmet row → go run `/comms-prep` retroactively
-now** (on the draft's intended purpose — the degraded path, named in the audit record), then
-re-check and continue. Phases are numbered across the pair of skills: Phase 1 lives in
-`/comms-prep`; this skill runs Phases 2–3.
+The review is built on the communications brief. This phase OBTAINS it:
+
+1. **Locate the brief** — the written artifact `/comms-prep` produced, kept with the draft.
+2. **Verify it against the rubric below** — this table is `/comms-prep`'s post-rubric, stated
+   here verbatim as the entry condition (the same rubric BY CONSTRUCTION; if the two skills'
+   tables ever diverge, that divergence is a bug in this pack).
+3. **Missing brief, or any unmet row → run `/comms-prep` NOW**, retroactively, on the draft's
+   intended purpose — the degraded path, named in the audit record — then re-verify and
+   continue. Do not proceed to Phase 2 on an unmet rubric.
+
+Authoring-time prep is `/comms-prep`'s job; this phase exists so a review invoked on its own
+still executes a complete pass.
 
 | # | The brief satisfies |
 |---|---|
