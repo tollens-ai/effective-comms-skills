@@ -127,14 +127,14 @@ The author cannot feel the absence of context they hold; a fresh reader can. Eac
    author does not own. **Who decides:** content, scope, and facts → the artifact's
    requestor/reader; the rubric or this process itself → the standard's owner. Bring a
    concrete proposal; fold the ruling; resume with a fresh round. If the run's mode has no
-   reply channel (Addressed-no-reply or Non-interactive), the escalation becomes the stop:
+   reply channel (Addressed, no reply channel — or Non-interactive), the escalation becomes the stop:
    exit **BLOCKED / PARTIAL** with the proposal written and addressed to the named owner —
    do not keep looping and do not decide it yourself. Rounds spent polishing a question that
    belongs above the author are waste.
 6. **Non-convergence without recurrence** — three failed rounds, each on a NEW kind of
    finding — indicts the brief, not the draft: rerun `/comms-prep` folding everything found
-   so far, then resume the loop. If the refreshed cycle fails again, exit BLOCKED / PARTIAL
-   with the round history in the record.
+   so far, then resume the loop. If the refreshed cycle again reaches three failed
+   rounds, exit BLOCKED / PARTIAL with the full round history in the record.
 7. **On PASS:** seal per the stop contract.
 
 ## Stop / output contract
