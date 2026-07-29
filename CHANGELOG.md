@@ -5,6 +5,7 @@
 - Add rubric checks for starting with why, single-kind lists, consumption-matched form, and typed references.
 - Require an artifact-attached audit record and a Phase 3 loop that terminates only on a passing audience review.
 - Tighten the skill through a complete self-pass, including a fresh mid-task-agent simulation.
+- Add C12 (reader's words, not author's coordinates) and a reader-model evidence rule: build audience-reviewer knowledge models from adoption evidence, not author say-so.
 
 ## 0.1.0
 

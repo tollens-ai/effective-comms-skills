@@ -112,3 +112,7 @@ Because the reviewer passed the revised skill and produced no fixable finding, n
 - **Residual risks:** none.
 - **Missing information:** none.
 - **Release propagation:** plugin version bumped from `0.1.0` to `0.2.0` so installed caches can receive the revised rubric.
+
+## Addendum — 2026-07-29
+
+Added a reader-model evidence rule and a new rubric row, **C12** ("Reader's words, not author's coordinates"), while this PR was still open for review. Provenance: a status report passed five review rounds while still keying its goals to author-coined labels ("G-1"..."G-5") the reader never adopted; the audience reviewer missed it because the same author who wrote the report also wrote the reviewer's reader-knowledge briefing, and told the reviewer the labels were known. The fix touches three places — the Phase 1 knowledge-model item now defaults author-minted identifiers to the falsely-assuming cell until the reader has used them back, the Phase 3 sub-agent briefing instruction now requires the reviewer's reader-model be built from evidence of adoption rather than the author's say-so, and C12 pins the same rule as a standing rubric row. No existing rule was weakened; this closes the gap where the one unreviewed channel in the loop — the author-written reviewer briefing — could pass an author's own blind spot straight through audience review.
