@@ -1,6 +1,6 @@
 ---
 name: effective-comms
-description: Run a prepare → review → revise pass over an agent-written user-facing output (report, status update, strategy doc, review finding, handoff, recommendation) before it is finalized. Builds a communications brief, then checks named failure modes including hidden context, coordinate-first references, retained rejected ideas, leaked process history, buried recommendations, missing why, mixed-kind lists, consumption-mismatched form, and untyped references.
+description: Run BEFORE writing any non-trivial user-facing output (report, status update, strategy doc, review finding, handoff, recommendation) — the pass starts at Phase 1 when you decide the communication will exist, not when a draft does; also runs retroactively over an existing draft. Builds a communications brief, then checks named failure modes including hidden context, coordinate-first references, retained rejected ideas, leaked process history, buried recommendations, missing why, mixed-kind lists, consumption-mismatched form, and untyped references.
 when_to_use: Before finalizing any non-trivial user-facing output you want checked for its reader. Trigger words/phrases include — "run effective comms", "comms-check this", "is this ready to send/ship?", "review this report/update/handoff for the reader", "did I bury the recommendation?", "turn these findings into a message for X".
 ---
 
@@ -10,7 +10,9 @@ Agents write with context their readers do not have; without a deliberate gate, 
 
 **Two failure families dominate agent communications, and every check below serves one of them.** **Claude-ese**: output in the agent's own dialect — coined labels, bare coordinates, process narration, task-shaped titles — that a human cannot comprehend without interrogating the agent. **Falsehood**: claims that do not survive comparison with the thing they describe — mischaracterized artifacts, unverified counts, status written from the author's self-image rather than the referent. A communication passes only when a human can understand it unaided and can trust every claim in it.
 
-Run it before finalizing any non-trivial output: report, update, strategy/test-strategy/tooling doc, review finding, audit, handoff, worker report, recommendation, decision note. Skip only for genuinely trivial messages (one-line ack, yes/no) with no audience to model. When in doubt, run it — the brief (Phase 1) is cheap.
+**The pass starts at authoring time, not review time.** It begins the moment you know a communication will exist: run Phase 1 (the brief) BEFORE drafting, write the draft from the brief, then review. Arriving at review with a finished draft and no brief is the degraded path — preparation compressed into review produces worse fixes at higher cost, and the reader saying "I don't understand, can you effective-comms this" is evidence the gate did not run when it should have. In that retroactive case, Phase 1 still runs first, on the draft's intended purpose rather than its text.
+
+Run it for any non-trivial output: report, update, strategy/test-strategy/tooling doc, review finding, audit, handoff, worker report, recommendation, decision note. Skip only for genuinely trivial messages (one-line ack, yes/no) with no audience to model. When in doubt, run it — the brief (Phase 1) is cheap.
 
 **The artifact is the whole communication.** Its title, subject line, headings, bylines, captions, annotations, link text, and any metadata the reader sees are reviewed text, held to every check below exactly as the main body is — the title is often the only line most of the audience reads.
 
