@@ -43,4 +43,4 @@
 - Add plugin metadata for `effective-comms`.
 - Add public README, feedback path, and dual Apache-2.0/MIT licensing.
 
-Validation note: the companion validation system remains internal, following the QSS model. Public release should summarize validation status without publishing internal fixtures or dogfood traces by default.
+Validation note: the companion validation system remains internal. Public release should summarize validation status without publishing internal fixtures or dogfood traces by default.

@@ -146,7 +146,7 @@ Finalize only on a passing review. Output is one of:
 - a **missing-info / assumptions note** when prep cannot support finalizing — terminal, or
   attached to the responsible partial.
 
-**Sealing (attach-last, founder-ruled 2026-07-29).** During the loop the audit record is a
+**Sealing (attach-last).** During the loop the audit record is a
 side-file; reviewers always receive the bare draft. On the final PASS: append the reviewer's
 seal block verbatim, then attach the record to the artifact on its REVIEW surface — a
 report's appendix, a PR's description or comment, a page's footer; a surface-less deliverable
