@@ -30,6 +30,12 @@ completion rubric therefore lives in `/comms-review` — terminal on every path 
 judged over ARTIFACTS (the brief and the audit record), which survive context loss; never
 over remembered router context, which may not.
 
+## Exit rubric
+
+This router is complete the moment one of the two gate skills is your NEXT action — you can
+name which (`/comms-prep` or `/comms-review`) and the draft/brief state that decided it.
+Anything more is the gates' work.
+
 ## Pitfalls
 
 - Treating this router as the pass: invoking it and doing neither gate's work.
