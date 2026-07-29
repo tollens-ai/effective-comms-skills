@@ -65,7 +65,7 @@ are stable identifiers, grouped here by kind.*
 | # | Check | Catches |
 |---|---|---|
 | C7 | **Uncertainty is legible.** Solid findings, assumptions, guesses, blockers, and open decisions are distinguished and sit in the right place for the form. | Uncertainty hidden, overstated, or misplaced. |
-| C14 | **True against the referent.** Every factual claim — what the artifact is and contains, counts, statuses, quotes — is derived from direct inspection of the referent (the diff, the logs, the data) at writing time, not from the author's memory or narrative of their work; anything the reader could falsify by opening the referent has been checked against it before finalizing. | A PR described as "a validation pass" while its diff carries substantive rule changes; a summary whose counts don't match its own source; a description inherited from the author's plan rather than the outcome. |
+| C14 | **True against the referent.** Every factual claim — what the artifact is and contains, counts, statuses, quotes — is derived from direct inspection of the referent (the diff, the logs, the data) at writing time, not from the author's memory or narrative of their work; anything the reader could falsify by opening the referent has been checked against it before finalizing. If no referent is reachable for a claim — or none exists — that is NEVER a silent pass: the claim is either removed or disclosed to the reader as unverifiable (C7 territory), and fabrication is the cardinal fail. | A PR described as "a validation pass" while its diff carries substantive rule changes; a summary whose counts don't match its own source; a description inherited from the author's plan rather than the outcome. |
 
 **In the reader's language** — *can they understand it without stopping?*
 
@@ -80,9 +80,9 @@ are stable identifiers, grouped here by kind.*
 |---|---|---|
 | C2 | **No hidden author context.** Self-standing for the brief's audience — nothing relies on context only the author had: working notes, prior conversation, earlier drafts, or reasoning that was never written down. Each needed fact is stated, or flagged as an assumption. | Output assumes the reader shares context only the author had. |
 | C3 | **No retained rejected ideas.** When the artifact is the accepted strategy/recommendation, rejected ideas are absent — not kept with rejection notes. (Keep them only when the objective *is* audit / provenance / decision-history.) | Current output carries rejected ideas. |
-| C4 | **No process-history leakage.** Tool narration, retries, routing, incident provenance, and the agent's decision history are stripped unless load-bearing for the reader's decision, reproducibility, or handoff — "it builds trust" is the author's instinct, not a reader need. | Reader does not care about your decision history; provenance offered as trust-building the reader didn't ask for. |
+| C4 | **No process-history leakage.** Tool narration, retries, routing, incident provenance, and the agent's decision history are stripped unless load-bearing for the reader's decision, reproducibility, or handoff — "it builds trust" is the author's instinct, not a reader need. Narration that IS load-bearing is delivered as a fact about the thing, not the author's activity ("verified against the repo", not "I went and checked the repo"). | Reader does not care about your decision history; provenance offered as trust-building the reader didn't ask for. |
 | C5 | **Purpose/audience fit.** Content matches what the audience needs and the objective. No spurious detail, no assumed knowledge they lack. | Written for the agent's logbook, not the reader. |
-| C8 | **Starts with why.** Any proposal, design, or decision-request opens with the problem it solves and what changes if accepted — stated in the reader's terms and rooted in observed fact, before any mechanics. | Reader meets mechanisms (tiers, lists, schemas) with no idea what they are for; or a "why" asserting projected costs as current facts. |
+| C8 | **Starts with why.** Any proposal, design, or decision-request opens with the problem it solves and what changes if accepted — stated in the reader's terms and rooted in observed fact, before any mechanics. Purely informational artifacts with no ask may mark this row N/A with one line of reasoning — N/A without the reasoning is an unmarked row. | Reader meets mechanisms (tiers, lists, schemas) with no idea what they are for; or a "why" asserting projected costs as current facts. |
 
 **Shaped for consumption** — *does the form serve how they will actually read it?*
 
@@ -151,7 +151,8 @@ Final output must include the applicable output types:
 Attach the audit record to the artifact on its REVIEW surface — a report's appendix, a PR's
 description or comment, a page's footer — never only in the delivery chat, and never shipped
 inside the product or package itself (a plugin, a release) where consumers rather than
-reviewers would receive it. Record:
+reviewers would receive it. A surface-less deliverable (a one-off chat message) attaches it
+as a named companion file stored beside the draft's artifacts. Record:
 
 - the phases run (including whether Phase 1 ran at authoring time or retroactively);
 - every check, marked with a cited instance from the draft rather than a bare "pass";
@@ -206,4 +207,5 @@ after the running agent's context is gone.
 
 ## Dogfood log
 
+- 2026-07-29: two cold-agent execution tests (happy path; retroactive path with no brief) — both 4/5; entry rubric forced retroactive prep with no escape; Phase-3 loops caught real defects incl. a fabricated quote (C14) and a three-round reader-confusion (converged round 4). Their ambiguity findings produced the three interactivity modes, the C14 no-referent clause, C8's N/A path, C4's delivery-frame rule, and the surface-less audit fallback.
 - 2026-07-29: five-round live run on a founder status report (4 FAIL → PASS; caught 2 reality errors incl. one in the author's own tracking file). Same day: the G-labels miss — an author-optimistic reviewer briefing passed author-coined vocabulary — produced C12 and the evidence-of-adoption briefing rule.

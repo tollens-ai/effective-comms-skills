@@ -26,12 +26,19 @@ When in doubt, run it.
 
 **Interactivity.** Choose one mode before starting:
 
-- **Live** — you can get a user reply within this turn. Ask the user to resolve any brief
-  gap you cannot answer.
-- **Non-interactive** — you are a dispatched subagent, background or scheduled run, or
-  mid-task with no one to ask. Do not block and do not guess: park every unresolved gap in a
-  missing-info / assumptions note, place it where **Evidence & uncertainty** (item 4) says
-  uncertainty belongs for this form, and finalize the rest.
+- **Live** — you can get a reply within this turn from someone who holds the answer. Ask
+  them to resolve any brief gap you cannot answer.
+- **Addressed, no reply channel** — the audience is a real, nameable person, but no reply
+  can reach you this turn (the ordinary shape of dispatched writing work). Brief against the
+  REAL audience; treat every judgment call as Non-interactive does — park, never
+  guess-and-proceed silently.
+- **Non-interactive** — a background or scheduled run, or mid-task with no one to ask. Park
+  every unresolved gap in a missing-info / assumptions note, place it where **Evidence &
+  uncertainty** (item 4) says uncertainty belongs for this form, and finalize the rest.
+
+A session can be Live and still hold gaps nobody present can resolve (jargon whose meaning
+only an absent author knows): those gaps are handled as Addressed-no-reply-channel — parked
+and disclosed, never fabricated.
 
 **Narrate.** Say that you are running comms-prep. Do not run silently.
 
