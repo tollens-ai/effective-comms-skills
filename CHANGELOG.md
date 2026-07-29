@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.0 — unreleased
+## 0.2.0 — 2026-07-29
 
 - Degradations disclosed where the reader looks: written self-review is named the DEGRADED review form; the audit record opens with the review mode (independent ×N rounds vs degraded self-review + reason) so a weaker pass never masquerades as the skill failing.
 - Phase 3 rewritten as six numbered steps with an ESCALATION path (recurrence-in-kind = same rubric row or decision; owner defined per question type; no-reply-channel runs exit BLOCKED with the proposal addressed; three fails of new kinds re-runs the prep) ; stop contract consolidated; prose tightened throughout.
