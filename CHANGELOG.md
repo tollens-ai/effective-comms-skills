@@ -2,6 +2,7 @@
 
 ## 0.2.0 — unreleased
 
+- C13 + scope clause: the artifact includes its furniture — titles, headings, captions, metadata — all held to the rubric (from a live PR-title miss, 2026-07-29).
 - Add rubric checks for starting with why, single-kind lists, consumption-matched form, and typed references.
 - Require an artifact-attached audit record and a Phase 3 loop that terminates only on a passing audience review.
 - Tighten the skill through a complete self-pass, including a fresh mid-task-agent simulation.

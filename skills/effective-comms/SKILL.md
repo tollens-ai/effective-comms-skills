@@ -10,6 +10,8 @@ Agents write with context their readers do not have; without a deliberate gate, 
 
 Run it before finalizing any non-trivial output: report, update, strategy/test-strategy/tooling doc, review finding, audit, handoff, worker report, recommendation, decision note. Skip only for genuinely trivial messages (one-line ack, yes/no) with no audience to model. When in doubt, run it — the brief (Phase 1) is cheap.
 
+**The artifact is the whole communication.** Its title, subject line, headings, bylines, captions, annotations, link text, and any metadata the reader sees are reviewed text, held to every check below exactly as the main body is — the title is often the only line most of the audience reads.
+
 **Two entry points.** A draft to gate, or raw findings with no message yet. From raw findings you produce either a revised message or, if prep is inadequate, a missing-info / assumptions note. Never silently guess your way to a polished-looking output.
 
 **Interactivity.** Choose one mode before Phase 1:
@@ -49,6 +51,7 @@ Run **every** check below. For each, find concrete instances in the draft, not a
 | C10 | **Form matches consumption.** Structure, layout, and density are chosen for how the reader will actually consume the artifact: scannable headings, typed lists or tables for parallel/enumerable content, one idea per block, summary before detail. Structure that exists in the content appears on the page. | A wall-of-text paragraph encoding what is really a list or table; a long dump where a layered summary-plus-reference would serve; separator-glyph run-ons standing in for layout. |
 | C11 | **References are typed.** Every linked or cited artifact is one of two things, and the text says which: (a) **required reading** — declared as such (it is an extra action being asked of the reader, so it is priced) and reachable as a working clickable link on the surface where the reader will actually read; or (b) **supplemental reference** — in which case the artifact stands alone without it and nothing downstream assumes it was read. | A load-bearing "see X" whose argument collapses unless X is read, never declared required; a required doc cited as a bare file path the reader cannot click on their surface; text that silently assumes a "reference" was actually read. |
 | C12 | **Reader's words, not author's coordinates.** Things are named as the reader names them; author-minted identifiers appear parenthetically at most, and count as unknown vocabulary until the reader has adopted them. | A report keyed to the author's private ontology sails through audience review because the author assured the reviewer the reader 'knows the terms'. |
+| C13 | **Furniture is part of the artifact.** Titles, subject lines, headings, captions, labels, and link text pass the same rubric as the body, and a title describes the artifact's effect for its reader — not the author's task. | A precise body under a vague or task-shaped title; headings and captions nobody reviewed; a PR titled after what the agent did rather than what merging changes. |
 
 ## Phase 3 — Audience review (mandatory; loop until pass)
 
