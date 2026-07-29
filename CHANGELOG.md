@@ -7,6 +7,10 @@
 - Translate pack-specific terms at first use and give the skill and README titles reader-effect wording.
 - Remove incident-history logs from shipped skills; keep validation evidence on review surfaces.
 - Declare linked license texts as required legal terms.
+- Bound “term” to labels, abbreviations, coined phrases, specialized jargon, and non-ordinary local uses; ordinary language needs no adoption evidence.
+- Define the audience-review briefing as target audience, consumption context, evidenced prior knowledge, objective, and draft.
+- Seal the audit with the final reviewer response verbatim; later authored changes reopen review, while unavailable attachment yields BLOCKED / PARTIAL.
+- Treat terminal missing-info / assumptions notes as delivered drafts that still pass through the full review gate.
 - Interactivity and completion hardening: Addressed/no-reply mode; C14 unreachable-source disclosure; C8 explicit N/A path; C4 fact-framed load-bearing narration; audit-record fallback for deliverables without a review surface.
 - P1–P6 unified: comms-prep's completion rubric and comms-review's entry rubric are one rubric stated verbatim in both skills, with divergence declared a pack bug.
 - Liberal prep triggering: comms-prep fires for anything written for people — including commit messages, PR titles/descriptions, help text, error messages, page copy — with the brief scaling to the artifact (three lines for a commit message).

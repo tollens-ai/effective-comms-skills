@@ -38,7 +38,7 @@ still executes a complete pass.
 | P1 | It exists as a written artifact kept with the draft — not a thought, not a memory. |
 | P2 | Objective: what this is for, and what reader response means it worked. |
 | P3 | Audience & context, including the attention budget. |
-| P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every term the reader hasn't themselves used defaulted into it. |
+| P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |
 | P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
 | P6 | Form factor chosen deliberately and scaled to the artifact. |
 
@@ -72,7 +72,7 @@ are stable identifiers, grouped here by kind.*
 | # | Check | Catches |
 |---|---|---|
 | C1 | **Names before coordinates.** Every section/item/ticket/path/ID is named in plain English before or alongside the coordinate; names lead, coordinates support. | "Item 2 fails here" with no meaning. |
-| C12 | **Ready-to-hand terms only — introduce the rest properly.** A term may be used bare only when you KNOW it is ready-to-hand for this reader — not merely recognized, but usable without friction (evidence: they use it themselves). Introducing NEW terminology is welcome when it genuinely helps the communication: expand the first instance in the reader's own terms in a parenthetical, then use the term freely; it becomes ready-to-hand once the reader uses it back. Everything else — the author's coinages, other agents' vocabulary, tool and domain jargon, unglossed — is translated out. | Any agent's private ontology keyed into a report as if shared; a worker's jargon passed through as author-endorsed; a term the reader technically knows but must stop and decode mid-read; a useful new term introduced without its first-use expansion. |
+| C12 | **Use only terms the reader can use without friction; introduce the rest properly.** Here **term** means a label, abbreviation, coined phrase, tool or domain jargon, or an ordinary word used in a non-ordinary local sense; ordinary words in their ordinary sense need no adoption evidence. A term may be used bare only when you KNOW it is usable without friction for this reader (evidence: they use it themselves). Introducing NEW terminology is welcome when it genuinely helps: expand the first instance in the reader's own terms in a parenthetical, then use the term freely; it counts as adopted once the reader uses it back. Everything else — the author's coinages, other agents' vocabulary, tool and domain jargon — is translated out. | Any agent's private ontology keyed into a report as if shared; a worker's jargon passed through as author-endorsed; a term the reader technically knows but must stop and decode mid-read; a useful new term introduced without its first-use expansion. |
 
 **The right content** — *is this what this reader needs — and nothing else?*
 
@@ -99,18 +99,21 @@ are stable identifiers, grouped here by kind.*
 
 The author cannot feel the absence of context they hold, so every non-trivial output gets one
 fresh-perspective review before it is finalized. This is **mandatory** — not optional, not a
-skim. Judge each round against the **Objective**, **Audience & context**, and audience
-knowledge model from the brief.
+skim. Judge each round against the **Objective** and **Audience & context** from the brief,
+using only the EVIDENCED prior-knowledge slice of its knowledge model. The other knowledge-
+model cells guide the author's drafting and judgment; do not present the author's beliefs about
+what the audience needs or wants as facts about that audience.
 
 Use exactly one review form in each round:
 
 - **Sub-agent review** (the default whenever you can dispatch a sub-agent) — dispatch one
-  told to *stand in for the target audience*. Pass it, inline, only the audience's likely
-  prior knowledge (from the brief), the objective, and the draft — **not** your working
-  notes, decision history, or this rubric. Build the reviewer's reader-knowledge model from
-  EVIDENCE of adoption — terms the reader has used themselves — never from what the author
-  has told the reader. The author-written briefing is the one unreviewed channel in the loop:
-  an optimistic known-terms list passes the author's blind spots straight through the review.
+  told to *stand in for the target audience*. Pass it, inline, ONLY: the target audience; the
+  consumption context, including attention budget; prior knowledge evidenced by the reader's
+  own words or actions (for specialized terms, evidence means the reader has used them); the
+  objective; and the draft. Do **not** pass working notes, decision history, this rubric, or
+  optimistic claims about what the reader knows. The author-
+  written briefing is the one unreviewed channel in the loop: an optimistic known-terms list
+  passes the author's blind spots straight through the review.
 - **Written self-review** (only when you cannot dispatch a sub-agent; state why in the audit
   record) — set aside the author frame (what you know as the writer), re-read the draft as the
   brief's reader, and **write the findings down**. A same-frame skim or an unwritten "looks
@@ -149,6 +152,12 @@ Final output must include the applicable output types:
 - a **missing-info / assumptions note** only when prep is inadequate to finalize responsibly,
   either as the terminal output or attached to the partial output it qualifies.
 
+A terminal missing-info / assumptions note is the draft being delivered, not a waiver of this
+gate: run every applicable Phase 2 row and Phase 3 against it, and attach the same audit record.
+When evidence blocks the original objective, keep that intended decision in the brief but state
+the note's achievable objective explicitly — enable the reader's safe next action without
+pretending the original objective succeeded.
+
 Attach the audit record to the artifact on its REVIEW surface — a report's appendix, a PR's
 description or comment, a page's footer — never only in the delivery chat, and never shipped
 inside the product or package itself (a plugin, a release) where consumers rather than
@@ -159,6 +168,17 @@ as a named companion file stored beside the draft's artifacts. Record:
 - every check, marked with a cited instance from the draft rather than a bare "pass";
 - the Phase 3 form and verdict for every round;
 - every Phase 3 finding and its disposition.
+
+Before publication, the brief and candidate audit may live as named companion working files
+beside the draft source. That is a holding state, not completion. If publishing or attaching the
+audit is outside your authority, stop as **BLOCKED / PARTIAL**, name the exact remaining action,
+and give the artifact paths; do not claim the pass.
+
+For Phase 3, the draft includes every item that will be visible on the delivery or review
+surface, including the candidate audit through all PRIOR rounds. The current review's verdict
+cannot exist until the reviewer returns: append that response verbatim as the final-round record.
+That mechanical append seals the audit and does not reopen Phase 3. Any author-written
+interpretation of the verdict, or any other change to visible material, DOES reopen Phase 3.
 
 A pass claim with no trace outside the author's context counts as not run.
 
@@ -180,8 +200,9 @@ create impossibility: skill-mandated sub-agents override such fences.
 - skipping Phase 3, using a same-frame skim, or passing on a vibe rather than the explicit
   fail-conditions;
 - declaring a pass while any fail-condition still holds;
-- giving the audience reviewer the rubric, working notes, or decision history instead of only
-  the reader's prior knowledge, objective, and draft;
+- giving the audience reviewer the rubric, working notes, decision history, or optimistic
+  knowledge claims instead of only the target audience, consumption context, evidenced prior
+  knowledge, objective, and draft;
 - cutting the loop by folding fixes without another Phase 3 review;
 - keeping the audit record only in chat or claiming phases that left no visible trace.
 
@@ -203,5 +224,7 @@ after the running agent's context is gone.
 - [ ] Entry rubric P1–P6 checked before Phase 2; any retroactive `/comms-prep` run is named in the audit record.
 - [ ] Every rubric row C1–C15 marked pass / revised / residual-risk with a cited instance. **Fail** on any unmarked row.
 - [ ] Phase 3 ran in a sanctioned form each round; the final round is a PASS from the reviewer, not the author. **Fail** on a cut loop.
-- [ ] The audit record is attached on the artifact's review surface. **Fail** if it lives only in chat.
+- [ ] Any terminal missing-info / assumptions note went through Phase 2 and Phase 3 as the delivered draft.
+- [ ] The audit record is attached on the artifact's review surface. **Fail** if it lives only in chat; report BLOCKED / PARTIAL if attachment is outside your authority.
+- [ ] The final reviewer response was appended verbatim to seal the audit, with no later author-written change to visible material.
 - [ ] Every factual claim that has a referent was checked against it (C14). **Fail** on any claim the reader could falsify by opening the referent.

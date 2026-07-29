@@ -55,11 +55,12 @@ resolves* (assume X / ask the user / flag as a gap). An unanswered line is a pre
 3. **Knowledge model** — answer all six: what they **need** / **don't need** / **want** /
    **don't want** to know, what they **already know**, and what you **might be falsely
    assuming** they know. The last cell is highest-value — assumed-context failures hide
-   there. Never skip it, even for a short output. Any term the reader has not themselves
-   used — the author's coinages, other agents' or tools' jargon, domain shorthand — belongs
-   in the falsely-assuming cell by default: mentioning a term to the reader, or receiving it
-   from another agent, is not the reader adopting it; it is ready-to-hand only once the
-   reader has used it back.
+   there. Never skip it, even for a short output. Here **term** means a label, abbreviation,
+   coined phrase, tool or domain jargon, or an ordinary word used in a non-ordinary local
+   sense; ordinary words in their ordinary sense need no adoption evidence. A term the reader
+   has not themselves used belongs in the falsely-assuming cell by default: mentioning it to
+   the reader, or receiving it from another agent, is not the reader adopting it; it is usable
+   without friction only once the reader has used it back.
 4. **Evidence & uncertainty.** What is solid, an assumption, a guess, blocked, or a decision
    still needed? Where does uncertainty belong for this form (working note → up front;
    polished artifact → end/appendix)?
@@ -76,8 +77,9 @@ reviewer's briefing is built from.
 If objective, audience, knowledge model, evidence, or form factor cannot be adequately
 answered, do not proceed to a polished guess — produce a **missing-info / assumptions note**
 (ask if live; else flag the gaps). If prep cannot support any responsible draft, that note is
-the terminal output; if a partial draft is still responsible, carry the parked gaps into it
-and into review.
+the only responsible draft: “terminal” names its output type, not a review waiver, so hand it
+to `/comms-review`. If a partial draft is still responsible, carry the parked gaps into it and
+into review.
 
 **Retroactive use (the degraded path).** If a draft already exists with no brief, run this
 skill FIRST, on the draft's intended purpose rather than its text — then hand both to
@@ -94,7 +96,7 @@ divergence is a bug in this pack.
 | P1 | It exists as a written artifact kept with the draft — not a thought, not a memory. |
 | P2 | Objective: what this is for, and what reader response means it worked. |
 | P3 | Audience & context, including the attention budget. |
-| P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every term the reader hasn't themselves used defaulted into it. |
+| P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |
 | P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
 | P6 | Form factor chosen deliberately and scaled to the artifact. |
 
