@@ -2,6 +2,7 @@
 
 ## 0.2.0 — unreleased
 
+- Rubric grouped into four kinds (Trustworthy · Reader's language · Right content · Shaped for consumption) with numbering preserved — C9 applied to the rubric itself.
 - C4 tightened: "trust" removed from the leakage exception — provenance-as-trust-building is an author instinct, not a reader need.
 - C12 generalized as "ready-to-hand terms only — introduce the rest properly": bare use requires frictionless familiarity; new terminology is welcome when its first instance is expanded in the reader's own terms in a parenthetical — covers other agents' and tools' vocabulary, not only the author's coinages; audit records live on the review surface, never inside the shipped package (review feedback, 2026-07-29).
 - Mission thesis: the two failure families — claude-ese and falsehood — named in the intro; every check serves one (Qing, 2026-07-29).

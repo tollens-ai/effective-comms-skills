@@ -39,22 +39,40 @@ If objective, audience, knowledge model, evidence, or form factor are not adequa
 
 Run **every** check below. For each, find concrete instances in the draft, not a vibe-level "looks fine". Mark each **pass / revised / residual-risk**. An unmarked check means the pass was vibes. Loop Phase 2 → revise → re-check until every row is pass or carries an explicit residual-risk line. A check that cannot be satisfied becomes a residual-risk line in the output or note — never a silent pass.
 
+**Trustworthy** — *can the reader believe every claim?*
+
+| # | Check | Catches |
+|---|---|---|
+| C7 | **Uncertainty is legible.** Solid findings, assumptions, guesses, blockers, and open decisions are distinguished and sit in the right place for the form. | Uncertainty hidden, overstated, or misplaced. |
+| C14 | **True against the referent.** Every factual claim — what the artifact is and contains, counts, statuses, quotes — is derived from direct inspection of the referent (the diff, the logs, the data) at writing time, not from the author's memory or narrative of their work; anything the reader could falsify by opening the referent has been checked against it before finalizing. | A PR described as "a validation pass" while its diff carries substantive rule changes; a summary whose counts don't match its own source; a description inherited from the author's plan rather than the outcome. |
+
+**In the reader's language** — *can they understand it without stopping?*
+
 | # | Check | Catches |
 |---|---|---|
 | C1 | **Names before coordinates.** Every section/item/ticket/path/ID is named in plain English before or alongside the coordinate; names lead, coordinates support. | "Item 2 fails here" with no meaning. |
+| C12 | **Ready-to-hand terms only — introduce the rest properly.** A term may be used bare only when you KNOW it is ready-to-hand for this reader — not merely recognized, but usable without friction (evidence: they use it themselves). Introducing NEW terminology is welcome when it genuinely helps the communication: expand the first instance in the reader's own terms in a parenthetical, then use the term freely; it becomes ready-to-hand once the reader uses it back. Everything else — the author's coinages, other agents' vocabulary, tool and domain jargon, unglossed — is translated out. | Any agent's private ontology keyed into a report as if shared; a worker's jargon passed through as author-endorsed; a term the reader technically knows but must stop and decode mid-read; a useful new term introduced without its first-use expansion. |
+
+**The right content** — *is this what this reader needs — and nothing else?*
+
+| # | Check | Catches |
+|---|---|---|
 | C2 | **No hidden author context.** Self-standing for the brief's audience — nothing relies on context only the author had: working notes, prior conversation, earlier drafts, or reasoning that was never written down. Each needed fact is stated, or flagged as an assumption. | Output assumes the reader shares context only the author had. |
 | C3 | **No retained rejected ideas.** When the artifact is the accepted strategy/recommendation, rejected ideas are absent — not kept with rejection notes. (Keep them only when the objective *is* audit / provenance / decision-history.) | Current output carries rejected ideas. |
 | C4 | **No process-history leakage.** Tool narration, retries, routing, incident provenance, and the agent's decision history are stripped unless load-bearing for the reader's decision, reproducibility, or handoff — "it builds trust" is the author's instinct, not a reader need. | Reader does not care about your decision history; provenance offered as trust-building the reader didn't ask for. |
 | C5 | **Purpose/audience fit.** Content matches what the audience needs and the objective. No spurious detail, no assumed knowledge they lack. | Written for the agent's logbook, not the reader. |
-| C6 | **Recommendation not buried.** Where action is part of the objective, findings carry their implication and the next action is explicit and easy to find. | Reader must re-derive "so what?". |
-| C7 | **Uncertainty is legible.** Solid findings, assumptions, guesses, blockers, and open decisions are distinguished and sit in the right place for the form. | Uncertainty hidden, overstated, or misplaced. |
 | C8 | **Starts with why.** Any proposal, design, or decision-request opens with the problem it solves and what changes if accepted — stated in the reader's terms and rooted in observed fact, before any mechanics. | Reader meets mechanisms (tiers, lists, schemas) with no idea what they are for; or a "why" asserting projected costs as current facts. |
+
+**Shaped for consumption** — *does the form serve how they will actually read it?*
+
+| # | Check | Catches |
+|---|---|---|
+| C6 | **Recommendation not buried.** Where action is part of the objective, findings carry their implication and the next action is explicit and easy to find. | Reader must re-derive "so what?". |
 | C9 | **One list, one kind.** Every list, queue, or section contains a single kind of thing; mixed kinds are split into typed groups (or each item is explicitly typed). A mixed list is an ontology failure surfacing as a comms failure. | A giant list mixing decisions, FYIs, defects, and ideas — the reader must re-sort by kind before they can act on anything. |
 | C10 | **Form matches consumption.** Structure, layout, and density are chosen for how the reader will actually consume the artifact: scannable headings, typed lists or tables for parallel/enumerable content, one idea per block, summary before detail. Structure that exists in the content appears on the page. | A wall-of-text paragraph encoding what is really a list or table; a long dump where a layered summary-plus-reference would serve; separator-glyph run-ons standing in for layout. |
 | C11 | **References are typed.** Every linked or cited artifact is one of two things, and the text says which: (a) **required reading** — declared as such (it is an extra action being asked of the reader, so it is priced) and reachable as a working clickable link on the surface where the reader will actually read; or (b) **supplemental reference** — in which case the artifact stands alone without it and nothing downstream assumes it was read. | A load-bearing "see X" whose argument collapses unless X is read, never declared required; a required doc cited as a bare file path the reader cannot click on their surface; text that silently assumes a "reference" was actually read. |
-| C12 | **Ready-to-hand terms only — introduce the rest properly.** A term may be used bare only when you KNOW it is ready-to-hand for this reader — not merely recognized, but usable without friction (evidence: they use it themselves). Introducing NEW terminology is welcome when it genuinely helps the communication: expand the first instance in the reader's own terms in a parenthetical, then use the term freely; it becomes ready-to-hand once the reader uses it back. Everything else — the author's coinages, other agents' vocabulary, tool and domain jargon, unglossed — is translated out. | Any agent's private ontology keyed into a report as if shared; a worker's jargon passed through as author-endorsed; a term the reader technically knows but must stop and decode mid-read; a useful new term introduced without its first-use expansion. |
 | C13 | **Furniture is part of the artifact.** Titles, subject lines, headings, captions, labels, and link text pass the same rubric as the body, and a title describes the artifact's effect for its reader — not the author's task. | A precise body under a vague or task-shaped title; headings and captions nobody reviewed; a PR titled after what the agent did rather than what merging changes. |
-| C14 | **True against the referent.** Every factual claim — what the artifact is and contains, counts, statuses, quotes — is derived from direct inspection of the referent (the diff, the logs, the data) at writing time, not from the author's memory or narrative of their work; anything the reader could falsify by opening the referent has been checked against it before finalizing. | A PR described as "a validation pass" while its diff carries substantive rule changes; a summary whose counts don't match its own source; a description inherited from the author's plan rather than the outcome. |
+
 
 ## Phase 3 — Audience review (mandatory; loop until pass)
 
