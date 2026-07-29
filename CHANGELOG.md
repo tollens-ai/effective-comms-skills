@@ -2,6 +2,8 @@
 
 ## 0.2.0 — unreleased
 
+- Mission thesis: the two failure families — claude-ese and falsehood — named in the intro; every check serves one (Qing, 2026-07-29).
+- C14: true against the referent — factual claims derived from inspection of the thing described, not the author's narrative (from a live PR-description miss, 2026-07-29).
 - C13 + scope clause: the artifact includes its furniture — titles, headings, captions, metadata — all held to the rubric (from a live PR-title miss, 2026-07-29).
 - Add rubric checks for starting with why, single-kind lists, consumption-matched form, and typed references.
 - Require an artifact-attached audit record and a Phase 3 loop that terminates only on a passing audience review.
