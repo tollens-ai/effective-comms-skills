@@ -67,6 +67,7 @@ The rubric is grouped into four kinds of check:
 - process-history leakage that carries no decision, reproducibility, or handoff value;
 - purpose/audience mismatch;
 - proposals or decision requests that lead with mechanics instead of why.
+- padding, restatement, and sentences that exist to sound thorough — length the objective didn't buy.
 
 **Shaped for consumption** — does the form serve how they will actually read it?
 
