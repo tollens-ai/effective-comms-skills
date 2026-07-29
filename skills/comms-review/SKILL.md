@@ -1,0 +1,197 @@
+---
+name: comms-review
+description: Run before delivering any drafted non-trivial user-facing communication. Requires the communications brief from /comms-prep as input — if none exists, run /comms-prep first (the degraded, retroactive path). Reviews the draft against a 14-check rubric in four kinds (trustworthy, reader's language, right content, shaped for consumption), then loops a fresh audience review until it passes; attaches the audit record.
+when_to_use: A draft communication exists and is about to be delivered — report, update, handoff, review finding, recommendation, decision note. Trigger phrases — "review this for the reader", "is this ready to send/ship?", "did I bury the recommendation?", "comms-check this".
+---
+
+# Comms Review — the pre-delivery gate (Phases 2–3)
+
+Agents write with context their readers do not have; without a deliberate gate, a technically
+correct output can still hide its purpose, assumptions, or next action. This skill checks
+judgment, not prose style. Product-neutral: assume no specific project, company, or tool.
+
+**Two failure families dominate agent communications, and every check below serves one of
+them.** **Claude-ese**: output in the agent's own dialect — coined labels, bare coordinates,
+process narration, task-shaped titles — that a human cannot comprehend without interrogating
+the agent. **Falsehood**: claims that do not survive comparison with the thing they describe
+— mischaracterized artifacts, unverified counts, status written from the author's self-image
+rather than the referent. A communication passes only when a human can understand it unaided
+and can trust every claim in it.
+
+## Entry rubric — is the preparation satisfied? (check FIRST, all must hold)
+
+This skill consumes the communications brief produced by `/comms-prep` (Phase 1). Check each
+row; **any unmet row → go run `/comms-prep` retroactively now** (on the draft's intended
+purpose — the degraded path, named in the audit record), then re-check and continue. Phases
+are numbered across the pair of skills: Phase 1 lives in `/comms-prep`; this skill runs
+Phases 2–3.
+
+| # | Preparation check |
+|---|---|
+| P1 | The brief exists as a written artifact kept with the draft — not a thought, not a memory. |
+| P2 | Objective answered: what this is for, and what reader response means it worked. |
+| P3 | Audience & context answered, including the attention budget. |
+| P4 | The six-cell knowledge model is filled, and the falsely-assuming cell is non-empty or its emptiness justified — with every term the reader hasn't themselves used defaulted into it. |
+| P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
+| P6 | Form factor chosen deliberately (a long async dump is not a default). |
+
+**The artifact is the whole communication.** Its title, subject line, headings, bylines,
+captions, annotations, link text, and any metadata the reader sees are reviewed text, held to
+every check below exactly as the main body is — the title is often the only line most of the
+audience reads.
+
+**Narrate.** Name the phases up front; say which you are on. Do not run silently.
+
+## Phase 2 — Review against the rubric
+
+Run **every** check below. For each, find concrete instances in the draft, not a vibe-level
+"looks fine". Mark each **pass / revised / residual-risk**. An unmarked check means the pass
+was vibes. Loop Phase 2 → revise → re-check until every row is pass or carries an explicit
+residual-risk line. A check that cannot be satisfied becomes a residual-risk line in the
+output or note — never a silent pass.
+
+*Row numbers reflect the order the rules were added, not importance or reading order — they
+are stable identifiers, grouped here by kind.*
+
+**Trustworthy** — *can the reader believe every claim?*
+
+| # | Check | Catches |
+|---|---|---|
+| C7 | **Uncertainty is legible.** Solid findings, assumptions, guesses, blockers, and open decisions are distinguished and sit in the right place for the form. | Uncertainty hidden, overstated, or misplaced. |
+| C14 | **True against the referent.** Every factual claim — what the artifact is and contains, counts, statuses, quotes — is derived from direct inspection of the referent (the diff, the logs, the data) at writing time, not from the author's memory or narrative of their work; anything the reader could falsify by opening the referent has been checked against it before finalizing. | A PR described as "a validation pass" while its diff carries substantive rule changes; a summary whose counts don't match its own source; a description inherited from the author's plan rather than the outcome. |
+
+**In the reader's language** — *can they understand it without stopping?*
+
+| # | Check | Catches |
+|---|---|---|
+| C1 | **Names before coordinates.** Every section/item/ticket/path/ID is named in plain English before or alongside the coordinate; names lead, coordinates support. | "Item 2 fails here" with no meaning. |
+| C12 | **Ready-to-hand terms only — introduce the rest properly.** A term may be used bare only when you KNOW it is ready-to-hand for this reader — not merely recognized, but usable without friction (evidence: they use it themselves). Introducing NEW terminology is welcome when it genuinely helps the communication: expand the first instance in the reader's own terms in a parenthetical, then use the term freely; it becomes ready-to-hand once the reader uses it back. Everything else — the author's coinages, other agents' vocabulary, tool and domain jargon, unglossed — is translated out. | Any agent's private ontology keyed into a report as if shared; a worker's jargon passed through as author-endorsed; a term the reader technically knows but must stop and decode mid-read; a useful new term introduced without its first-use expansion. |
+
+**The right content** — *is this what this reader needs — and nothing else?*
+
+| # | Check | Catches |
+|---|---|---|
+| C2 | **No hidden author context.** Self-standing for the brief's audience — nothing relies on context only the author had: working notes, prior conversation, earlier drafts, or reasoning that was never written down. Each needed fact is stated, or flagged as an assumption. | Output assumes the reader shares context only the author had. |
+| C3 | **No retained rejected ideas.** When the artifact is the accepted strategy/recommendation, rejected ideas are absent — not kept with rejection notes. (Keep them only when the objective *is* audit / provenance / decision-history.) | Current output carries rejected ideas. |
+| C4 | **No process-history leakage.** Tool narration, retries, routing, incident provenance, and the agent's decision history are stripped unless load-bearing for the reader's decision, reproducibility, or handoff — "it builds trust" is the author's instinct, not a reader need. | Reader does not care about your decision history; provenance offered as trust-building the reader didn't ask for. |
+| C5 | **Purpose/audience fit.** Content matches what the audience needs and the objective. No spurious detail, no assumed knowledge they lack. | Written for the agent's logbook, not the reader. |
+| C8 | **Starts with why.** Any proposal, design, or decision-request opens with the problem it solves and what changes if accepted — stated in the reader's terms and rooted in observed fact, before any mechanics. | Reader meets mechanisms (tiers, lists, schemas) with no idea what they are for; or a "why" asserting projected costs as current facts. |
+
+**Shaped for consumption** — *does the form serve how they will actually read it?*
+
+| # | Check | Catches |
+|---|---|---|
+| C6 | **Recommendation not buried.** Where action is part of the objective, findings carry their implication and the next action is explicit and easy to find. | Reader must re-derive "so what?". |
+| C9 | **One list, one kind.** Every list, queue, or section contains a single kind of thing; mixed kinds are split into typed groups (or each item is explicitly typed). A mixed list is an ontology failure surfacing as a comms failure. | A giant list mixing decisions, FYIs, defects, and ideas — the reader must re-sort by kind before they can act on anything. |
+| C10 | **Form matches consumption.** Structure, layout, and density are chosen for how the reader will actually consume the artifact: scannable headings, typed lists or tables for parallel/enumerable content, one idea per block, summary before detail. Structure that exists in the content appears on the page. | A wall-of-text paragraph encoding what is really a list or table; a long dump where a layered summary-plus-reference would serve; separator-glyph run-ons standing in for layout. |
+| C11 | **References are typed.** Every linked or cited artifact is one of two things, and the text says which: (a) **required reading** — declared as such (it is an extra action being asked of the reader, so it is priced) and reachable as a working clickable link on the surface where the reader will actually read; or (b) **supplemental reference** — in which case the artifact stands alone without it and nothing downstream assumes it was read. | A load-bearing "see X" whose argument collapses unless X is read, never declared required; a required doc cited as a bare file path the reader cannot click on their surface; text that silently assumes a "reference" was actually read. |
+| C13 | **Furniture is part of the artifact.** Titles, subject lines, headings, captions, labels, and link text pass the same rubric as the body, and a title describes the artifact's effect for its reader — not the author's task. | A precise body under a vague or task-shaped title; headings and captions nobody reviewed; a PR titled after what the agent did rather than what merging changes. |
+
+## Phase 3 — Audience review (mandatory; loop until pass)
+
+The author cannot feel the absence of context they hold, so every non-trivial output gets one
+fresh-perspective review before it is finalized. This is **mandatory** — not optional, not a
+skim. Judge each round against the **Objective**, **Audience & context**, and audience
+knowledge model from the brief.
+
+Use exactly one review form in each round:
+
+- **Sub-agent review** (the default whenever you can dispatch a sub-agent) — dispatch one
+  told to *stand in for the target audience*. Pass it, inline, only the audience's likely
+  prior knowledge (from the brief), the objective, and the draft — **not** your working
+  notes, decision history, or this rubric. Build the reviewer's reader-knowledge model from
+  EVIDENCE of adoption — terms the reader has used themselves — never from what the author
+  has told the reader. The author-written briefing is the one unreviewed channel in the loop:
+  an optimistic known-terms list passes the author's blind spots straight through the review.
+- **Written self-review** (only when you cannot dispatch a sub-agent; state why in the audit
+  record) — drop the author frame, re-read the draft as the brief's reader, and **write the
+  findings down**. A same-frame skim or an unwritten "looks fine" does not count and does not
+  satisfy this phase.
+
+Either form answers one question: **does this reader, knowing only what the brief says they
+know, succeed at the objective?**
+
+**Pass — and only then —** when the communication achieves the objective without confusing
+the reader with spurious information and without omitting anything the reader needs to act.
+
+**Fail** if any of these is true for the reader. Each is a fail on its own:
+
+- left confused, lost, or frustrated;
+- unclear what a word, term, phrase, or number refers to;
+- unclear why a piece of information is relevant to the objective;
+- unclear what they should do or conclude;
+- any ambiguity that blocks understanding or action.
+
+On any fail: **log the specific finding, fold it into Phase 2, revise, and run Phase 3
+again.** A residual-risk note does not turn a fail into a pass. The reviewer may pass with a
+residual-risk note only when the disclosed limit does not trigger a fail-condition or block
+the reader's understanding or action.
+
+## Stop / output contract
+
+Do not finalize until Phase 3 returns a passing review. A passing review may carry explicit
+residual risks only under the Phase 3 criterion above.
+
+Final output must include the applicable output types:
+
+- a **revised output** when there is enough information to produce one; it must pass the
+  rubric and Phase 3 review;
+- a short **residual-risk note** only for a genuine irreducible limit that does not trigger a
+  Phase 3 fail-condition;
+- a **missing-info / assumptions note** only when prep is inadequate to finalize responsibly,
+  either as the terminal output or attached to the partial output it qualifies.
+
+Attach the audit record to the artifact on its REVIEW surface — a report's appendix, a PR's
+description or comment, a page's footer — never only in the delivery chat, and never shipped
+inside the product or package itself (a plugin, a release) where consumers rather than
+reviewers would receive it. Record:
+
+- the phases run (including whether Phase 1 ran at authoring time or retroactively);
+- every check, marked with a cited instance from the draft rather than a bare "pass";
+- the Phase 3 form and verdict for every round;
+- every Phase 3 finding and its disposition.
+
+A pass claim with no trace outside the author's context counts as not run.
+
+After folding any Phase 3 finding, run Phase 3 again. The loop ends only on the reviewer's
+passing verdict, never on the author's judgment; committing folded fixes without re-review is
+a **cut loop** and voids the pass.
+
+Written self-review is permitted only when dispatch is genuinely impossible and that
+impossibility is stated in the attached record. An instruction forbidding sub-agents does not
+create impossibility: skill-mandated sub-agents override such fences.
+
+## Boundaries & friction
+
+**Pass-invalidating failures:**
+
+- treating the rubric as optional;
+- reviewing with no brief instead of running `/comms-prep` first;
+- polishing over an inadequate brief instead of writing the missing-info / assumptions note;
+- skipping Phase 3, using a same-frame skim, or passing on a vibe rather than the explicit
+  fail-conditions;
+- declaring a pass while any fail-condition still holds;
+- giving the audience reviewer the rubric, working notes, or decision history instead of only
+  the reader's prior knowledge, objective, and draft;
+- cutting the loop by folding fixes without another Phase 3 review;
+- keeping the audit record only in chat or claiming phases that left no visible trace.
+
+**Scope:** This is not a prose-polish or house-style template; it checks judgment, not
+aesthetics. Form and layout under C10 are judgment because they set the reader's parsing
+cost. Ornament is aesthetics.
+
+**Extension:** If a check misfires or does not fit the output in hand, surface it to the user
+rather than silently working around it. To extend the skill, **append** a new failure mode
+and rubric row; do not redesign it.
+
+## Eval (all must pass)
+
+- [ ] Entry rubric P1–P6 checked before Phase 2; any retroactive `/comms-prep` run is named in the audit record.
+- [ ] Every rubric row C1–C14 marked pass / revised / residual-risk with a cited instance. **Fail** on any unmarked row.
+- [ ] Phase 3 ran in a sanctioned form each round; the final round is a PASS from the reviewer, not the author. **Fail** on a cut loop.
+- [ ] The audit record is attached on the artifact's review surface. **Fail** if it lives only in chat.
+- [ ] Every factual claim that has a referent was checked against it (C14). **Fail** on any claim the reader could falsify by opening the referent.
+
+## Dogfood log
+
+- 2026-07-29: five-round live run on a founder status report (4 FAIL → PASS; caught 2 reality errors incl. one in the author's own tracking file). Same day: the G-labels miss — an author-optimistic reviewer briefing passed author-coined vocabulary — produced C12 and the evidence-of-adoption briefing rule.

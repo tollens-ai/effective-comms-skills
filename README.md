@@ -2,7 +2,7 @@
 
 Claude Code skill for making agent-written communication land with its reader.
 
-`/effective-comms` runs a **prepare → review → revise** pass over a report, update, strategy doc, review finding, handoff, or recommendation before it is finalized. It targets the two failure families that dominate agent communications: **claude-ese** — output in the agent's own dialect that a human can't comprehend unaided — and **falsehood** — claims that don't survive comparison with the thing they describe. A communication passes only when its reader can understand it without help and trust every claim in it.
+The pack runs a **prepare → write → review** pass over a report, update, strategy doc, review finding, handoff, or recommendation — as **two gates, each its own skill**: `/comms-prep` produces the communications brief at authoring time, BEFORE drafting; `/comms-review` gates the draft before delivery, and its entry rubric sends you back to `/comms-prep` if the brief is missing. `/effective-comms` remains as a router that picks the right gate. It targets the two failure families that dominate agent communications: **claude-ese** — output in the agent's own dialect that a human can't comprehend unaided — and **falsehood** — claims that don't survive comparison with the thing they describe. A communication passes only when its reader can understand it without help and trust every claim in it.
 
 > **Status: early alpha.** Dogfooded through [Quality Strategy Skills](https://github.com/tollens-ai/quality-strategy-skills). Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
 
@@ -27,21 +27,16 @@ This is a public Claude Code plugin. Install with:
 /plugin install effective-comms@tollens-effective-comms
 ```
 
-Then run:
+Then run `/comms-prep` before writing, `/comms-review` before delivering — or `/effective-comms` to be routed to the right gate.
 
-```text
-/effective-comms
-```
-
-If the bare skill name collides with another plugin, use the plugin's namespaced form in Claude Code.
+If a bare skill name collides with another plugin, use the plugin's namespaced form in Claude Code.
 
 ## The pass
 
-Effective Comms has three phases:
+Two gates, three phases:
 
-1. **Prepare the communications brief** — objective, audience, audience knowledge model, evidence/uncertainty, and form factor.
-2. **Review the draft** — apply the rubric to catch known failure modes.
-3. **Audience-perspective review** — for non-trivial outputs, dispatch a fresh reviewer with only the reader's prior knowledge, objective, and draft. Written self-review is allowed only when dispatch is genuinely impossible. Revise and re-run until the reviewer passes.
+1. **`/comms-prep` (Phase 1)** — the communications brief: objective, audience, audience knowledge model, evidence/uncertainty, form factor. Runs the moment you know the communication will exist; the draft is written from it.
+2. **`/comms-review` (Phases 2–3)** — an entry rubric first confirms the brief is satisfied (missing → run `/comms-prep` retroactively, the named degraded path); then the 14-check rubric; then an audience-perspective review by a fresh reviewer given only the reader's prior knowledge, objective, and draft — revised and re-run until the reviewer passes.
 
 The pass ends with one of:
 
