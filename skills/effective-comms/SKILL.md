@@ -1,6 +1,6 @@
 ---
 name: effective-comms
-description: Router for the comms pass. Determines which gate the communication is at and invokes it — /comms-prep (the brief, at authoring time, Phase 1) or /comms-review (rubric + audience review before delivery, Phases 2–3). Kept for compatibility; the gates are the skills.
+description: Router for the comms pass. Determines which gate the communication is at and invokes it — /comms-prep (the brief, at authoring time, Phase 1) or /comms-review (verify-the-prep, rubric, audience review — before delivery). Kept for compatibility; the gates are the skills.
 when_to_use: Any moment something written for people is in play and you have not already picked a gate — reports, docs, explainers, commit messages, PR descriptions, help text — "run effective comms", "effective-comms this", "is this ready to send?", "turn these findings into a message for X".
 ---
 
@@ -18,9 +18,9 @@ Determine the state of the communication, then invoke the gate:
 
 | State | Do |
 |---|---|
-| No draft yet (a communication is about to exist, or a report trigger fired) | Run `/comms-prep` (Phase 1), write the draft FROM the brief, then run `/comms-review`. |
+| No draft yet (a communication is about to exist, or a report trigger fired) | Run `/comms-prep`, write the draft FROM the brief, then run `/comms-review`. |
 | Draft exists, no brief (typically: the reader asked "can you effective-comms this") | Run `/comms-prep` retroactively on the draft's intended purpose — the degraded path, named in the audit record — then `/comms-review`. |
-| Draft and brief both exist | Run `/comms-review` (Phases 2–3). |
+| Draft and brief both exist | Run `/comms-review` (it verifies the prep, then reviews). |
 
 The gates carry all rules, rubrics, eval checks, and stop contracts. This router adds none.
 

@@ -9,7 +9,7 @@ when_to_use: Any time you are about to write something a person will read — a 
 A communication is shaped by decisions made before its first sentence: who it is for, what
 they need, what counts as it working. This skill is that preparation, run as its own gate at
 authoring time — the draft is then WRITTEN FROM the brief, and the brief travels with the
-draft to `/comms-review` (Phases 2–3), where it becomes the reviewer's briefing. Skipping
+draft to `/comms-review`, where it becomes the reviewer's briefing. Skipping
 prep and "fixing it in review" compresses these decisions into the worst moment: the reader
 saying "I don't understand" is prep arriving late. Product-neutral: assume no specific
 project, company, or tool.
