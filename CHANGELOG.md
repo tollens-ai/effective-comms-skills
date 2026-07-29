@@ -3,10 +3,14 @@
 ## 0.2.0 — unreleased
 
 - C15: every clause earns its place — brevity by selectivity (cut what doesn't change understanding or action), never by compression into fragments.
-- Cold-execution test findings folded: a third interactivity mode (Addressed, no reply channel); C14 no-referent disclosure clause; C8 explicit N/A path; C4 delivery-frame rule for load-bearing narration; audit-record fallback for surface-less deliverables.
-- P1–P6 unified: comms-prep's post-rubric and comms-review's entry rubric are one rubric stated verbatim in both skills, with divergence declared a pack bug.
+- Correct rubric totals and ranges to C1–C15, and describe the public package as three skills.
+- Translate pack-specific terms at first use and give the skill and README titles reader-effect wording.
+- Remove incident-history logs from shipped skills; keep validation evidence on review surfaces.
+- Declare linked license texts as required legal terms.
+- Interactivity and completion hardening: Addressed/no-reply mode; C14 unreachable-source disclosure; C8 explicit N/A path; C4 fact-framed load-bearing narration; audit-record fallback for deliverables without a review surface.
+- P1–P6 unified: comms-prep's completion rubric and comms-review's entry rubric are one rubric stated verbatim in both skills, with divergence declared a pack bug.
 - Liberal prep triggering: comms-prep fires for anything written for people — including commit messages, PR titles/descriptions, help text, error messages, page copy — with the brief scaling to the artifact (three lines for a commit message).
-- Split the pass into two gate skills: `/comms-prep` (the brief, at authoring time) and `/comms-review` (entry rubric P1–P6 confirming preparation, then the C-rubric and audience loop); `/effective-comms` becomes a router. Both gates carry eval checks, pitfalls, and dogfood logs.
+- Split the pass into two gate skills: `/comms-prep` (the brief, at authoring time) and `/comms-review` (entry rubric P1–P6 confirming preparation, then the C-rubric and audience loop); `/effective-comms` becomes a router. Both gates carry eval checks and pitfalls.
 - The pass starts at authoring time: Phase 1 runs before drafting; review-time invocation is named the degraded path.
 - Name the mission: two failure families — claude-ese (output humans can't comprehend unaided) and falsehood (claims that don't survive comparison with the referent); every check serves one.
 - New rubric checks: C8 starts with why · C9 one list, one kind · C10 form matches consumption · C11 references are typed · C12 ready-to-hand terms only (new terminology welcome when the first instance is expanded in the reader's own terms in a parenthetical) · C13 furniture is part of the artifact (titles, headings, captions under the rubric) · C14 true against the referent (factual claims derived from inspecting the thing described).

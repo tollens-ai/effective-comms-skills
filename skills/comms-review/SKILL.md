@@ -1,10 +1,10 @@
 ---
 name: comms-review
-description: Run before delivering any drafted non-trivial user-facing communication. Its Phase 1 locates and verifies the communications brief from /comms-prep — running /comms-prep retroactively if it is missing (the degraded path) — then it reviews the draft against a 14-check rubric in four kinds (trustworthy, reader's language, right content, shaped for consumption), then loops a fresh audience review until it passes; attaches the audit record.
+description: Run before delivering any drafted non-trivial user-facing communication. Its Phase 1 locates and verifies the communications brief from /comms-prep — running /comms-prep retroactively if it is missing (the degraded path) — then it reviews the draft against a 15-check rubric in four kinds (trustworthy, reader's language, right content, shaped for consumption), loops a fresh audience review until it passes, and attaches the audit record.
 when_to_use: A draft communication exists and is about to be delivered — report, update, handoff, review finding, recommendation, decision note. Trigger phrases — "review this for the reader", "is this ready to send/ship?", "did I bury the recommendation?", "comms-check this". ("effective comms" routes via /effective-comms.)
 ---
 
-# Comms Review — the pre-delivery gate
+# Comms Review — make the draft ready to deliver
 
 Agents write with context their readers do not have; without a deliberate gate, a technically
 correct output can still hide its purpose, assumptions, or next action. This skill checks
@@ -15,16 +15,16 @@ them.** **Claude-ese**: output in the agent's own dialect — coined labels, bar
 process narration, task-shaped titles — that a human cannot comprehend without interrogating
 the agent. **Falsehood**: claims that do not survive comparison with the thing they describe
 — mischaracterized artifacts, unverified counts, status written from the author's self-image
-rather than the referent. A communication passes only when a human can understand it unaided
-and can trust every claim in it.
+rather than the source being described (the referent). A communication passes only when a
+human can understand it unaided and can trust every claim in it.
 
 ## Phase 1 — Pick up the prep, or do it now
 
 The review is built on the communications brief. This phase OBTAINS it:
 
 1. **Locate the brief** — the written artifact `/comms-prep` produced, kept with the draft.
-2. **Verify it against the rubric below** — this table is `/comms-prep`'s post-rubric, stated
-   here verbatim as the entry condition (the same rubric BY CONSTRUCTION; if the two skills'
+2. **Verify it against the rubric below** — this table is `/comms-prep`'s completion rubric,
+   stated here verbatim as the entry condition (the same rubric BY CONSTRUCTION; if the two skills'
    tables ever diverge, that divergence is a bug in this pack).
 3. **Missing brief, or any unmet row → run `/comms-prep` NOW**, retroactively, on the draft's
    intended purpose — the degraded path, named in the audit record — then re-verify and
@@ -65,7 +65,7 @@ are stable identifiers, grouped here by kind.*
 | # | Check | Catches |
 |---|---|---|
 | C7 | **Uncertainty is legible.** Solid findings, assumptions, guesses, blockers, and open decisions are distinguished and sit in the right place for the form. | Uncertainty hidden, overstated, or misplaced. |
-| C14 | **True against the referent.** Every factual claim — what the artifact is and contains, counts, statuses, quotes — is derived from direct inspection of the referent (the diff, the logs, the data) at writing time, not from the author's memory or narrative of their work; anything the reader could falsify by opening the referent has been checked against it before finalizing. If no referent is reachable for a claim — or none exists — that is NEVER a silent pass: the claim is either removed or disclosed to the reader as unverifiable (C7 territory), and fabrication is the cardinal fail. | A PR described as "a validation pass" while its diff carries substantive rule changes; a summary whose counts don't match its own source; a description inherited from the author's plan rather than the outcome. |
+| C14 | **True against the referent (the source being described).** Every factual claim — what the artifact is and contains, counts, statuses, quotes — is derived from direct inspection of that source (the diff, the logs, the data) at writing time, not from the author's memory or narrative of their work; anything the reader could falsify by opening the source has been checked against it before finalizing. If no source is reachable for a claim — or none exists — that is NEVER a silent pass: the claim is either removed or disclosed to the reader as unverifiable (C7 territory), and fabrication is the cardinal fail. | A PR described as "a validation pass" while its diff carries substantive rule changes; a summary whose counts don't match its own source; a description inherited from the author's plan rather than the outcome. |
 
 **In the reader's language** — *can they understand it without stopping?*
 
@@ -93,7 +93,7 @@ are stable identifiers, grouped here by kind.*
 | C9 | **One list, one kind.** Every list, queue, or section contains a single kind of thing; mixed kinds are split into typed groups (or each item is explicitly typed). A mixed list is an ontology failure surfacing as a comms failure. | A giant list mixing decisions, FYIs, defects, and ideas — the reader must re-sort by kind before they can act on anything. |
 | C10 | **Form matches consumption.** Structure, layout, and density are chosen for how the reader will actually consume the artifact: scannable headings, typed lists or tables for parallel/enumerable content, one idea per block, summary before detail. Structure that exists in the content appears on the page. | A wall-of-text paragraph encoding what is really a list or table; a long dump where a layered summary-plus-reference would serve; separator-glyph run-ons standing in for layout. |
 | C11 | **References are typed.** Every linked or cited artifact is one of two things, and the text says which: (a) **required reading** — declared as such (it is an extra action being asked of the reader, so it is priced) and reachable as a working clickable link on the surface where the reader will actually read; or (b) **supplemental reference** — in which case the artifact stands alone without it and nothing downstream assumes it was read. | A load-bearing "see X" whose argument collapses unless X is read, never declared required; a required doc cited as a bare file path the reader cannot click on their surface; text that silently assumes a "reference" was actually read. |
-| C13 | **Furniture is part of the artifact.** Titles, subject lines, headings, captions, labels, and link text pass the same rubric as the body, and a title describes the artifact's effect for its reader — not the author's task. | A precise body under a vague or task-shaped title; headings and captions nobody reviewed; a PR titled after what the agent did rather than what merging changes. |
+| C13 | **Visible framing (the artifact's “furniture”) is part of the artifact.** Titles, subject lines, headings, captions, labels, and link text pass the same rubric as the body, and a title describes the artifact's effect for its reader — not the author's task. | A precise body under a vague or task-shaped title; headings and captions nobody reviewed; a PR titled after what the agent did rather than what merging changes. |
 
 ## Phase 3 — Audience review (mandatory; loop until pass)
 
@@ -112,9 +112,9 @@ Use exactly one review form in each round:
   has told the reader. The author-written briefing is the one unreviewed channel in the loop:
   an optimistic known-terms list passes the author's blind spots straight through the review.
 - **Written self-review** (only when you cannot dispatch a sub-agent; state why in the audit
-  record) — drop the author frame, re-read the draft as the brief's reader, and **write the
-  findings down**. A same-frame skim or an unwritten "looks fine" does not count and does not
-  satisfy this phase.
+  record) — set aside the author frame (what you know as the writer), re-read the draft as the
+  brief's reader, and **write the findings down**. A same-frame skim or an unwritten "looks
+  fine" does not count and does not satisfy this phase.
 
 Either form answers one question: **does this reader, knowing only what the brief says they
 know, succeed at the objective?**
@@ -201,12 +201,7 @@ audit record, the delivered output), so it can be checked by anyone at any time,
 after the running agent's context is gone.
 
 - [ ] Entry rubric P1–P6 checked before Phase 2; any retroactive `/comms-prep` run is named in the audit record.
-- [ ] Every rubric row C1–C14 marked pass / revised / residual-risk with a cited instance. **Fail** on any unmarked row.
+- [ ] Every rubric row C1–C15 marked pass / revised / residual-risk with a cited instance. **Fail** on any unmarked row.
 - [ ] Phase 3 ran in a sanctioned form each round; the final round is a PASS from the reviewer, not the author. **Fail** on a cut loop.
 - [ ] The audit record is attached on the artifact's review surface. **Fail** if it lives only in chat.
 - [ ] Every factual claim that has a referent was checked against it (C14). **Fail** on any claim the reader could falsify by opening the referent.
-
-## Dogfood log
-
-- 2026-07-29: two cold-agent execution tests (happy path; retroactive path with no brief) — both 4/5; entry rubric forced retroactive prep with no escape; Phase-3 loops caught real defects incl. a fabricated quote (C14) and a three-round reader-confusion (converged round 4). Their ambiguity findings produced the three interactivity modes, the C14 no-referent clause, C8's N/A path, C4's delivery-frame rule, and the surface-less audit fallback.
-- 2026-07-29: five-round live run on a founder status report (4 FAIL → PASS; caught 2 reality errors incl. one in the author's own tracking file). Same day: the G-labels miss — an author-optimistic reviewer briefing passed author-coined vocabulary — produced C12 and the evidence-of-adoption briefing rule.

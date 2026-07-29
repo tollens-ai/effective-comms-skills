@@ -1,10 +1,10 @@
-# Effective Comms Skills
+# Effective Comms Skills — make agent-written communication usable and trustworthy
 
-Claude Code skill for making agent-written communication land with its reader.
+Claude Code skills for making agent-written communication land with its reader.
 
 The pack runs a **prepare → write → review** pass over a report, update, strategy doc, review finding, handoff, or recommendation — as **two gates, each its own skill**: `/comms-prep` produces the communications brief at authoring time, BEFORE drafting; `/comms-review` gates the draft before delivery, and its entry rubric sends you back to `/comms-prep` if the brief is missing. `/effective-comms` remains as a router that picks the right gate. It targets the two failure families that dominate agent communications: **claude-ese** — output in the agent's own dialect that a human can't comprehend unaided — and **falsehood** — claims that don't survive comparison with the thing they describe. A communication passes only when its reader can understand it without help and trust every claim in it.
 
-> **Status: early alpha.** Dogfooded through [Quality Strategy Skills](https://github.com/tollens-ai/quality-strategy-skills). Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
+> **Status: early alpha.** Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
 
 ## What it is for
 
@@ -36,7 +36,7 @@ If a bare skill name collides with another plugin, use the plugin's namespaced f
 Two gates, three phases:
 
 1. **`/comms-prep` (Phase 1)** — the communications brief: objective, audience, audience knowledge model, evidence/uncertainty, form factor. Runs the moment you know the communication will exist; the draft is written from it.
-2. **`/comms-review` (Phases 2–3)** — an entry rubric first confirms the brief is satisfied (missing → run `/comms-prep` retroactively, the named degraded path); then the 14-check rubric; then an audience-perspective review by a fresh reviewer given only the reader's prior knowledge, objective, and draft — revised and re-run until the reviewer passes.
+2. **`/comms-review` (Phases 2–3)** — an entry rubric first confirms the brief is satisfied (missing → run `/comms-prep` retroactively, the named degraded path); then the 15-check rubric; then an audience-perspective review by a fresh reviewer given only the reader's prior knowledge, objective, and draft — revised and re-run until the reviewer passes.
 
 The pass ends with one of:
 
@@ -75,7 +75,7 @@ The rubric is grouped into four kinds of check:
 - lists that mix different kinds of information;
 - structure or density that does not match how the reader will consume the artifact;
 - linked or cited artifacts whose required-versus-supplemental role is unstated;
-- unreviewed furniture — titles, headings, captions held to a lower bar than the body.
+- unreviewed visible framing (“furniture”) — titles, headings, and captions held to a lower bar than the body.
 
 ## Roadmap
 
@@ -98,9 +98,7 @@ Please do not include private project data, credentials, customer data, or non-p
 
 ## License
 
-Licensed under either of:
+Choose either of these required legal terms:
 
-- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE)); or
-- MIT License ([LICENSE-MIT](LICENSE-MIT));
-
-at your option.
+- [Apache License, Version 2.0](LICENSE-APACHE); or
+- [MIT License](LICENSE-MIT).

@@ -4,7 +4,7 @@ description: Run the moment you are about to write ANYTHING for people — repor
 when_to_use: Any time you are about to write something a person will read — a report, document, explainer, handoff, review finding, recommendation, decision note, commit message, PR title or description, help text, error message, README, page copy — or a report trigger fired (a stakeholder ask, a scheduled digest, a run-out-of-work report). Also retroactively when a draft exists with no brief. Trigger phrases — "write me a report/doc/explainer", "prep this comms", "who is this for?". ("effective comms" routes via /effective-comms.)
 ---
 
-# Comms Prep — the authoring-time gate (Phase 1)
+# Comms Prep — prepare before drafting (Phase 1)
 
 A communication is shaped by decisions made before its first sentence: who it is for, what
 they need, what counts as it working. This skill is that preparation, run as its own gate at
@@ -69,8 +69,9 @@ resolves* (assume X / ask the user / flag as a gap). An unanswered line is a pre
 ## Stop / output contract
 
 The brief is an ARTIFACT, not a thought: written down, kept with the draft, and handed to
-`/comms-review` — its knowledge model (especially the falsely-assuming cell and the
-evidence-of-adoption term list) is what the audience reviewer's briefing is built from.
+`/comms-review` — its knowledge model (especially the falsely-assuming cell and the list of
+terms the reader has used themselves, which is the evidence of adoption) is what the audience
+reviewer's briefing is built from.
 
 If objective, audience, knowledge model, evidence, or form factor cannot be adequately
 answered, do not proceed to a polished guess — produce a **missing-info / assumptions note**
@@ -82,7 +83,7 @@ and into review.
 skill FIRST, on the draft's intended purpose rather than its text — then hand both to
 `/comms-review`. Name the degradation in the audit record.
 
-## Post-rubric — the brief is done when all six hold (P1–P6)
+## Completion rubric — the brief is done when all six hold (P1–P6)
 
 This table is the skill's exit condition, and BY CONSTRUCTION it is also `/comms-review`'s
 entry rubric — the two are the same rubric stated in both skills; if they ever diverge, that
@@ -99,7 +100,7 @@ divergence is a bug in this pack.
 
 ## Eval (all must pass)
 
-- [ ] P1–P6 all hold (the post-rubric above). **Fail** on any silently unmet row.
+- [ ] P1–P6 all hold (the completion rubric above). **Fail** on any silently unmet row.
 - [ ] Unanswerable items are explicitly parked with how they resolve — and if prep is inadequate overall, the output is a missing-info / assumptions note, not a polished guess.
 - [ ] Retroactive runs name the degradation.
 
@@ -107,9 +108,5 @@ divergence is a bug in this pack.
 
 - Running after the draft exists and not naming it — the degraded path hidden as the normal one.
 - The brief as a mental exercise instead of an artifact — `/comms-review`'s reviewer briefing is BUILT from it; an unwritten brief rebuilds the author's blind spots downstream.
-- Marking the author's own coinages (or another agent's jargon) as "already known" — mentioning is not adoption.
+- Marking the author's own coinages (or another agent's jargon) as "already known" — mentioning is not evidence that the reader can use the term without friction.
 - Answering the knowledge model for a generic reader instead of THIS reader under THIS attention budget.
-
-## Dogfood log
-
-- 2026-07-29: adopted after a live interaction-model failure — the pass only ever fired retroactively ("I don't understand, can you effective-comms it"), because preparation had no gate of its own.

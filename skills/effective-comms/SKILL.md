@@ -4,7 +4,7 @@ description: Router for the comms pass. Determines which gate the communication 
 when_to_use: Any moment something written for people is in play and you have not already picked a gate — reports, docs, explainers, commit messages, PR descriptions, help text — "run effective comms", "effective-comms this", "is this ready to send?", "turn these findings into a message for X".
 ---
 
-# Effective Comms — the router
+# Effective Comms — choose the right communication gate
 
 The comms pass targets the two failure families that dominate agent communications:
 **claude-ese** — output in the agent's own dialect that a human cannot comprehend unaided —
