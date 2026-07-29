@@ -2,6 +2,7 @@
 
 ## 0.2.0 — unreleased
 
+- Liberal prep triggering: comms-prep fires for anything written for people — including commit messages, PR titles/descriptions, help text, error messages, page copy — with the brief scaling to the artifact (three lines for a commit message).
 - Split the pass into two gate skills: `/comms-prep` (the brief, at authoring time) and `/comms-review` (entry rubric P1–P6 confirming preparation, then the C-rubric and audience loop); `/effective-comms` becomes a router. Both gates carry eval checks, pitfalls, and dogfood logs.
 - The pass starts at authoring time: Phase 1 runs before drafting; review-time invocation is named the degraded path.
 - Name the mission: two failure families — claude-ese (output humans can't comprehend unaided) and falsehood (claims that don't survive comparison with the referent); every check serves one.

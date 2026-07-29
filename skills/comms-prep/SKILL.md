@@ -1,7 +1,7 @@
 ---
 name: comms-prep
-description: Run the moment you know a non-trivial user-facing communication will exist — BEFORE drafting it. Produces the communications brief (objective, audience, knowledge model, evidence, form factor) that the draft is written from and that /comms-review requires as its input. Running it after a draft exists is the degraded path.
-when_to_use: A report, update, handoff, review finding, recommendation, or decision note is about to be written — or a report trigger fired (a stakeholder ask, a scheduled digest, a run-out-of-work report). Also retroactively when a draft exists with no brief. Trigger phrases — "prep this comms", "brief before writing", "who is this for?".
+description: Run the moment you are about to write ANYTHING for people — reports, documents, explainers, commit messages, PR titles and descriptions, help text, error messages, READMEs, page copy, announcements. Produces the communications brief (objective, audience, knowledge model, evidence, form factor) the draft is written from; /comms-review requires it as input. The brief scales to the artifact — three lines for a commit message. Running it after a draft exists is the degraded path.
+when_to_use: Any time you are about to write something a person will read — a report, document, explainer, handoff, review finding, recommendation, decision note, commit message, PR title or description, help text, error message, README, page copy — or a report trigger fired (a stakeholder ask, a scheduled digest, a run-out-of-work report). Also retroactively when a draft exists with no brief. Trigger phrases — "write me a report/doc/explainer", "prep this comms", "who is this for?".
 ---
 
 # Comms Prep — the authoring-time gate (Phase 1)
@@ -14,10 +14,15 @@ prep and "fixing it in review" compresses these decisions into the worst moment:
 saying "I don't understand" is prep arriving late. Product-neutral: assume no specific
 project, company, or tool.
 
-Run it for any non-trivial output: report, update, strategy/test-strategy/tooling doc,
-review finding, audit, handoff, worker report, recommendation, decision note. Skip only for
-genuinely trivial messages (one-line ack, yes/no) with no audience to model. When in doubt,
-run it — the brief is cheap.
+**Be liberal: any time you are writing something for people, think comms-prep.** Reports,
+updates, strategy docs, review findings, audits, handoffs, worker reports, recommendations,
+decision notes — and equally the small furniture-sized artifacts: commit messages, PR titles
+and descriptions, help text, error messages, READMEs, page copy. **The brief scales to the
+artifact**: for a commit message it is three lines answered in seconds (who reads this and
+when · what must they understand · what would mislead them). Cost is never the reason to
+skip — prep is far cheaper than review, and cheaper still than a reader's confusion. Skip
+only for genuinely trivial messages (a one-line ack, a yes/no) with no audience to model.
+When in doubt, run it.
 
 **Interactivity.** Choose one mode before starting:
 

@@ -1,7 +1,7 @@
 ---
 name: effective-comms
 description: Router for the comms pass. Determines which gate the communication is at and invokes it — /comms-prep (the brief, at authoring time, Phase 1) or /comms-review (rubric + audience review before delivery, Phases 2–3). Kept for compatibility; the gates are the skills.
-when_to_use: Any moment a non-trivial user-facing communication is in play and you have not already picked a gate — "run effective comms", "effective-comms this", "is this ready to send?", "turn these findings into a message for X".
+when_to_use: Any moment something written for people is in play and you have not already picked a gate — reports, docs, explainers, commit messages, PR descriptions, help text — "run effective comms", "effective-comms this", "is this ready to send?", "turn these findings into a message for X".
 ---
 
 # Effective Comms — the router
