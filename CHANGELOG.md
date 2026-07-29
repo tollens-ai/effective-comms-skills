@@ -2,6 +2,7 @@
 
 ## 0.2.0 — unreleased
 
+- Degradations disclosed where the reader looks: written self-review is named the DEGRADED review form; the audit record opens with the review mode (independent ×N rounds vs degraded self-review + reason) so a weaker pass never masquerades as the skill failing.
 - Phase 3 rewritten as six numbered steps with an ESCALATION path (recurrence-in-kind = same rubric row or decision; owner defined per question type; no-reply-channel runs exit BLOCKED with the proposal addressed; three fails of new kinds re-runs the prep) ; stop contract consolidated; prose tightened throughout.
 - Furniture planned at prep time: form factor (brief item 5, P6) now includes the artifact's attached text — titles, headings, captions — planned for the reader before drafting; C13 remains the review-side check.
 - Attach-last (founder-ruled): the audit record is a side-file during the review loop — reviewers always receive the bare draft — and attaches only at the final PASS, labeled for-auditors-safe-to-skip; a fresh reviewer is required every round.

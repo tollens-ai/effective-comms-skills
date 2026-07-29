@@ -103,10 +103,13 @@ The author cannot feel the absence of context they hold; a fresh reader can. Eac
    prior knowledge EVIDENCED by the reader's own words or actions (a specialized term counts
    only if the reader has used it) · the objective · the bare draft. Never: the audit
    side-file, this rubric, working notes, or unevidenced knowledge claims.
-2. **No dispatch possible?** Written self-review: drop the author frame, read as the brief's
-   reader, write the findings down; state the impossibility in the record. An instruction
-   forbidding sub-agents does not create impossibility — skill-mandated sub-agents override
-   such fences. A same-frame skim does not count.
+2. **No dispatch possible?** Written self-review — **the DEGRADED review form**: drop the
+   author frame, read as the brief's reader, write the findings down. An author reviewing
+   their own blind spots catches less; the run is weaker and must SAY so — state the
+   impossibility and the degradation in the record, where the reader can see it (an
+   undisclosed degraded pass reads as the skill failing). An instruction forbidding
+   sub-agents does not create impossibility — skill-mandated sub-agents override such
+   fences. A same-frame skim does not count.
 3. The reviewer answers one question — **does this reader, knowing only the evidenced
    knowledge, succeed at the objective?** — and FAILS on any of: left confused, lost, or
    frustrated · unclear what a term or number refers to · unclear why something is relevant ·
@@ -154,7 +157,9 @@ only in the delivery chat; never shipped inside a product or package where consu
 than reviewers receive it). The append-and-attach does not reopen Phase 3; any later
 author-written change to visible material does.
 
-**The record contains:** phases run (and whether prep ran at authoring time or retroactively);
+**The record contains:** the review mode up front — independent sub-agent (×N rounds) or
+**DEGRADED: written self-review**, with the reason — and any other degradation (retroactive
+prep) named beside it; phases run (and whether prep ran at authoring time or retroactively);
 every P and C check with a cited instance, names expanded at first use; every round's form,
 verdict, findings, and dispositions; any escalation and its ruling. A pass claim with no
 trace outside the author's context counts as not run.
