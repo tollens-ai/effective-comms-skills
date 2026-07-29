@@ -2,9 +2,9 @@
 
 Claude Code skill for making agent-written communication land with its reader.
 
-`/effective-comms` runs a **prepare → review → revise** pass over a report, update, strategy doc, review finding, handoff, or recommendation before it is finalized. It helps agents check the communication objective, model the audience, remove hidden-context assumptions, name internal references in plain English, and make uncertainty/next actions legible.
+`/effective-comms` runs a **prepare → review → revise** pass over a report, update, strategy doc, review finding, handoff, or recommendation before it is finalized. It targets the two failure families that dominate agent communications: **claude-ese** — output in the agent's own dialect that a human can't comprehend unaided — and **falsehood** — claims that don't survive comparison with the thing they describe. A communication passes only when its reader can understand it without help and trust every claim in it.
 
-> **Status: early alpha.** The v0 skill exists and has been dogfooded through [Quality Strategy Skills](https://github.com/tollens-ai/quality-strategy-skills). Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
+> **Status: early alpha.** Dogfooded through [Quality Strategy Skills](https://github.com/tollens-ai/quality-strategy-skills). Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
 
 ## What it is for
 
@@ -49,23 +49,37 @@ The pass ends with one of:
 - a revised output plus explicit, non-blocking residual-risk notes;
 - or a missing-info / assumptions note if the brief is too incomplete to finalize responsibly.
 
-The artifact also carries an audit trace naming the phases and checks run, cited instances, audience-review verdicts, and finding dispositions.
+The artifact carries an audit trace — phases and checks run with cited instances, audience-review verdicts, finding dispositions — attached on its review surface (a report's appendix, a PR's description or comment), never shipped inside a deliverable package.
 
 ## Core checks
 
-The rubric checks for:
+The rubric is grouped into four kinds of check:
+
+**Trustworthy** — can the reader believe every claim?
+
+- illegible uncertainty;
+- factual claims written from the author's narrative instead of derived from the thing described.
+
+**In the reader's language** — can they understand it without stopping?
 
 - coordinate or internal references that lack plain-English meaning;
+- jargon that is not ready-to-hand for this reader — including other agents' and tools' vocabulary — or new terms introduced without a first-use expansion in the reader's own words.
+
+**The right content** — is this what this reader needs, and nothing else?
+
 - hidden scratch/context assumptions;
 - rejected ideas retained in current accepted outputs;
-- irrelevant agent process-history leakage;
+- process-history leakage that carries no decision, reproducibility, or handoff value;
 - purpose/audience mismatch;
+- proposals or decision requests that lead with mechanics instead of why.
+
+**Shaped for consumption** — does the form serve how they will actually read it?
+
 - buried recommendations or unclear next actions;
-- illegible uncertainty;
-- proposals or decision requests that lead with mechanics instead of why;
 - lists that mix different kinds of information;
 - structure or density that does not match how the reader will consume the artifact;
-- linked or cited artifacts whose required-versus-supplemental role is unstated.
+- linked or cited artifacts whose required-versus-supplemental role is unstated;
+- unreviewed furniture — titles, headings, captions held to a lower bar than the body.
 
 ## Roadmap
 

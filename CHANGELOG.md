@@ -2,16 +2,14 @@
 
 ## 0.2.0 — unreleased
 
-- Rubric grouped into four kinds (Trustworthy · Reader's language · Right content · Shaped for consumption) with numbering preserved — C9 applied to the rubric itself.
-- C4 tightened: "trust" removed from the leakage exception — provenance-as-trust-building is an author instinct, not a reader need.
-- C12 generalized as "ready-to-hand terms only — introduce the rest properly": bare use requires frictionless familiarity; new terminology is welcome when its first instance is expanded in the reader's own terms in a parenthetical — covers other agents' and tools' vocabulary, not only the author's coinages; audit records live on the review surface, never inside the shipped package (review feedback, 2026-07-29).
-- Mission thesis: the two failure families — claude-ese and falsehood — named in the intro; every check serves one (Qing, 2026-07-29).
-- C14: true against the referent — factual claims derived from inspection of the thing described, not the author's narrative (from a live PR-description miss, 2026-07-29).
-- C13 + scope clause: the artifact includes its furniture — titles, headings, captions, metadata — all held to the rubric (from a live PR-title miss, 2026-07-29).
-- Add rubric checks for starting with why, single-kind lists, consumption-matched form, and typed references.
-- Require an artifact-attached audit record and a Phase 3 loop that terminates only on a passing audience review.
-- Tighten the skill through a complete self-pass, including a fresh mid-task-agent simulation.
-- Add C12 (reader's words, not author's coordinates) and a reader-model evidence rule: build audience-reviewer knowledge models from adoption evidence, not author say-so.
+- Name the mission: two failure families — claude-ese (output humans can't comprehend unaided) and falsehood (claims that don't survive comparison with the referent); every check serves one.
+- New rubric checks: C8 starts with why · C9 one list, one kind · C10 form matches consumption · C11 references are typed · C12 ready-to-hand terms only (new terminology welcome when the first instance is expanded in the reader's own terms in a parenthetical) · C13 furniture is part of the artifact (titles, headings, captions under the rubric) · C14 true against the referent (factual claims derived from inspecting the thing described).
+- Reader-model rules: terms the reader hasn't used themselves default to the falsely-assuming cell; audience-reviewer knowledge models are built from evidence of adoption, never author say-so.
+- Tighten C4: process history survives only when load-bearing for the reader's decision, reproducibility, or handoff.
+- Tighten pass semantics: the Phase 3 loop ends only on a passing audience review (a cut loop voids the pass); a residual-risk note cannot convert a fail; written self-review only when sub-agent dispatch is genuinely impossible.
+- Require the audit record attached to the artifact on its review surface, each check with a cited instance — never shipped inside the package.
+- Group the rubric into four kinds (Trustworthy · Reader's language · Right content · Shaped for consumption); row numbers stay stable identifiers in addition order.
+- Restructure the skill document for mid-task execution (typed run-modes, itemized stop contract and pass-invalidating failures).
 
 ## 0.1.0
 
