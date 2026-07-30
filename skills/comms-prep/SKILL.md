@@ -64,6 +64,13 @@ Write a short brief. Every line is answered or explicitly marked *unknown — an
    text the reader will see (title, subject line, headings, captions, labels) and what each must do
    for them; a title describes the artifact's effect for its reader, not the author's task. It is
    all written from this brief and reviewed under the same rubric as the body (C13).
+   **For a multi-section document, the form answer includes a structure plan** — the ordered
+   headings with one line each stating that section's job and its KIND — checked two ways before
+   any prose is written: sibling headings are the same kind of thing (a domain next to a domain,
+   not a domain next to a technique), and the order follows the reader's path through the subject,
+   not the author's path through the sources. Combining sources is where this fails silently: a
+   document assembled in the order the material was encountered reads as content vomit however
+   good each section is.
 
 ## Stop / output contract
 
@@ -95,7 +102,7 @@ a bug in this pack.
 | P3 | Audience & context, including the attention budget. |
 | P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |
 | P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
-| P6 | Form factor chosen deliberately and scaled to the artifact — furniture included (title, headings, captions planned for the reader). |
+| P6 | Form factor chosen deliberately and scaled to the artifact — furniture included (title, headings, captions planned for the reader), and multi-section documents have a written structure plan (each section's job and kind; siblings the same kind; reader-path order). |
 
 ## Eval (all must pass)
 
@@ -113,3 +120,7 @@ a bug in this pack.
   not evidence that the reader can use the term without friction.
 - Answering the knowledge model for a generic reader instead of THIS reader under THIS attention
   budget.
+- Collaging sources in encounter-order — a combined or synthesized document inheriting its
+  section structure from wherever the content happened to come from, instead of from the reader's
+  ontology of the subject. The tell: sibling headings of mixed kinds, and a topic the reader would
+  ask for first buried under the author's first source.

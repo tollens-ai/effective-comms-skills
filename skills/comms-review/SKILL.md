@@ -40,7 +40,7 @@ executes a complete pass.
 | P3 | Audience & context, including the attention budget. |
 | P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |
 | P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
-| P6 | Form factor chosen deliberately and scaled to the artifact — furniture included (title, headings, captions planned for the reader). |
+| P6 | Form factor chosen deliberately and scaled to the artifact — furniture included (title, headings, captions planned for the reader), and multi-section documents have a written structure plan (each section's job and kind; siblings the same kind; reader-path order). |
 
 **The artifact is the whole communication.** Its title, subject line, headings, bylines, captions,
 annotations, link text, and any metadata the reader sees are reviewed text, held to every check
