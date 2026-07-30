@@ -71,6 +71,13 @@ Write a short brief. Every line is answered or explicitly marked *unknown — an
    not the author's path through the sources. Combining sources is where this fails silently: a
    document assembled in the order the material was encountered reads as content vomit however
    good each section is.
+   **For a LONG document (substantially more than a page), the structure plan is itself a
+   reviewable artifact and is reviewed BEFORE drafting** — headings plus topic bullets, tested
+   against the brief's objective the way a software design is reviewed before code: review is
+   testing, and the outline is the cheapest artifact the document will ever be, so a structural
+   bug found there costs a bullet edit instead of a rewrite. Revising an existing long document's
+   structure re-triggers this — edit and re-review the plan first, then the prose; iterating
+   structure in place is the failure mode this step exists to stop.
 
 ## Stop / output contract
 
@@ -102,7 +109,7 @@ a bug in this pack.
 | P3 | Audience & context, including the attention budget. |
 | P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |
 | P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
-| P6 | Form factor chosen deliberately and scaled to the artifact — furniture included (title, headings, captions planned for the reader), and multi-section documents have a written structure plan (each section's job and kind; siblings the same kind; reader-path order). |
+| P6 | Form factor chosen deliberately and scaled to the artifact — furniture included (title, headings, captions planned for the reader); multi-section documents have a written structure plan (each section's job and kind; siblings the same kind; reader-path order); long documents (substantially more than a page) have that plan reviewed against the objective before drafting, and re-reviewed before any structural revision. |
 
 ## Eval (all must pass)
 
