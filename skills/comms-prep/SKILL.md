@@ -65,10 +65,17 @@ Write a short brief. Every line is answered or explicitly marked *unknown — an
    for them; a title describes the artifact's effect for its reader, not the author's task. It is
    all written from this brief and reviewed under the same rubric as the body (C13).
    **For a multi-section document, the form answer includes a structure plan** — the ordered
-   headings with one line each stating that section's job and its KIND — checked two ways before
-   any prose is written: sibling headings are the same kind of thing (a domain next to a domain,
-   not a domain next to a technique), and the order follows the reader's path through the subject,
-   not the author's path through the sources. Combining sources is where this fails silently: a
+   headings with one line each stating that section's job and its KIND — checked before any prose
+   is written: (a) each level's children partition their parent along ONE named axis (by domain,
+   phase, view, work-item type, audience — if the axis can't be named in a phrase, the level is
+   mixed); (b) the axis's missing siblings are generated — if it produces siblings you don't
+   intend to write, the item is on the wrong axis; (c) sibling headings are the same kind, with
+   kinds written on the plan; (d) each fact has one home — duplication pressure is a structure
+   signal, not a writing problem; (e) the reader's likely questions each route to exactly one
+   obvious heading; and (f) the order follows the reader's path through the subject, not the
+   author's path through the sources. Re-run these checks at every level a piece of content
+   moves through when revising — a local move that skips the destination level's test is the
+   named failure. Combining sources is where this fails silently: a
    document assembled in the order the material was encountered reads as content vomit however
    good each section is.
    **For a LONG document (substantially more than a page), the structure plan is itself a
