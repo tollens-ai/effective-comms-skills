@@ -75,7 +75,11 @@ Write a short brief. Every line is answered or explicitly marked *unknown — an
    obvious heading; and (f) the order follows the reader's path through the subject, not the
    author's path through the sources. Re-run these checks at every level a piece of content
    moves through when revising — a local move that skips the destination level's test is the
-   named failure. Combining sources is where this fails silently: a
+   named failure. The structure plan's review is a FRESH-CONTEXT REVIEWER GIVEN THIS RUBRIC:
+   measured on a real defective outline (2026-07-30, three blind arms, same model), unarmed
+   fresh reviewers went 0/2 on a planted axis violation — one praised it — while the
+   rubric-armed reviewer caught it as its top blocking finding and found further real defects;
+   fresh eyes alone are not a structure test, and the checklist is what carries the pass. Combining sources is where this fails silently: a
    document assembled in the order the material was encountered reads as content vomit however
    good each section is.
    **For a LONG document (substantially more than a page), the structure plan is itself a
