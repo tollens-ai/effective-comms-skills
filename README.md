@@ -2,7 +2,7 @@
 
 Claude Code skills for making agent-written communication land with its reader.
 
-The pack runs a **prepare → write → review** pass over a report, update, strategy doc, review finding, handoff, or recommendation — as **two gates, each its own skill**: `/comms-prep` produces the communications brief at authoring time, BEFORE drafting; `/comms-review` gates the draft before delivery, and its entry rubric sends you back to `/comms-prep` if the brief is missing. `/effective-comms` remains as a router that picks the right gate. It targets the two failure families that dominate agent communications: **claude-ese** — output in the agent's own dialect that a human can't comprehend unaided — and **falsehood** — claims that don't survive comparison with the thing they describe. A communication passes only when its reader can understand it without help and trust every claim in it.
+The pack runs a **prepare → write → review** pass over a report, update, strategy doc, review finding, handoff, or recommendation — as **two gates, each its own skill**: `/comms-prep` produces the communications brief at authoring time, BEFORE drafting; `/comms-review` gates the draft before delivery, and its entry rubric sends you back to `/comms-prep` if the brief is missing. `/effective-comms` remains as a router that chooses the next communication action, including when no gate is due. It targets the two failure families that dominate agent communications: **claude-ese** — output in the agent's own dialect that a human can't comprehend unaided — and **falsehood** — claims that don't survive comparison with the thing they describe. A communication passes only when its reader can understand it without help and trust every claim in it.
 
 > **Status: early alpha.** Expect rough edges. Please report confusing behavior or missed communication failures via [GitHub issues](#feedback).
 
@@ -27,7 +27,7 @@ This is a public Claude Code plugin. Install with:
 /plugin install effective-comms@tollens-effective-comms
 ```
 
-Then generally run `/comms-prep` at the authoring boundary, `/comms-review` before delivering — or `/effective-comms` to be routed to the right gate. Reuse an adequate brief while the conversation and communication objective remain the same.
+Then generally run `/comms-prep` at the authoring boundary, `/comms-review` before delivering — or `/effective-comms` to choose whether preparation, review, or no gate is due. Reuse an adequate brief while the conversation and communication objective remain the same.
 
 If a bare skill name collides with another plugin, use the plugin's namespaced form in Claude Code.
 

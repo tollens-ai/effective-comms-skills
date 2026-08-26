@@ -1,18 +1,30 @@
 ---
 name: comms-prep
-description: Create or materially refresh a communications brief at the authoring boundary, immediately before drafting substantive communication. Generally reuse an adequate brief while the conversation and objective remain the same. Use retroactively when a draft exists without an adequate brief.
+description: Generally create or materially refresh a communications brief immediately before drafting human-facing findings, explanations, recommendations, decision requests, or text intended for publication or reuse. Reuse an adequate brief while the conversation and objective remain the same. Use retroactively when a draft exists without an adequate brief.
 ---
 
 # Comms Prep — prepare before drafting (Phase 1)
 
-Create a written communications brief at authoring time for substantive communication. If the
-communication is a one-line acknowledgement or yes/no answer with no audience to model, write it
-directly. Otherwise write the draft from the brief, keep them together, and pass both to
+Generally create a written communications brief at authoring time when the draft will report
+findings, explain or recommend a decision, request action, or be published or reused. Outside those
+cases, create one only when objective, audience and context, knowledge, evidence and uncertainty,
+or form factor needs a deliberate choice.
+Write the draft from the resulting or reused brief, keep them together, and pass both to
 `/comms-review`.
 
-## 1. Choose the run mode
+Apply the brief without assuming a specific product, project, company, or tool.
 
-**Interactivity.** Choose one mode before starting:
+## 1. Decide whether to reuse or prepare
+
+**Adequacy.** A brief is adequate when it is inspectable and its answers for objective, audience
+and context, knowledge model, evidence and uncertainty, and form factor are accurate and complete
+for the communication.
+
+**Reuse.** The brief belongs to the conversation's communication objective, not to each reply.
+While the conversation and objective remain the same, generally reuse an adequate existing brief.
+Refresh the affected answers when it is no longer adequate.
+
+If the brief cannot be reused, choose one interactivity mode before creating or refreshing it:
 
 - **Live** — you can get a reply within this turn from someone who holds the answer. Ask them to
   resolve any brief gap you cannot answer.
@@ -30,20 +42,12 @@ never fabricated.
 **Scale.** Scale the brief to the artifact. For a small artifact it may be three lines answered in
 seconds: who reads this and when · what must they understand · what would mislead them.
 
-**Adequacy.** A brief is adequate when it is inspectable and its answers for objective, audience
-and context, knowledge model, evidence and uncertainty, and form factor are accurate and complete
-for the communication.
-
 **Authoring boundary.** Generally run this skill once you can state the intended findings, results,
 decision, or recommendation and the evidence or uncertainty supporting it, immediately before
 drafting the substantive communication. When the requested work is itself writing, that boundary
 is the start of drafting. When underlying work must happen first, stay with that work until those
 answers exist; the fact that a report will eventually follow does not move the boundary to task
 start.
-
-**Reuse.** The brief belongs to the conversation's communication objective, not to each reply.
-While the conversation and objective remain the same, generally reuse an adequate existing brief.
-Refresh the affected answers when it is no longer adequate.
 
 **Retroactive use (the degraded path).** If a draft already exists with no brief, prepare the brief
 from the draft's intended purpose rather than its text. Name the degradation in the audit record,
@@ -84,6 +88,12 @@ Check P1–P6 below, then the additional Eval requirements. The brief is ready t
 both sets pass. The P1–P6 table is also `/comms-review`'s entry rubric; if the two tables differ,
 stop and report a pack defect rather than choosing one.
 
+When any brief field remains unresolved, produce a **missing-info / assumptions note**: ask if live;
+otherwise flag each gap and how it resolves. If drafting past the gaps would require inventing or
+overstating information needed for the reader's objective, the note is the only draft and still
+goes through `/comms-review`. Otherwise carry the parked gaps into the partial draft and into
+review.
+
 | # | The brief satisfies |
 |---|---|
 | P1 | It exists as inspectable written text kept with the draft — a file, draft body, or clearly delimited section in the current response; not a thought or memory. Durable attachment is a whole-pass completion condition, not this entry condition. |
@@ -104,12 +114,7 @@ stop and report a pack defect rather than choosing one.
       overall, the output is a missing-info / assumptions note, not a polished guess.
 - [ ] Retroactive runs name the degradation in the audit record.
 - [ ] Creation or material refresh was narrated; reuse required no repeated ceremony.
+- [ ] The brief introduced no product, project, company, or tool assumption absent from the task.
 
 Fix every failed check before handoff. The brief is an artifact, not a thought: keep it with the
 draft and hand both to `/comms-review`.
-
-When any brief field remains unresolved, produce a **missing-info / assumptions note**: ask if live;
-otherwise flag each gap and how it resolves. If drafting past the gaps would require inventing or
-overstating information needed for the reader's objective, the note is the only draft and still
-goes through `/comms-review`. Otherwise carry the parked gaps into the partial draft and into
-review.

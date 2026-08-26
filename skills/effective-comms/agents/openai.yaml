@@ -1,4 +1,4 @@
 interface:
   display_name: "Effective Comms"
-  short_description: "Route communication to the right gate"
-  default_prompt: "Use $effective-comms to route this communication to preparation or review based on its current state."
+  short_description: "Choose the next communication action"
+  default_prompt: "Use $effective-comms to decide whether this communication needs preparation, review, or no gate yet, then perform that action."

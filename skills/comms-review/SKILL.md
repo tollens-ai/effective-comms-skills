@@ -10,12 +10,15 @@ Review the draft for trustworthiness, reader language, content fit, and consumpt
 **Scope.** Review judgment and consumption form, not prose polish or house style. C10 covers form
 and layout because they affect the reader's parsing cost; ornament is outside scope.
 
+Apply the review without assuming a specific product, project, company, or tool.
+
+When the request is to choose the next communication action rather than review an existing draft,
+route through `/effective-comms`. This skill is terminal on every route that invokes it.
+
 **Narrate.** Name Phase 1 brief verification, Phase 2 rubric review, and Phase 3 audience review up
 front, then say which phase is running.
 
 ## Phase 1 — Pick up the prep, or do it now
-
-Locate the written brief `/comms-prep` produced and kept with the draft.
 
 | # | The brief satisfies |
 |---|---|
@@ -26,15 +29,18 @@ Locate the written brief `/comms-prep` produced and kept with the draft.
 | P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
 | P6 | Form factor chosen deliberately and scaled to the artifact — furniture included (title, headings, captions planned for the reader). |
 
-Verify every row. If the two skills' tables differ, stop and report a pack defect rather than
-choosing one. If the brief is missing or any row is unmet, run `/comms-prep` retroactively on the
-draft's intended purpose, name the degraded path in the audit record, and re-verify. Do not proceed
-to Phase 2 with an unmet row.
+Execute these stages in order:
 
-If retroactive preparation leaves a gap that would force the draft to invent or overstate
-information needed for the reader's objective, use the missing-info / assumptions note as the
-delivered draft. Otherwise carry each parked gap into the responsible partial draft. Continue with
-Phase 2 and Phase 3 on the selected draft.
+1. **Locate** the written brief `/comms-prep` produced and kept with the draft.
+2. **Compare and verify** every P1–P6 row. If the two skills' tables differ, stop and report a pack
+   defect rather than choosing one.
+3. **Prepare and re-verify when needed.** If the brief is missing or any row is unmet, run
+   `/comms-prep` retroactively on the draft's intended purpose, name the degraded path in the audit
+   record, and re-verify. Do not proceed to Phase 2 with an unmet row.
+4. **Select the draft.** If retroactive preparation leaves a gap that would force invention or
+   overstatement needed for the reader's objective, use the missing-info / assumptions note as the
+   delivered draft. Otherwise carry each parked gap into the responsible partial draft. Continue
+   with Phase 2 and Phase 3 on the selected draft.
 
 ## Phase 2 — Review against the rubric
 
@@ -44,6 +50,11 @@ unmet check within the author's authority. A check may be a residual-risk candid
 identified constraint or unavailable fact prevents resolution and the draft discloses the
 resulting limit. Re-check after revision. The candidate becomes residual risk only if the Phase 3
 reviewer passes with that disclosed limit; otherwise it remains an unmet check.
+
+Before applying a check, handle a **check mismatch**: if it has no applicable subject and supplies
+no N/A path, or satisfying it would contradict the verified objective or evidence, stop and surface
+the mismatch with a proposal. Content and fact mismatches go to the requestor; rubric mismatches go
+to the standard owner.
 
 **Trustworthy** — *can the reader believe every claim?*
 
@@ -78,7 +89,7 @@ reviewer passes with that disclosed limit; otherwise it remains an unmet check.
 | C9 | **One list, one kind.** Every list, queue, or section contains a single kind of thing; mixed kinds are split into typed groups (or each item is explicitly typed). A mixed list is an ontology failure surfacing as a comms failure. | A giant list mixing decisions, FYIs, defects, and ideas — the reader must re-sort by kind before they can act on anything. |
 | C10 | **Form matches consumption.** Structure, layout, and density are chosen for how the reader will actually consume the artifact: scannable headings, typed lists or tables for parallel/enumerable content, one idea per block, summary before detail. Structure that exists in the content appears on the page. | A wall-of-text paragraph encoding what is really a list or table; a long dump where a layered summary-plus-reference would serve; separator-glyph run-ons standing in for layout. |
 | C11 | **References are typed.** Every linked or cited artifact is one of two things, and the text says which: (a) **required reading** — declared as such (it is an extra action being asked of the reader, so it is priced) and reachable as a working clickable link on the surface where the reader will actually read; or (b) **supplemental reference** — in which case the artifact stands alone without it and nothing downstream assumes it was read. | A load-bearing "see X" whose argument collapses unless X is read, never declared required; a required doc cited as a bare file path the reader cannot click on their surface; text that silently assumes a "reference" was actually read. |
-| C13 | **Visible framing (the artifact's “furniture”) is part of the artifact.** Titles, subject lines, headings, captions, labels, and link text pass the same rubric as the body, and a title describes the artifact's effect for its reader — not the author's task. | A precise body under a vague or task-shaped title; headings and captions nobody reviewed; a PR titled after what the agent did rather than what merging changes. |
+| C13 | **Visible framing (the artifact's “furniture”) is part of the artifact.** Titles, subject lines, headings, bylines, captions, annotations, labels, link text, and any other reader-visible metadata pass the same rubric as the body. A title describes the artifact's effect for its reader — not the author's task. | A precise body under a vague or task-shaped title; headings, captions, or metadata nobody reviewed; a PR titled after what the agent did rather than what merging changes. |
 
 ## Phase 3 — Audience review (mandatory; loop until pass)
 
@@ -105,8 +116,7 @@ Each round:
    Blocking findings: <none, or a concise list>
    ```
 
-3. **On FAIL:** fold the findings through Phase 2, revise, and run a NEW round.
-4. **Escalate instead of looping** when a finding recurs in kind across rounds (same rubric
+3. **On FAIL, escalate instead of looping** when a finding recurs in kind across rounds (same rubric
    row, or same underlying decision), or when resolving it means deciding something the
    author does not own. **Who decides:** content, scope, and facts → the artifact's
    requestor/reader; the rubric or this process itself → the standard's owner. Bring a
@@ -114,10 +124,11 @@ Each round:
    reply channel (Addressed, no reply channel — or Non-interactive), the escalation becomes the stop:
    exit **BLOCKED / PARTIAL** with the proposal written and addressed to the named owner —
    do not keep looping and do not decide it yourself.
-5. **Non-convergence without recurrence** — three failed rounds, each on a NEW kind of
+4. **On FAIL, test non-convergence without recurrence:** three failed rounds, each on a NEW kind of
    finding — indicts the brief, not the draft: rerun `/comms-prep` folding everything found
    so far, then resume the loop. If the refreshed cycle again reaches three failed
    rounds, exit BLOCKED / PARTIAL with the full round history in the record.
+5. **On any other FAIL:** fold the findings through Phase 2, revise, and run a NEW round.
 6. **On PASS:** finalize and attach below.
 
 ## After Phase 3 — finalize and attach
@@ -151,19 +162,28 @@ name the role and park the identity gap.
 Use this checklist after finalization. Every item must hold over the brief, audit record, and
 delivered output.
 
-- [ ] Entry rubric P1–P6 checked before Phase 2; any retroactive `/comms-prep` run is named in the
+- [ ] Entry rubric P1–P6 was compared across both skills and satisfied before Phase 2; any table
+  divergence was reported as a pack defect, and any retroactive `/comms-prep` run is named in the
   audit record.
 - [ ] The phases were named up front and narrated as they ran.
+- [ ] The review introduced no product, project, company, or tool assumption absent from the task.
 - [ ] Every rubric row C1–C15 marked pass / revised / residual-risk with a cited instance. **Fail**
   on any unmarked row.
+- [ ] Every Phase 2 revision was re-checked against its affected rows before Phase 3 or finalization.
 - [ ] Every residual-risk row names the constraint or unavailable fact and the disclosed limit;
   the final reviewer passed with that limit.
+- [ ] The selected delivered draft, including any terminal missing-info / assumptions note or
+  responsible partial draft, completed Phase 2 and Phase 3.
 - [ ] Phase 3 ran in a sanctioned form each round; dispatch-capable runs used a new sub-agent each
   round, and the final round is a PASS from the reviewer, not the author. **Fail** on a cut loop.
 - [ ] Each reviewer received only the target audience, consumption context, evidenced prior
   knowledge, objective, and bare draft.
 - [ ] Every failed round was followed by Phase 2 revision and a new review; any finding recurring
   in kind triggered the required escalation.
+- [ ] Every check mismatch was either resolved by its N/A path or surfaced to the named decision
+  owner with a proposal.
+- [ ] Every escalation carried a concrete proposal, and its ruling was applied before a fresh
+  review round.
 - [ ] If three consecutive failed rounds introduced new finding kinds, `/comms-prep` was refreshed;
   if the refreshed cycle did the same, the result is BLOCKED / PARTIAL with the full round history.
 - [ ] The audit is typed as required for its reviewer and supplemental for the primary reader, and
@@ -176,3 +196,8 @@ delivered output.
   change to visible material.
 - [ ] Every factual claim that has a referent was checked against it (C14). **Fail** on any claim
   the reader could falsify by opening the referent.
+
+## Maintainer reference
+
+To extend the standard, append a new failure mode and rubric row. Change an existing row only with
+the standard owner's decision. Do not redesign the standard through an extension.
