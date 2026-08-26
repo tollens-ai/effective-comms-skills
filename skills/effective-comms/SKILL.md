@@ -10,10 +10,8 @@ Identify the communication's current state and perform the corresponding action 
 ## Procedure
 
 An **adequate brief** is inspectable and has accurate, complete answers for objective, audience and
-context, knowledge model, evidence and uncertainty, and form factor. Enter the pass when at least
-one answer is unknown or would change, an adequate brief is available to reuse, or a draft exists.
-Otherwise continue without a gate. Once in the pass, use the table to select and perform the
-action; merely naming a route does not complete it.
+context, knowledge model, evidence and uncertainty, and form factor. Use the table to select and
+perform the action; merely naming a route does not complete it.
 
 For every route that invokes a communication gate, `/comms-review` is terminal. Judge completion
 from the written brief and audit record.
@@ -21,9 +19,9 @@ from the written brief and audit record.
 | State | Do |
 |---|---|
 | Underlying work is still producing the substance to communicate | Stay with that work; no comms gate is due yet. |
-| No draft or adequate brief exists, and no briefing field needs deliberate choice | Write directly; no comms gate is due. |
+| Ready to draft a one-line acknowledgement or yes/no answer with no audience to model | Write it directly; no comms gate is due. |
 | Ready to draft, with an adequate brief for the same conversation and objective | Reuse the brief, write the draft from it, then run `/comms-review`. |
-| Ready to draft, with no adequate brief and at least one briefing answer unknown or changed | Run `/comms-prep`, write the draft from the brief, then run `/comms-review`. |
+| Ready to draft any other communication, with no adequate brief | Run `/comms-prep`, write the draft from the brief, then run `/comms-review`. |
 | Draft exists, with no adequate brief | Run `/comms-prep` retroactively on the draft's intended purpose — the degraded path, named in the audit record — then `/comms-review`. |
 | Draft and adequate brief both exist | Run `/comms-review` (it verifies the prep, then reviews). |
 
