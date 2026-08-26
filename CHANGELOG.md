@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased
+
+- Move `/comms-prep` to the authoring boundary: generally prepare once the substance is ready to
+  present and immediately before drafting, rather than when an investigation or implementation
+  merely implies a later report.
+- Reuse an adequate communications brief across replies in the same conversation and objective;
+  refresh it when material briefing conditions change instead of treating every response as a new
+  prep pass.
+- Apply the QSS T01–T10 agent-writing quality profile across all three skills: order decisions at
+  their point of use, remove duplicated and rhetorical guidance, make branch conditions observable,
+  and close each operative rule in the completion checks.
+- Add Codex interface metadata for all three skills.
+
 ## 0.2.0 — 2026-07-29
 
 - Degradations disclosed where the reader looks: written self-review is named the DEGRADED review form; the audit record opens with the review mode (independent ×N rounds vs degraded self-review + reason) so a weaker pass never masquerades as the skill failing.

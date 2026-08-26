@@ -1,26 +1,16 @@
 ---
 name: comms-prep
-description: Run the moment you are about to write ANYTHING for people — reports, documents, explainers, commit messages, PR titles and descriptions, help text, error messages, READMEs, page copy, announcements. Produces the communications brief (objective, audience, knowledge model, evidence, form factor) the draft is written from; /comms-review requires it as input. The brief scales to the artifact — three lines for a commit message. Running it after a draft exists is the degraded path.
-when_to_use: Any time you are about to write something a person will read — a report, document, explainer, handoff, review finding, recommendation, decision note, commit message, PR title or description, help text, error message, README, page copy — or a report trigger fired (a stakeholder ask, a scheduled digest, a run-out-of-work report). Also retroactively when a draft exists with no brief. Trigger phrases — "write me a report/doc/explainer", "prep this comms", "who is this for?". ("effective comms" routes via /effective-comms.)
+description: Create or materially refresh a communications brief at the authoring boundary, immediately before drafting substantive communication. Generally reuse an adequate brief while the conversation and objective remain the same. Use retroactively when a draft exists without an adequate brief.
 ---
 
 # Comms Prep — prepare before drafting (Phase 1)
 
-A communication is shaped by decisions made before its first sentence: who it is for, what they
-need, what counts as it working. This skill is that preparation, run as its own gate at authoring
-time — the draft is then WRITTEN FROM the brief, and the brief travels with the draft to
-`/comms-review`, where it becomes the reviewer's briefing. Skipping prep and "fixing it in review"
-compresses these decisions into the worst moment: the reader saying "I don't understand" is prep
-arriving late. Product-neutral: assume no specific project, company, or tool.
+Create a written communications brief at authoring time for substantive communication. If the
+communication is a one-line acknowledgement or yes/no answer with no audience to model, write it
+directly. Otherwise write the draft from the brief, keep them together, and pass both to
+`/comms-review`.
 
-**Be liberal: any time you are writing something for people, think comms-prep.** Reports, updates,
-strategy docs, review findings, audits, handoffs, worker reports, recommendations, decision notes —
-and equally the small furniture-sized artifacts: commit messages, PR titles and descriptions, help
-text, error messages, READMEs, page copy. **The brief scales to the artifact**: for a commit message
-it is three lines answered in seconds (who reads this and when · what must they understand · what
-would mislead them). Cost is never the reason to skip — prep is far cheaper than review, and cheaper
-still than a reader's confusion. Skip only for genuinely trivial messages (a one-line ack, a yes/no)
-with no audience to model. When in doubt, run it.
+## 1. Choose the run mode
 
 **Interactivity.** Choose one mode before starting:
 
@@ -30,16 +20,39 @@ with no audience to model. When in doubt, run it.
   you this turn (the ordinary shape of dispatched writing work). Brief against the REAL audience;
   treat every judgment call as Non-interactive does — park, never guess-and-proceed silently.
 - **Non-interactive** — a background or scheduled run, or mid-task with no one to ask. Park every
-  unresolved gap in a missing-info / assumptions note, place it where **Evidence & uncertainty**
-  (item 4) says uncertainty belongs for this form, and finalize the rest.
+  unresolved gap in a missing-info / assumptions note, choose where that uncertainty belongs in
+  the form, and finalize the rest.
 
 A session can be Live and still hold gaps nobody present can resolve (jargon whose meaning only an
 absent author knows): those gaps are handled as Addressed-no-reply-channel — parked and disclosed,
 never fabricated.
 
-**Narrate.** Say that you are running comms-prep. Do not run silently.
+**Scale.** Scale the brief to the artifact. For a small artifact it may be three lines answered in
+seconds: who reads this and when · what must they understand · what would mislead them.
 
-## The communications brief (Phase 1 of the pass)
+**Adequacy.** A brief is adequate when it is inspectable and its answers for objective, audience
+and context, knowledge model, evidence and uncertainty, and form factor are accurate and complete
+for the communication.
+
+**Authoring boundary.** Generally run this skill once you can state the intended findings, results,
+decision, or recommendation and the evidence or uncertainty supporting it, immediately before
+drafting the substantive communication. When the requested work is itself writing, that boundary
+is the start of drafting. When underlying work must happen first, stay with that work until those
+answers exist; the fact that a report will eventually follow does not move the boundary to task
+start.
+
+**Reuse.** The brief belongs to the conversation's communication objective, not to each reply.
+While the conversation and objective remain the same, generally reuse an adequate existing brief.
+Refresh the affected answers when it is no longer adequate.
+
+**Retroactive use (the degraded path).** If a draft already exists with no brief, prepare the brief
+from the draft's intended purpose rather than its text. Name the degradation in the audit record,
+then hand both to `/comms-review`.
+
+**Narrate creation or refresh.** Say when you create or materially refresh the brief. Reusing an
+adequate brief needs no repeated ceremony.
+
+## 2. Write the communications brief
 
 Write a short brief. Every line is answered or explicitly marked *unknown — and how it resolves*
 (assume X / ask the user / flag as a gap). An unanswered line is a prep failure.
@@ -65,28 +78,11 @@ Write a short brief. Every line is answered or explicitly marked *unknown — an
    for them; a title describes the artifact's effect for its reader, not the author's task. It is
    all written from this brief and reviewed under the same rubric as the body (C13).
 
-## Stop / output contract
+## 3. Check and hand off
 
-The brief is an ARTIFACT, not a thought: written down, kept with the draft, and handed to
-`/comms-review` — its knowledge model (especially the falsely-assuming cell and the list of terms
-the reader has used themselves, which is the evidence of adoption) is what the audience reviewer's
-briefing is built from.
-
-If objective, audience, knowledge model, evidence, or form factor cannot be adequately answered, do
-not proceed to a polished guess — produce a **missing-info / assumptions note** (ask if live; else
-flag the gaps). If prep cannot support any responsible draft, that note is the only responsible
-draft: “terminal” names its output type, not a review waiver, so hand it to `/comms-review`. If a
-partial draft is still responsible, carry the parked gaps into it and into review.
-
-**Retroactive use (the degraded path).** If a draft already exists with no brief, run this skill
-FIRST, on the draft's intended purpose rather than its text — then hand both to `/comms-review`.
-Name the degradation in the audit record.
-
-## Completion rubric — the brief is done when all six hold (P1–P6)
-
-This table is the skill's exit condition, and BY CONSTRUCTION it is also `/comms-review`'s entry
-rubric — the two are the same rubric stated in both skills; if they ever diverge, that divergence is
-a bug in this pack.
+Check P1–P6 below, then the additional Eval requirements. The brief is ready to hand off only when
+both sets pass. The P1–P6 table is also `/comms-review`'s entry rubric; if the two tables differ,
+stop and report a pack defect rather than choosing one.
 
 | # | The brief satisfies |
 |---|---|
@@ -100,16 +96,20 @@ a bug in this pack.
 ## Eval (all must pass)
 
 - [ ] P1–P6 all hold (the completion rubric above). **Fail** on any silently unmet row.
+- [ ] One interactivity mode was chosen before preparation, and unresolved gaps were handled by
+      that mode's rule.
+- [ ] A reused brief still fits the current objective and material briefing conditions; refresh it
+      when it does not.
 - [ ] Unanswerable items are explicitly parked with how they resolve — and if prep is inadequate
-  overall, the output is a missing-info / assumptions note, not a polished guess.
-- [ ] Retroactive runs name the degradation.
+      overall, the output is a missing-info / assumptions note, not a polished guess.
+- [ ] Retroactive runs name the degradation in the audit record.
+- [ ] Creation or material refresh was narrated; reuse required no repeated ceremony.
 
-## Pitfalls
+Fix every failed check before handoff. The brief is an artifact, not a thought: keep it with the
+draft and hand both to `/comms-review`.
 
-- Running after the draft exists and not naming it — the degraded path hidden as the normal one.
-- The brief as a mental exercise instead of an artifact — `/comms-review`'s reviewer briefing is
-  BUILT from it; an unwritten brief rebuilds the author's blind spots downstream.
-- Marking the author's own coinages (or another agent's jargon) as "already known" — mentioning is
-  not evidence that the reader can use the term without friction.
-- Answering the knowledge model for a generic reader instead of THIS reader under THIS attention
-  budget.
+When any brief field remains unresolved, produce a **missing-info / assumptions note**: ask if live;
+otherwise flag each gap and how it resolves. If drafting past the gaps would require inventing or
+overstating information needed for the reader's objective, the note is the only draft and still
+goes through `/comms-review`. Otherwise carry the parked gaps into the partial draft and into
+review.

@@ -27,7 +27,7 @@ This is a public Claude Code plugin. Install with:
 /plugin install effective-comms@tollens-effective-comms
 ```
 
-Then run `/comms-prep` before writing, `/comms-review` before delivering — or `/effective-comms` to be routed to the right gate.
+Then generally run `/comms-prep` at the authoring boundary, `/comms-review` before delivering — or `/effective-comms` to be routed to the right gate. Reuse an adequate brief while the conversation and communication objective remain the same.
 
 If a bare skill name collides with another plugin, use the plugin's namespaced form in Claude Code.
 
@@ -35,7 +35,7 @@ If a bare skill name collides with another plugin, use the plugin's namespaced f
 
 Two gates, three phases:
 
-1. **`/comms-prep` (Phase 1)** — the communications brief: objective, audience, audience knowledge model, evidence/uncertainty, form factor. Runs the moment you know the communication will exist; the draft is written from it.
+1. **`/comms-prep` (Phase 1)** — the communications brief: objective, audience, audience knowledge model, evidence/uncertainty, form factor. Generally runs once findings, evidence, results, decisions, or recommendations are ready to present, immediately before drafting their substantive communication. If the work itself is writing, that boundary is the start of drafting. An adequate brief can be reused while the conversation and objective remain the same, and refreshed when material briefing conditions change.
 2. **`/comms-review`** — its Phase 1 locates the brief and verifies it against the same rubric (missing → run `/comms-prep` retroactively, the named degraded path); then the 15-check rubric; then an audience-perspective review by a new reviewer each round, given only the target audience and consumption context, evidenced prior knowledge, objective, and the bare draft — revised and re-run until the reviewer passes, with a defined escalation path when a finding belongs to a decision owner rather than another round.
 
 The pass ends with one of:
