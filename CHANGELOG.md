@@ -8,6 +8,15 @@
 - Reuse an adequate communications brief across replies in the same conversation and objective;
   refresh it when material briefing conditions change instead of treating every response as a new
   prep pass.
+- Plan multi-section documents as ordered headings with named section jobs and kinds; for long
+  documents, review that structure against the brief before drafting and before structural
+  revision.
+- Treat uncertainty and unresolved issues as a form-and-structure decision: give them a deliberate
+  reader-visible home instead of redoing evidence assessment during communications preparation.
+- Frame the review around three dominant content failures: missing the audience or objective,
+  Claude-ese/Neuralese, and falsehood.
+- Restore the explanatory framing that tells an agent why preparation, source checking, and a fresh
+  audience perspective matter.
 - Make all three skills more sequential and checkable: decisions appear at their point of use,
   branch conditions are observable, and each operative rule closes in the completion checks.
 - Preserve product-neutral execution, all reader-visible metadata, and escalation when a review

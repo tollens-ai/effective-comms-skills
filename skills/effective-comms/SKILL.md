@@ -1,20 +1,25 @@
 ---
 name: effective-comms
-description: Generally route communication work to /comms-prep or /comms-review once substantive content is ready to draft or a draft exists. Reuse an adequate brief for the same conversation and objective.
+description: >-
+  Catcher for the "effective comms" skill trigger — route work to /comms-prep or /comms-review
+  depending on whether we are preparing for or reviewing the communication.
 ---
 
 # Effective Comms — choose the right communication gate
 
-Identify the communication's current state and perform the corresponding action below.
+This skill helps you route to the correct part of the Effective Comms skill pack.
 
 ## Procedure
 
-An **adequate brief** is inspectable and has accurate, complete answers for objective, audience and
-context, knowledge model, evidence and uncertainty, and form factor. Use the table to select and
-perform the action; merely naming a route does not complete it.
+Answer the following questions, then select AND PERFORM the action from the table below.
 
-For every route that invokes a communication gate, `/comms-review` is terminal. Judge completion
-from the written brief and audit record.
+1. Are you ready to start drafting the communication, or do you need to do more underlying work?
+2. Is the communication more than a one-line acknowledgement or direct answer (for example,
+   yes/no)?
+3. Is there already an adequate brief for the communication? An adequate brief is inspectable and
+   has accurate, complete answers for objective, audience and context, knowledge model, and form
+   factor.
+4. Have you already drafted the communication, or are you reviewing an existing communication?
 
 | State | Do |
 |---|---|
@@ -26,3 +31,8 @@ from the written brief and audit record.
 | Draft and adequate brief both exist | Run `/comms-review` (it verifies the prep, then reviews). |
 
 The gates carry all rules, rubrics, eval checks, and stop contracts. This router adds none.
+
+**No stack, no return.** Skill invocations are context injections, not a call stack: this router
+holds no state and never regains control after sending you to a gate. The pass's completion rubric
+therefore lives in `/comms-review`, terminal on every routed path, and is judged over the written
+brief and audit record that survive context loss rather than remembered router state.
