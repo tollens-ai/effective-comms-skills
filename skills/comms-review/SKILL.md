@@ -152,9 +152,10 @@ The author cannot feel the absence of context they hold; a fresh reader can. Eac
    Blocking findings: <none, or a concise list>
    ```
 
-3. **On FAIL, detect loops and escalate** when a finding recurs in kind across rounds (same rubric
-   row, or same underlying decision), or when resolving it means deciding something the
-   author does not own. **Who decides:** content, scope, and facts → the artifact's
+3. **On FAIL, detect loops and escalate** when a finding recurs in kind across multiple rounds
+   (same rubric row, or same underlying decision) and fails to be resolved, or when resolving it
+   means deciding something the author does not own. **Who decides:** content, scope, and facts →
+   the artifact's
    requestor/reader; the rubric or this process itself → the standard's owner. Bring a
    concrete proposal; fold the ruling; resume with a fresh round. If the run's mode has no
    reply channel (Addressed, no reply channel — or Non-interactive), the escalation becomes the
@@ -173,8 +174,9 @@ The author cannot feel the absence of context they hold; a fresh reader can. Eac
   round, and the final round is a PASS from the reviewer, not the author. **Fail** on a cut loop.
 - [ ] Each reviewer received only the target audience, consumption context, evidenced prior
   knowledge, objective, and bare draft.
-- [ ] Every failed round was followed by Phase 2 revision and a new review; any finding recurring
-  in kind triggered the required escalation.
+- [ ] Every failed round was followed by Phase 2 revision and a new review; any finding that
+  recurred in kind across multiple rounds and remained unresolved triggered the required
+  escalation.
 - [ ] Every escalation carried a concrete proposal, and its ruling was applied before a fresh
   review round.
 - [ ] If three consecutive failed rounds introduced new finding kinds, `/comms-prep` was refreshed;

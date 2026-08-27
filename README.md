@@ -84,10 +84,10 @@ The review proceeds through three separately gated phases:
    know, can achieve the communication's objective. Use a fresh independent reviewer when one is
    available; a written self-review is the named degraded fallback.
 
-Failed audience reviews return to the rubric and then run again. Repeated findings or decisions the
-author does not own are escalated with a concrete proposal instead of being polished in a loop.
-After a pass, finalization has its own gate for attaching the audit record and reviewer-authored
-seal.
+Failed audience reviews return to the rubric and then run again. Findings that remain unresolved
+across multiple rounds, or decisions the author does not own, are escalated with a concrete
+proposal instead of being polished in a loop. After a pass, finalization has its own gate for
+attaching the audit record and reviewer-authored seal.
 
 ## Core review checks
 
