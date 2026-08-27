@@ -26,10 +26,6 @@ This skill is aimed at fixing defects in the *contents* of communications. It is
 focused on changing or improving style. It also does not override any house style conventions — if
 they exist, you must apply both.
 
-**Orientation narration.** Orient yourself and your user: name the phases (Phase 1 brief
-verification, Phase 2 rubric review, and Phase 3 audience review) up front, then say which phase is
-running.
-
 ## Phase 1 — Pick up the prep, or do it now
 
 The review is built on the communications brief. Authoring-time preparation is `/comms-prep`'s
@@ -67,7 +63,6 @@ Execute these stages in order:
 - [ ] Entry rubric P1–P5 was compared across both skills and satisfied; any table divergence was
   reported as a pack defect.
 - [ ] Any retroactive `/comms-prep` run is named in the audit record.
-- [ ] The phases were named up front, and Phase 1 was narrated as it ran.
 - [ ] A draft was selected for review, with every parked gap carried into either the missing-info /
   assumptions note or the responsible partial draft.
 
@@ -131,7 +126,6 @@ to the standard owner.
   owner with a proposal.
 - [ ] Every factual claim that has a referent was checked against it (C14). **Fail** on any claim
   the reader could falsify by opening the referent.
-- [ ] Phase 2 was narrated as it ran.
 
 ## Phase 3 — Audience review (mandatory; loop until pass)
 
@@ -188,7 +182,6 @@ The author cannot feel the absence of context they hold; a fresh reader can. Eac
 - [ ] Every residual-risk candidate from Phase 2 was passed by the final reviewer with its disclosed
   limit; otherwise it remains an unmet check.
 - [ ] The selected draft completed both Phase 2 and Phase 3.
-- [ ] Phase 3 was narrated as it ran.
 
 ## After Phase 3 — finalize and attach
 

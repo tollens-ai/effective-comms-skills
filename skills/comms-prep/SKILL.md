@@ -58,9 +58,6 @@ eventually follow does not move the boundary to task start.
 from the draft's intended purpose rather than its text. Name the degradation in the audit record,
 then hand both to `/comms-review`.
 
-**Narrate creation or refresh.** Say when you create or materially refresh the brief. Reusing an
-adequate brief needs no repeated ceremony.
-
 ## 2. Write the communications brief
 
 Write a short brief. Go step by step and answer every line. Each line is answered or explicitly
@@ -164,7 +161,6 @@ certainty or confidence level.
 - [ ] Unanswerable items are explicitly parked with how they resolve — and if prep is inadequate
       overall, the output is a missing-info / assumptions note, not a polished guess.
 - [ ] Retroactive runs name the degradation in the audit record.
-- [ ] Creation or material refresh was narrated; reuse required no repeated ceremony.
 - [ ] The brief introduced no product, project, company, or tool assumption absent from the task.
 
 Fix every failed check before handoff. The brief is an artifact, not a thought: keep it with the

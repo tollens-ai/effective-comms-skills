@@ -10,6 +10,8 @@
   prep pass.
 - Make full review proportionate: preparation decides from the objective, audience, and cost of
   failure whether the drafting agent should invoke `/comms-review` when the draft is complete.
+- Remove mandatory live narration of preparation and review progress; the written brief, checks,
+  and audit record remain the evidence of the pass.
 - Plan multi-section documents as ordered headings with named section jobs and kinds; for long
   documents, review that structure against the brief before drafting and before structural
   revision.
