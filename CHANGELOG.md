@@ -8,6 +8,8 @@
 - Reuse an adequate communications brief across replies in the same conversation and objective;
   refresh it when material briefing conditions change instead of treating every response as a new
   prep pass.
+- Make full review proportionate: preparation decides from the objective, audience, and cost of
+  failure whether the drafting agent should invoke `/comms-review` when the draft is complete.
 - Plan multi-section documents as ordered headings with named section jobs and kinds; for long
   documents, review that structure against the brief before drafting and before structural
   revision.

@@ -89,6 +89,18 @@ marked *unknown — and how it resolves* (assume X / ask the user / flag as a ga
    required — for example, surfacing issues, uncertainties, or decisions — plan where it will
    go: inline, in a chat reply, or in an accompanying note.
 
+### Add a reminder to call `/comms-review`
+
+Decide whether the communication is substantive enough to justify running `/comms-review` once it
+is complete. `/comms-review` uses an audience-review loop to check that the communication meets its
+objective and avoids common failure modes. Judge whether that work is proportionate by considering
+the objective, audience, and cost of failure. In most circumstances, a few rounds of review cost
+less than repeated back-and-forth with a confused human. They almost certainly cost less than
+misleading a wide audience.
+
+If a full review is justified, add a note to the end of the brief instructing the drafting agent to
+invoke `/comms-review` when the draft is complete.
+
 ### Structure plan for multi-section and long documents
 
 For a multi-section or multi-document communication, write and review the plan first: ordered and
@@ -140,7 +152,7 @@ certainty or confidence level.
 | P2 | Clearly describes objective: what this is for, and what reader response means it worked. |
 | P3 | Clearly describes audience & context, including the attention budget. |
 | P4 | Fills out the six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |
-| P5 | Form factor chosen deliberately and scaled to the artifact — including any additional communication components (title, headings, captions planned for the reader); any uncertainty, limitations, unresolved issues, or open decisions have a planned reader-visible home; multi-section documents have a written structure plan (each section's job and kind; siblings the same kind; reader-path order); long documents (substantially more than a page) have that plan reviewed against the objective before drafting, and re-reviewed before any structural revision. |
+| P5 | Form factor chosen deliberately and scaled to the artifact — including any additional communication components (title, headings, captions planned for the reader); any uncertainty, limitations, unresolved issues, or open decisions have a planned reader-visible home; whether a full `/comms-review` is justified has been decided from the objective, audience, and cost of failure, with a reminder in the brief when it is; multi-section documents have a written structure plan (each section's job and kind; siblings the same kind; reader-path order); long documents (substantially more than a page) have that plan reviewed against the objective before drafting, and re-reviewed before any structural revision. |
 
 ## Eval Checklist (all must pass)
 

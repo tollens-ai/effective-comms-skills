@@ -66,7 +66,12 @@ the ambiguity and escalate if it prevents a trustworthy communication.
 The brief is an artifact, not a thought. Keep it with the draft so it can become the reviewer's
 briefing.
 
-### 3. Review with `/comms-review`
+During preparation, decide whether the communication's objective, audience, and cost of failure
+justify a full review. When they do, the brief tells the drafting agent to invoke `/comms-review`
+once the draft is complete. A few review rounds generally cost less than repeated back-and-forth
+with a confused reader, and far less than misleading a wide audience.
+
+### 3. When justified, review with `/comms-review`
 
 The review proceeds through three separately gated phases:
 
@@ -122,9 +127,10 @@ This repository is packaged as a public Claude Code plugin:
 /plugin install effective-comms@tollens-effective-comms
 ```
 
-Then invoke `/comms-prep` at the authoring boundary, `/comms-review` before delivery, or
-`/effective-comms` when you want the pack to choose the next action. If a bare skill name collides
-with another plugin, use the plugin's namespaced form in Claude Code.
+Then invoke `/comms-prep` at the authoring boundary and, when the brief says a full review is
+justified, `/comms-review` before delivery. Use `/effective-comms` when you want the pack to choose
+the next action. If a bare skill name collides with another plugin, use the plugin's namespaced form
+in Claude Code.
 
 ## Review trace
 
