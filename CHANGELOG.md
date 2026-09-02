@@ -1,5 +1,50 @@
 # Changelog
 
+## 0.3.0 — 2026-09-02
+
+Behavioral rewrite of all three skills. They are shorter, plainer, and test-driven: the previous
+candidate failed a controlled retest because review machinery leaked into deliveries, source
+meaning drifted in rewrites, and the process was too heavy to follow. Every change below targets
+one of those failures.
+
+- Drop the mandatory audit record, reviewer seal, and row-by-row proof that each check was
+  applied. The brief, check notes, reviewer prompts and returns, and superseded drafts are working
+  state, kept outside the returned workspace. An audit is produced only when it is itself
+  requested, as a separate communication.
+- Add a pre-delivery check over every file and message about to be returned: it contains the
+  requested communication and nothing else.
+- Keep the brief's five lines (objective, audience and context, knowledge model, source meaning,
+  form factor) and drop the separate P1 to P6 proof table; the brief's own completion list is the
+  check.
+- Add source-meaning preservation as an explicit check. Before rewriting, list the required
+  elements, asks and their order, distinctions, conflicts, explicit exclusions, and requested
+  scope; recheck the list after every substantive revision.
+- Replace the binary "reader has used the term" rule with an evidence ladder: reader usage, then
+  task-provided context, then ordinary role knowledge. Terms with none of these are introduced in
+  the reader's words when material, otherwise avoided.
+- Add a direct-statement check: use the literal phrase where one exists; keep a metaphor only
+  where it carries meaning the literal phrase cannot.
+- Review the complete delivery bundle: titles, headings, captions, and the exact chat handoff are
+  reviewed together with the body. The handoff names what was delivered and any material limit; it
+  does not describe the review, claim a pass that did not happen, or imply implementation when
+  only a specification was written.
+- Send the fresh audience reviewer only the reader, their situation, their evidenced knowledge,
+  the objective, the complete delivery, and the verdict format. The brief and the checks stay with
+  the author.
+- Replace "loop until pass" with one stop rule: a second failed round ends the loop, with one
+  brief refresh allowed when the findings show the brief was wrong, and otherwise an escalation
+  with a concrete proposal or a partial delivery that states its limit.
+- Scope guard: a missing fact limits only the claim that needs it. Unavailable implementation
+  access does not invalidate a completed writing or specification task.
+- Use degraded written self-review only when a fresh subagent or delegated agent is unavailable or
+  fails to start; record that in working notes and say nothing about review mechanics in the
+  delivery.
+- Remove the mandatory Live/Non-interactive declaration. Ask or state an assumption only when an
+  unresolved question changes the deliverable.
+- Move `/comms-prep` to the authoring boundary and reuse the brief across replies in the same
+  conversation and objective.
+- Add Codex interface metadata for all three skills.
+
 ## 0.2.0 — 2026-07-29
 
 - Degradations disclosed where the reader looks: written self-review is named the DEGRADED review form; the audit record opens with the review mode (independent ×N rounds vs degraded self-review + reason) so a weaker pass never masquerades as the skill failing.

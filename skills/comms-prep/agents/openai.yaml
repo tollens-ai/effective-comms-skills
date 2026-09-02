@@ -1,0 +1,4 @@
+interface:
+  display_name: "Comms Prep"
+  short_description: "Prepare or reuse an audience-aware brief"
+  default_prompt: "Use $comms-prep to prepare or reuse a communications brief for this objective and audience before drafting."
