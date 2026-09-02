@@ -8,7 +8,7 @@
     {
       "name": "effective-comms",
       "source": ".",
-      "description": "Effective communication checks for agent-written user-facing outputs."
+      "description": "Prepare and review agent-written communication for audience fit and truth."
     }
   ]
 }

@@ -1,115 +1,183 @@
 ---
 name: comms-prep
-description: Run the moment you are about to write ANYTHING for people — reports, documents, explainers, commit messages, PR titles and descriptions, help text, error messages, READMEs, page copy, announcements. Produces the communications brief (objective, audience, knowledge model, evidence, form factor) the draft is written from; /comms-review requires it as input. The brief scales to the artifact — three lines for a commit message. Running it after a draft exists is the degraded path.
-when_to_use: Any time you are about to write something a person will read — a report, document, explainer, handoff, review finding, recommendation, decision note, commit message, PR title or description, help text, error message, README, page copy — or a report trigger fired (a stakeholder ask, a scheduled digest, a run-out-of-work report). Also retroactively when a draft exists with no brief. Trigger phrases — "write me a report/doc/explainer", "prep this comms", "who is this for?". ("effective comms" routes via /effective-comms.)
+description: >-
+  Write yourself a brief about the communication's objective and audience in order to communicate
+  more successfully. Use immediately before drafting human-facing findings, explanations,
+  recommendations, decision requests, or text intended for publication or reuse. For example, use
+  before writing human-facing READMEs, PR messages in public repos, tutorials, documentation,
+  recommendations, error messages, reports, or website copy. If the communication will come at the
+  end of a piece of work, do the work first and invoke the skill later — for example, finish the
+  bug fix and then call comms-prep when you are about to explain what you did to the user. While the
+  conversation and objective remain the same, you can reuse the existing brief rather than invoke
+  the skill again to write a new one. Use retroactively when a draft exists without an adequate
+  brief.
 ---
 
-# Comms Prep — prepare before drafting (Phase 1)
+# Comms Prep — prepare before drafting
 
-A communication is shaped by decisions made before its first sentence: who it is for, what they
-need, what counts as it working. This skill is that preparation, run as its own gate at authoring
-time — the draft is then WRITTEN FROM the brief, and the brief travels with the draft to
-`/comms-review`, where it becomes the reviewer's briefing. Skipping prep and "fixing it in review"
-compresses these decisions into the worst moment: the reader saying "I don't understand" is prep
-arriving late. Product-neutral: assume no specific project, company, or tool.
+A communication's success depends on its being appropriate for its audience, meeting their needs,
+and having a clear measure of success. This skill helps you prepare the information you need to
+succeed. Once your draft is written, run `/comms-review`; your brief supplies the objective,
+audience, context, evidence sources, and structure plan if appropriate. This is useful both when
+you are drafting and for independent review agents.
 
-**Be liberal: any time you are writing something for people, think comms-prep.** Reports, updates,
-strategy docs, review findings, audits, handoffs, worker reports, recommendations, decision notes —
-and equally the small furniture-sized artifacts: commit messages, PR titles and descriptions, help
-text, error messages, READMEs, page copy. **The brief scales to the artifact**: for a commit message
-it is three lines answered in seconds (who reads this and when · what must they understand · what
-would mislead them). Cost is never the reason to skip — prep is far cheaper than review, and cheaper
-still than a reader's confusion. Skip only for genuinely trivial messages (a one-line ack, a yes/no)
-with no audience to model. When in doubt, run it.
+**Be liberal: any time you are writing something for people, think comms-prep.**
 
-**Interactivity.** Choose one mode before starting:
+## 1. Decide whether to reuse or prepare
 
-- **Live** — you can get a reply within this turn from someone who holds the answer. Ask them to
-  resolve any brief gap you cannot answer.
-- **Addressed, no reply channel** — the audience is a real, nameable person, but no reply can reach
-  you this turn (the ordinary shape of dispatched writing work). Brief against the REAL audience;
-  treat every judgment call as Non-interactive does — park, never guess-and-proceed silently.
-- **Non-interactive** — a background or scheduled run, or mid-task with no one to ask. Park every
-  unresolved gap in a missing-info / assumptions note, place it where **Evidence & uncertainty**
-  (item 4) says uncertainty belongs for this form, and finalize the rest.
+**Adequacy.** A brief is adequate when its answers for objective, audience and context, knowledge
+model, source content, form factor, and style conventions are accurate and complete for the
+communication.
 
-A session can be Live and still hold gaps nobody present can resolve (jargon whose meaning only an
-absent author knows): those gaps are handled as Addressed-no-reply-channel — parked and disclosed,
-never fabricated.
+**Reuse.** While the conversation and objective remain the same, generally reuse an adequate
+existing brief. You can amend an existing brief if something has changed and it is no longer
+adequate. If the form is a back-and-forth communication, it is not necessary to prepare again for
+each reply.
 
-**Narrate.** Say that you are running comms-prep. Do not run silently.
+**Scale.** Scale the brief to the artifact. For a small artifact it may be four lines answered in
+seconds: who reads this and when · what do you know that they don't · what must they understand ·
+what would mislead them.
 
-## The communications brief (Phase 1 of the pass)
+**Authoring boundary.** Generally run this skill once you have finished working out the actual
+information you need to communicate and immediately before drafting the substantive communication.
+When the requested work is itself writing, that boundary is the start of drafting. When underlying
+work must happen first, stay with that work until those answers exist; the fact that a report will
+eventually follow does not move the boundary to task start.
 
-Write a short brief. Every line is answered or explicitly marked *unknown — and how it resolves*
-(assume X / ask the user / flag as a gap). An unanswered line is a prep failure.
+**Retroactive use.** If a draft already exists with no brief, prepare the brief from the draft's
+intended purpose rather than copying assumptions out of its text. Then make the brief and draft
+available to `/comms-review`.
 
-1. **Objective.** What is this for — explain, convince, surface risk, get a decision? What reader
-   response means it worked? Default for technical/project comms: *help the reader understand the
-   key points well enough to surface genuine confusion, objections, and risks.*
-2. **Audience & context.** Who reads it? More than one reader? Under what attention budget?
-3. **Knowledge model** — answer all six: what they **need** / **don't need** / **want** / **don't
-   want** to know, what they **already know**, and what you **might be falsely assuming** they know.
-   The last cell is highest-value — assumed-context failures hide there. Never skip it, even for a
-   short output. Here **term** means a label, abbreviation, coined phrase, tool or domain jargon, or
-   an ordinary word used in a non-ordinary local sense; ordinary words in their ordinary sense need
-   no adoption evidence. A term the reader has not themselves used belongs in the falsely-assuming
-   cell by default: mentioning it to the reader, or receiving it from another agent, is not the
-   reader adopting it; it is usable without friction only once the reader has used it back.
-4. **Evidence & uncertainty.** What is solid, an assumption, a guess, blocked, or a decision still
-   needed? Where does uncertainty belong for this form (working note → up front; polished artifact →
-   end/appendix)?
-5. **Form factor.** Short message, full report, checklist, handoff, decision note? A single long
-   async dump is not the default shape. The furniture is part of the form — plan here what attached
-   text the reader will see (title, subject line, headings, captions, labels) and what each must do
-   for them; a title describes the artifact's effect for its reader, not the author's task. It is
-   all written from this brief and reviewed under the same rubric as the body (C13).
+**Where it lives.** The brief is an artifact, not a thought: keep it available with the draft for
+`/comms-review` reviewers, while keeping it outside the primary reader-facing communication. Keep
+it in your own scratch space, in context, or as a brief summary directly in chat if appropriate.
+Do not include the brief with the workspace or files for the audience; this would generally not
+be appropriate.
 
-## Stop / output contract
+## 2. Write the communications brief
 
-The brief is an ARTIFACT, not a thought: written down, kept with the draft, and handed to
-`/comms-review` — its knowledge model (especially the falsely-assuming cell and the list of terms
-the reader has used themselves, which is the evidence of adoption) is what the audience reviewer's
-briefing is built from.
+Write a short brief. Go step by step and answer every line. Each line is answered or explicitly
+marked *unknown — and how it resolves* (assume X / ask the user / flag as a gap).
 
-If objective, audience, knowledge model, evidence, or form factor cannot be adequately answered, do
-not proceed to a polished guess — produce a **missing-info / assumptions note** (ask if live; else
-flag the gaps). If prep cannot support any responsible draft, that note is the only responsible
-draft: “terminal” names its output type, not a review waiver, so hand it to `/comms-review`. If a
-partial draft is still responsible, carry the parked gaps into it and into review.
+1. **Objective.** What is this for — for example, explain, convince, surface risk, or get a
+   decision? What should change for the reader if the communication succeeds? For technical comms,
+   the objective might be: *help the reader understand the key points well enough to surface
+   genuine confusion, objections, and risks.* Describe the deliverable: for example a chat reply,
+   a single document, a document plus a short handoff. When the request is to improve an existing
+   communication, the deliverable is the improved communication itself, not just findings about
+   it.
+2. **Audience & context.** Who reads it? More than one reader? Are they friendly or critical? Under
+   what attention budget? What are their expectations for this communication?
+3. **Knowledge model** — six key questions about the audience: what they **need** / **don't need**
+   / **want** / **don't want** to know, what they **already know**, and what you **might be falsely
+   assuming** they know. The last cell is highest-value — a failure of assumed context results in
+   "wait, what?" and repeated effort. Never skip it, even for a short output.
 
-**Retroactive use (the degraded path).** If a draft already exists with no brief, run this skill
-FIRST, on the draft's intended purpose rather than its text — then hand both to `/comms-review`.
-Name the degradation in the audit record.
+   **Language and jargon.** The communication must avoid context-specific terms (labels,
+   abbreviations, coined phrases, tools, or domain jargon) that you don't have evidence the user is
+   comfortable with. This part of the prep must determine what that looks like. You need to use
+   your judgement on what terminology the audience is confident with and what needs to be
+   rephrased. If they've used the term themselves, that is strong evidence. Having read the term
+   recently, or it being ordinary knowledge for their role, could also be evidence, but is not a
+   guarantee of knowledge. Highlight specific classes of terms (e.g. section headings and
+   abbreviations) to avoid. A term that is unfamiliar to the user should be defined in the
+   communication at its first use if it's helpful for communicating the objective; otherwise try
+   to avoid unfamiliar terms.
+4. **Source meaning that must be preserved.** When the communication describes, rewrites, or
+   summarises source material, list the key points that must be preserved in the rewrite: for
+   example ordered procedures, instructions, and checklists; numerical or factual information;
+   distinctions the source draws, such as who owns what or which system does which job; conflicts,
+   contradictions, and uncertainties in the source; explicit exclusions; and the requested scope,
+   so a writing task stays a writing task. This list is what the review rechecks after every
+   revision.
+5. **Form factor.** What's the right form factor for this communication? Short message, checklist,
+   multi-section document, multiple documents? Every part of the communication is part of the form
+   factor — consider what attached text the reader will see (title, subject line, headings,
+   captions, labels, commit messages) and whether any of these have separate objectives or
+   audiences. If the communication is complex and requires a multi-section or multi-document form,
+   follow the structure-planning guidance below. If communication *about* this communication is
+   required — for example, surfacing issues, uncertainties, or decisions — plan where it will
+   go. Working notes stay outside the communication and need not persist after the review unless
+   the user explicitly asks for a record.
+6. **Style and conventions.** Which house style conventions, writing skills, and instructions in
+   your prompts or project files apply to this communication? Find them before writing and name
+   them here, so the draft follows them and the review checks against them.
 
-## Completion rubric — the brief is done when all six hold (P1–P6)
+### Add a reminder to call `/comms-review`
 
-This table is the skill's exit condition, and BY CONSTRUCTION it is also `/comms-review`'s entry
-rubric — the two are the same rubric stated in both skills; if they ever diverge, that divergence is
-a bug in this pack.
+Decide whether the communication is substantive enough to justify running `/comms-review` once it
+is complete. `/comms-review` uses an audience-review loop to check that the communication meets its
+objective and avoids common failure modes. Judge whether that work is proportionate by considering
+the objective, audience, and cost of failure. In most circumstances, a few rounds of review cost
+less than repeated back-and-forth with a confused human. They almost certainly cost less than
+misleading a wide audience.
 
-| # | The brief satisfies |
-|---|---|
-| P1 | It exists as inspectable written text kept with the draft — a file, draft body, or clearly delimited section in the current response; not a thought or memory. Durable attachment is a whole-pass completion condition, not this entry condition. |
-| P2 | Objective: what this is for, and what reader response means it worked. |
-| P3 | Audience & context, including the attention budget. |
-| P4 | The six-cell knowledge model, with the falsely-assuming cell non-empty or its emptiness justified — every label, abbreviation, coined phrase, or specialized term the reader hasn't themselves used defaulted into it; ordinary words in their ordinary sense need no adoption evidence. |
-| P5 | Evidence & uncertainty mapped: solid / assumption / guess / blocked / open decision, with a stated home for uncertainty in this form. |
-| P6 | Form factor chosen deliberately and scaled to the artifact — furniture included (title, headings, captions planned for the reader). |
+If a full review is justified, add a note to the end of the brief instructing the drafting agent to
+invoke `/comms-review` when the draft is complete.
 
-## Eval (all must pass)
+### Structure plan for multi-section and long documents
 
-- [ ] P1–P6 all hold (the completion rubric above). **Fail** on any silently unmet row.
-- [ ] Unanswerable items are explicitly parked with how they resolve — and if prep is inadequate
-  overall, the output is a missing-info / assumptions note, not a polished guess.
-- [ ] Retroactive runs name the degradation.
+For a multi-section or multi-document communication, write and review the plan first: ordered and
+nested headings or titles, bullet points, and one line or a few bullet points naming each section's
+objective. Self-review the plan against the high-level objective and audience before continuing.
+The following rubrics are guidance, not an exhaustive list — use your judgement to achieve the
+best plan before drafting prose.
 
-## Pitfalls
+**Rubrics for categorising section headings**
 
-- Running after the draft exists and not naming it — the degraded path hidden as the normal one.
-- The brief as a mental exercise instead of an artifact — `/comms-review`'s reviewer briefing is
-  BUILT from it; an unwritten brief rebuilds the author's blind spots downstream.
-- Marking the author's own coinages (or another agent's jargon) as "already known" — mentioning is
-  not evidence that the reader can use the term without friction.
-- Answering the knowledge model for a generic reader instead of THIS reader under THIS attention
-  budget.
+- Each level's children partition their parent along some clear axis — for example, domain, phase,
+  view, work-item type, or audience. If the axis cannot be named in a phrase, this nesting level may
+  mix unlike things and cause confusion.
+- Generate each axis's "missing siblings" — things the audience might reasonably expect at that
+  level. If that produces sections you do not intend to write, the axis may be miscategorised or
+  mislabelled.
+- Sibling headings are the same "kind of thing." For the drafting agent's convenience, annotate
+  this in the plan.
+- Each piece of content you want to write has one clear home. Pressure to duplicate a fact is a
+  structure signal.
+- Each likely reader question routes to one obvious heading.
+- Uncertainty, limitations, unresolved issues, and open decisions have an explicit home appropriate
+  to their importance rather than being scattered or buried.
+- The order follows the reader's path through the subject, not the author's path through the
+  sources.
+
+Combining sources can be where structural issues appear: a document assembled in encounter order
+can read as a pile of good content in a random structure.
+
+For a long document — substantially more than a page — the structure plan is itself a reviewable
+artifact. Review its headings and topic bullets against the communications brief before drafting,
+the way a software design is reviewed before code. The outline is the cheapest version of the
+document, so a structural bug found there costs a bullet edit instead of a rewrite. A structural
+revision retriggers this gate: edit and re-review the plan before changing the prose.
+
+## 3. Unresolved questions
+
+If a question arises during comms prep and you don't know the answer, ask the user when you can
+get a reply this turn. Otherwise, note the issue in the brief, and use an appropriate escalation
+path if this significantly affects the quality of the communication. Even when you can ask,
+sometimes neither of you knows the answer (for example, some information the absent author hasn't
+provided). Use your best judgement together, and document ambiguity. Do not overstate your
+certainty or confidence level. Never make stuff up. If some particular part of the communication
+is not possible, say so, but deliver any unaffected or unrelated remaining parts.
+
+## 4. Check and hand off
+
+Verify the following stopping conditions before continuing. Go back and review or redo if
+necessary to ensure a good-quality communication brief.
+
+- [ ] every line of the brief is answered or explicitly parked with how it resolves;
+- [ ] the "falsely assuming" question has been answered or its absence justified, and it names
+      the terms you will introduce or avoid;
+- [ ] the source-meaning list exists whenever there is source material;
+- [ ] the decision on whether a full `/comms-review` is justified is written down;
+- [ ] the applicable style conventions and skills are named;
+- [ ] the brief introduced no new information that is not justified from the sources; and
+- [ ] the brief stays separate from anything you will return to the reader.
+
+## 5. Writing the communication
+
+Once you have a good communication brief, use it to go and write a good communication. Say what
+you mean, as simply as benefits your objective. Avoid mannered prose and metaphor unless it carries
+key meaning that serves the objective and audience.
+
+Follow the style conventions and skills the brief names.
