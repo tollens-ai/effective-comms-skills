@@ -1,7 +1,7 @@
 {
   "name": "effective-comms",
-  "version": "0.3.0",
-  "description": "Claude Code skills for a prepare → write → review communication pass that keeps agent-written outputs aligned with their audience, objective, and sources.",
+  "version": "0.4.0",
+  "description": "Claude Code skills for a prepare \u2192 write \u2192 review communication pass that keeps agent-written outputs aligned with their audience, objective, and sources.",
   "author": {
     "name": "Tollens"
   },

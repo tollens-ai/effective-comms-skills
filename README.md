@@ -14,8 +14,8 @@ than any others:
   contradiction silently resolved.
 
 Effective Comms is a pack of three Claude Code skills that add a **prepare, write, review** pass
-targeting those failures. It fixes the content of a communication, not its style, and it works
-alongside any house style you already apply.
+scaled to the communication's complexity and consequences. It fixes the content of a communication,
+not its style, and it works alongside any house style you already apply.
 
 > **Status: alpha.** Expect rough edges. Please report confusing behavior or missed communication
 > failures through [GitHub issues](#feedback).
@@ -24,8 +24,8 @@ alongside any house style you already apply.
 
 | Skill | When | What it does |
 |---|---|---|
-| `/comms-prep` | Immediately before drafting, once the substance is known | Writes a short brief: the objective, the audience and context, a knowledge model of what they know and what the agent may be falsely assuming, the source meaning that must be preserved, the form factor, and the style conventions that apply. |
-| `/comms-review` | When a draft is complete and the brief called for review | Checks the draft against the brief and a set of content checks, then puts it in front of a fresh reader who knows only what the real reader knows. |
+| `/comms-prep` | Immediately before drafting, once the substance is known | Checks the audience and source meaning for routine replies; writes or reuses a brief for substantial artifacts. Chooses the review depth. |
+| `/comms-review` | When requested or preparation calls for it | Checks content against the audience, objective, and sources. Adds a fresh reader for long, public, or consequential writing. |
 | `/effective-comms` | When you want the pack to choose | Decides whether preparation, review, or nothing is due, and does it. |
 
 The brief and the review notes are working state. They stay with the agent and never appear in
@@ -33,21 +33,22 @@ the delivered communication or the returned files.
 
 ## How a pass works
 
-**Prepare.** Do the underlying work first. When the substance is ready and drafting is about to
-start, the agent writes a short brief at a scale that fits the artifact: the objective and what
-should change for the reader; the audience, their attention budget, and their expectations; a
-knowledge model of what they need, want, and already know, and what the agent might be falsely
-assuming they know; the source meaning that must be preserved in a rewrite; the form factor,
-including where uncertainty goes and whether a full review is worth running; and the house style
-conventions and skills that apply. A small artifact may
-need four lines answered in seconds. A document needs a page. The brief is reused across replies
-while the conversation and objective stay the same.
+**Prepare.** Do the underlying work first. For a routine reply, the agent checks who is reading,
+what they need to understand or do, what it might falsely assume they know, and what source meaning
+must survive. It uses those answers directly; a written brief is unnecessary. Detailed briefing,
+structure-planning, and review guides are loaded only for the tasks that need them.
 
-**Write.** The agent drafts from the brief, saying what it means in literal phrases.
+For a substantial artifact or consequential message, the agent writes or reuses a short brief:
+objective; audience and context; what the reader needs, wants, and knows, including possible false
+assumptions; source meaning to preserve; form and structure; and applicable house style. Related
+answers can be combined. Long documents get a structure plan before prose. A short approval
+request may need more care than a long informal reply. Preparation is reused while it still fits.
 
-**Review.** The agent reads the whole delivery as the reader will see it, including titles,
-headings, and the chat message that accompanies a file, and fixes what it can see against these
-checks:
+**Write.** The agent drafts from that preparation, saying what it means in literal phrases.
+
+**Review.** Every draft gets a self-review for reader fit, source fidelity, and applicable style.
+For routine replies, that normally completes the pass. The detailed `/comms-review` checks cover
+the whole delivery, including titles, headings, and the chat message accompanying a file:
 
 - *Trustworthy:* every claim about a source comes from inspecting that source now; uncertainty
   is stated where it limits a claim.
@@ -59,12 +60,24 @@ checks:
   structure matches how the reader will read, references are typed, and titles describe the
   effect for the reader.
 
-Then a fresh subagent, told only who the reader is, what they know, what the communication is
-for, and the complete delivery, answers one question: does this reader achieve the objective? A
-failed round is fixed and reviewed again by a new reader. A second failure stops the loop: either
-the brief was wrong and is redone once, or the fix needs a decision the author does not own and
-is escalated with a proposal. Before returning, the agent checks every file and message it is
-about to return and removes anything that is not the requested communication.
+For long, public, or consequential writing, a fresh agent also reads the complete delivery with
+only the objective and supported audience context. Reader usage, task context, and ordinary
+knowledge for an evidenced role can support that context; local jargon needs its own explanation.
+The reviewer tests whether the reader can understand and use the communication. The author remains
+responsible for verifying facts against sources. If independent review is unavailable or not
+permitted, a careful self-review from the audience's perspective is the fallback.
+
+The author fixes writing defects within the requested scope. A missing fact or choice that needs
+someone else's input can prompt a concrete question; a second failed review does not itself
+require approval. Repeated reviews that make no progress prompt a reassessment of the reader's
+needs or a specific statement of the unresolved limit. Ordinary wording choices stay with the
+author.
+
+Later edits get checks proportionate to their effect. A typo needs proofreading; a changed claim,
+number, recommendation, or structure needs the affected content and source checks. Independent
+review repeats when the change could materially alter the reader's understanding or action and
+the communication warrants that depth. A one-character change to a number or negation can matter.
+Working notes stay outside the delivered files and messages.
 
 ## Install
 
@@ -75,10 +88,27 @@ Effective Comms is a public Claude Code plugin:
 /plugin install effective-comms@tollens-effective-comms
 ```
 
-Then invoke `/comms-prep` before drafting and, when the brief says so, `/comms-review` before
-delivery. If a bare skill name collides with another plugin, use the plugin's namespaced form.
-The skills also run under Codex: each carries the interface metadata Codex uses to list and
-invoke it.
+In Claude Code, use the router with your writing request, for example:
+
+```text
+/effective-comms:effective-comms Draft a customer update from these incident notes: …
+```
+
+The router chooses preparation and review at the right depth. To choose a step yourself, use
+`/effective-comms:comms-prep` before drafting or `/effective-comms:comms-review` with an existing
+draft. These are the plugin's fully namespaced commands, as described in
+[Claude Code's plugin guide](https://code.claude.com/docs/en/plugins).
+
+**Codex CLI or IDE extension:** ask the built-in installer to install the three skill directories:
+
+```text
+$skill-installer Install skills/comms-prep, skills/comms-review, and skills/effective-comms from the GitHub repository tollens-ai/effective-comms-skills.
+```
+
+Then include `$effective-comms` with your writing request, or choose `$comms-prep` before drafting
+and `$comms-review` for a draft. Codex detects newly installed skills automatically; restart if they
+do not appear. See [Codex's skill guide](https://learn.chatgpt.com/docs/build-skills) for local
+installation and discovery details.
 
 ## Roadmap
 
