@@ -42,12 +42,15 @@ understanding or action and the communication warrants that depth. Cosmetic chan
 proofreading.
 
 Return the requested communication. Keep briefs, reviewer prompts and returns, superseded drafts,
-and review notes in working state unless audit or provenance is explicitly requested. The chat
-handoff names what was delivered and any material limit; it does not narrate the review, claim a
-pass that did not happen, or imply implementation when only a specification was written. Apply
-the same checks to handoff text added at finalization.
+and review notes in working state unless audit or provenance is explicitly requested.
+
+The chat handoff says what was delivered and any material limit. It does not describe the review
+that produced it, claim a pass that did not happen, or imply that something was built when only a
+specification was written. Apply the same checks to handoff text added at finalization.
 
 ## Maintainer reference
 
-The content rubric lives in [Content checks](references/content-checks.md). To extend it, append
-a new failure mode and row. Changing an existing row requires the standard owner's decision.
+The content rubric lives in [Content checks](references/content-checks.md).
+
+To extend the standard, append a new failure mode and rubric row. Change an existing row only with
+the standard owner's decision. Do not redesign the standard through an extension.

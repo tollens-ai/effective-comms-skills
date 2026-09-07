@@ -13,7 +13,7 @@ the outline need only be detailed enough to expose gaps, duplication, or a confu
 - Generate each axis's "missing siblings" — things the audience might reasonably expect at that
   level. If that produces sections you do not intend to write, the axis may be miscategorised or
   mislabelled.
-- Sibling headings are the same "kind of thing." Use that relationship to choose clear headings.
+- Sibling headings are the same "kind of thing."
 - Each piece of content you want to write has one clear home. Pressure to duplicate a fact is a
   structure signal.
 - Each likely reader question routes to one obvious heading.
@@ -28,5 +28,5 @@ can read as a pile of good content in a random structure.
 For a long document — substantially more than a page — the structure plan is itself a reviewable
 artifact. Review its headings and topic bullets against the communications brief before drafting,
 the way a software design is reviewed before code. The outline is the cheapest version of the
-document, so a structural bug found there costs a bullet edit instead of a rewrite. When a revision changes the document's organization, update and recheck the outline before
-rewriting the affected prose.
+document, so a structural bug found there costs a bullet edit instead of a rewrite. A structural
+revision retriggers this gate: edit and re-review the plan before changing the prose.

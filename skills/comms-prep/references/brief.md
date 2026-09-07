@@ -15,8 +15,8 @@ Use the questions to resolve the communication's needs; they are not a required 
    what attention budget? What are their expectations for this communication?
 3. **Knowledge model** — six key questions about the audience: what they **need** / **don't need**
    / **want** / **don't want** to know, what they **already know**, and what you **might be falsely
-   assuming** they know. The last question is highest-value — a failure of assumed context results in
-   "wait, what?" and repeated effort. Answer it even for a short output.
+   assuming** they know. The last cell is highest-value — a failure of assumed context results in
+   "wait, what?" and repeated effort. Never skip it, even for a short output.
 
 4. **Source meaning that must be preserved.** When the communication describes, rewrites, or
    summarises source material, list the key points that must be preserved in the rewrite: for
@@ -45,7 +45,8 @@ Record the review depth and reason using the entrypoint's review decision.
 For the written-brief path, check that the brief is ready to guide drafting:
 
 - [ ] all six areas are covered, with material unknowns and their resolution identified;
-- [ ] the "falsely assuming" question is answered, including unfamiliar terms that matter;
+- [ ] the "falsely assuming" question has been answered or its absence justified, and it names
+      the terms you will introduce or avoid;
 - [ ] the source-meaning list exists whenever there is source material;
 - [ ] the review depth and reason are recorded;
 - [ ] the applicable style conventions and skills are named;

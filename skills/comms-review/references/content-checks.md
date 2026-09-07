@@ -14,9 +14,12 @@ title is bad, the audience might not even read the rest.
 ### Source meaning
 
 Check the source meaning identified during preparation against the sources and draft. For a
-written brief, confirm each listed item is in the draft or visibly dispositioned. A readable draft
-still fails if an ask was dropped, a priority reordered, a distinction lost, a contradiction silently resolved, an
-exclusion ignored, or the scope changed. Recheck source meaning after every substantive revision.
+written brief, confirm each listed item is in the draft or visibly dispositioned.
+
+There's no point having a communication that reads well if an
+ask was dropped, a priority reordered, a distinction lost, a contradiction silently resolved, an
+exclusion ignored, or the scope changed! *Redo this check after every substantive revision* to
+avoid errors creeping in.
 
 **Trustworthy** — *can the reader believe every claim?*
 

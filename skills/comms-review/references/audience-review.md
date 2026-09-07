@@ -1,7 +1,10 @@
 # Independent audience review
 
-A fresh reader can expose missing context because they do not share the author's working
-knowledge. This tests comprehension and usefulness; factual verification remains the author's
+It is very hard to self-review for some of the content checks consistently, because you already have
+in your head what the audience doesn't know. Therefore it is important to have an independent agent
+simulating the reader's perspective review the communication.
+
+This tests comprehension and usefulness; factual verification remains the author's
 [content review](content-checks.md). A readability verdict does not establish source accuracy.
 
 Use an available, permitted subagent or delegated-agent capability. If it is absent, prohibited,
@@ -19,7 +22,7 @@ prompt contains exactly these things and nothing else:
 - the complete delivery as the reader will see it, including the chat handoff;
 - the question and answer format below.
 
-Keep the rubric, full brief, working notes, and unsupported knowledge claims out of the prompt.
+Never send the rubric, the brief, working notes, or unevidenced knowledge claims.
 The reviewer answers one question — **does this audience, with the stated knowledge and its limits, succeed at the
 objective?** — and FAILS on any of: left confused, lost, or frustrated · unclear what a term or
 number refers to · unclear why something is relevant · unclear what to do or conclude · any
