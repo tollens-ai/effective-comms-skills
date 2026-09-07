@@ -13,9 +13,10 @@ than any others:
   described, and source meaning that drifts in a rewrite: a dropped ask, a reordered priority, a
   contradiction silently resolved.
 
-Effective Comms is a pack of three Claude Code skills that add a **prepare, write, review** pass
-scaled to the communication's complexity and consequences. It fixes the content of a communication,
-not its style, and it works alongside any house style you already apply.
+Effective Comms helps agents write for their reader, preserve source meaning, and catch
+misleading or confusing content before delivery. Routine replies get a quick check; substantial
+or consequential writing gets a written brief and independent reader review. The three skills
+work alongside your house style.
 
 > **Status: alpha.** Expect rough edges. Please report confusing behavior or missed communication
 > failures through [GitHub issues](#feedback).
@@ -31,9 +32,9 @@ not its style, and it works alongside any house style you already apply.
 The brief and the review notes are working state. They stay with the agent and never appear in
 the delivered communication or the returned files.
 
-## How a pass works
+## How much checking a communication needs
 
-**Prepare.** Do the underlying work first. For a routine reply, the agent checks who is reading,
+Do the underlying work first. For a routine reply, the agent checks who is reading,
 what they need to understand or do, what it might falsely assume they know, and what source meaning
 must survive. It uses those answers directly; a written brief is unnecessary. Detailed briefing,
 structure-planning, and review guides are loaded only for the tasks that need them.
@@ -44,10 +45,8 @@ assumptions; source meaning to preserve; form and structure; and applicable hous
 answers can be combined. Long documents get a structure plan before prose. A short approval
 request may need more care than a long informal reply. Preparation is reused while it still fits.
 
-**Write.** The agent drafts from that preparation, saying what it means in literal phrases.
-
-**Review.** Every draft gets a self-review for reader fit, source fidelity, and applicable style.
-For routine replies, that normally completes the pass. The detailed `/comms-review` checks cover
+The agent drafts from that context, then checks reader fit, source fidelity, and applicable style.
+For routine replies, that normally completes the work. The detailed `/comms-review` checks cover
 the whole delivery, including titles, headings, and the chat message accompanying a file:
 
 - *Trustworthy:* every claim about a source comes from inspecting that source now; uncertainty
