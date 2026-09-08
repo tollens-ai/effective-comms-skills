@@ -14,7 +14,7 @@ Do not include private project data, credentials, customer data, or non-public a
 
 ## Preserve the skills' intent
 
-These skills are carefully human-written. Their purpose is to help a communication achieve its
+These skills are substantially carefully human-written. Their purpose is to help a communication achieve its
 objective for its reader; preparation, writing guidance, checks and review support that purpose.
 Preserve the goals, orientation, invocation guidance and substantive sections when maintaining them.
 
