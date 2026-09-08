@@ -1,6 +1,9 @@
 ---
 name: comms-review
-description: Check a finished communication for reader fit and source fidelity before delivery.
+description: >-
+  Review a drafted communication before delivery to humans. Use when writing human-facing
+  communications such as documents, reports, website copy, and READMEs, once a draft is complete,
+  at review time.
 ---
 
 # Comms Review — make the draft ready to deliver
