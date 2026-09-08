@@ -7,6 +7,14 @@ description: >-
 
 # Comms Prep — prepare before drafting
 
+A communication's success depends on its being appropriate for its audience, meeting their needs,
+and having a clear measure of success. This skill helps you prepare the information you need to
+succeed. Once your draft is written, run `/comms-review` when the chosen review depth calls for it;
+your brief supplies the objective, audience, context, evidence sources, and structure plan if
+appropriate. This is useful both when you are drafting and for independent review agents.
+
+**Be liberal: any time you are writing something for people, think comms-prep.**
+
 Prepare when the substance is ready to communicate. If underlying work must happen first, finish
 that work; if the task is writing, preparation belongs at the start. The user's requested scope
 and form take precedence over these defaults.

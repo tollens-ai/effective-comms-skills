@@ -8,6 +8,20 @@ description: >-
 
 # Comms Review — make the draft ready to deliver
 
+The goal of communication is to make yourself understood by your audience so that you can achieve
+your goals together. A communication that fails to serve this purpose is a waste of time, effort
+and tokens for both parties. It is therefore worth the effort to ensure that a communication will
+land, by reviewing it to the best of your ability, and repeatedly fixing any issues you can find,
+such that there are no more issues that you can discover before sending it. This skill gives
+detailed instructions about how to do this to best mitigate common failure modes.
+
+This skill is aimed at fixing defects in the *contents* of communications. It is not primarily
+focused on changing or improving style. It also does not override any house style conventions — if
+they exist, you must apply both these content rubrics and house style conventions when reviewing.
+
+**Above all, do your best to make the communication achieve its objective. The following are all
+rubrics intended to help you in this goal, not ends in themselves.**
+
 Fix concrete content defects within the user's request, preserving source meaning and applying
 their house style. The whole delivery matters: titles, headings, links, returned files, and the
 accompanying chat message.
