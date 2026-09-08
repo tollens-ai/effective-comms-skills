@@ -13,6 +13,11 @@
   justified, and give the router a fourth question and ordered rows so the quick path does not
   overlap the brief rows.
 - State that a post-PASS change to meaning reopens audience review as a new first round.
+- Split each gate into a short entry point and reference files, so the routine path loads only
+  the decision text: `comms-prep` keeps the reuse, quick-path, and review decisions and points to
+  `references/brief.md` and `references/structure.md`; `comms-review` keeps the phases and
+  finalization and points to `references/content-checks.md` and `references/audience-review.md`.
+  Moved text is unchanged.
 
 ## 0.3.0 — 2026-09-02
 
