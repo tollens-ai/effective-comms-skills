@@ -119,9 +119,9 @@ Each round uses a FRESH agent, new each round, with no memory of earlier rounds.
 prompt contains exactly these things and nothing else:
 
 - the target reader and their situation, including attention budget;
-- what the reader knows, limited to what the brief's evidence supports (reader usage is strong
-  evidence; task context or ordinary knowledge for the reader's role can also support familiarity,
-  as in `/comms-prep`, but neither guarantees it);
+- what the reader knows, limited to what the brief's evidence supports: the terms its knowledge
+  model found the reader can use. The brief has already weighed reader usage, task context, and
+  role knowledge; do not add terms here that it did not accept;
 - the objective;
 - the complete delivery as the reader will see it, including the chat handoff;
 - the question and answer format below.
@@ -159,7 +159,8 @@ in the handoff. That statement is the only text added after review.
 
 Deliver only the communication selected by the final review. After the final PASS, proofread
 cosmetic corrections locally. Changes that could affect the reader's understanding or action
-require the affected Phase 2 checks, including source meaning, and reopen Phase 3.
+require the affected Phase 2 checks, including source meaning, and reopen Phase 3 as a new first
+round.
 
 Before returning, look at every file and message you are about to return. It contains the
 requested communication and nothing else: no brief, no rubric notes, no reviewer prompts or

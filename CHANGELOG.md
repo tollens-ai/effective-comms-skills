@@ -7,7 +7,12 @@
 - Remove the assumption that a second failed review requires a decision outside the author’s
   authority; ask only when the fix actually needs someone else’s input.
 - Exempt cosmetic corrections from another audience review, while rechecking changes to meaning.
-- Align audience-review knowledge evidence with the existing preparation guidance.
+- Align audience-review knowledge evidence with the existing preparation guidance: the reviewer is
+  told the terms the brief's knowledge model accepted, rather than re-grading evidence.
+- Define low-stakes by cost of failure, the same test that decides whether a full review is
+  justified, and give the router a fourth question and ordered rows so the quick path does not
+  overlap the brief rows.
+- State that a post-PASS change to meaning reopens audience review as a new first round.
 
 ## 0.3.0 — 2026-09-02
 

@@ -19,8 +19,7 @@ A communication's success depends on its being appropriate for its audience, mee
 and having a clear measure of success. This skill helps you prepare the information you need to
 succeed. When a full review is justified, run `/comms-review` once your draft is written; your brief
 supplies the objective, audience, context, evidence sources, and structure plan if appropriate. This
-is useful both when
-you are drafting and for independent review agents.
+is useful both when you are drafting and for independent review agents.
 
 **Be liberal: any time you are writing something for people, think comms-prep.**
 
@@ -41,8 +40,11 @@ what would mislead them.
 
 For a routine, low-stakes reply, answer those questions directly, draft, and self-review for the
 objective, reader understanding, and source meaning. A written brief and `/comms-review` are not
-required on this path. Continue below for substantive or consequential communications; shortness
-alone does not make a message low-stakes.
+required on this path. A reply is low-stakes when a misunderstanding would be cheap to correct in
+the next exchange: the same test of objective, audience, and cost of failure that decides below
+whether a full review is justified. Shortness alone does not make a message low-stakes; a short
+message that reaches a wide audience, fixes a decision, or will be reused is not on this path.
+Continue below for substantive or consequential communications.
 
 **Authoring boundary.** Generally run this skill once you have finished working out the actual
 information you need to communicate and immediately before drafting the substantive communication.

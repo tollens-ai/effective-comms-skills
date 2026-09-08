@@ -87,7 +87,9 @@ In Claude Code, use the router with your writing request, for example:
 The router chooses preparation and review at the right depth. To choose a step yourself, use
 `/effective-comms:comms-prep` before drafting or `/effective-comms:comms-review` with an existing
 draft. These are the plugin's fully namespaced commands, as described in
-[Claude Code's plugin guide](https://code.claude.com/docs/en/plugins).
+[Claude Code's plugin guide](https://code.claude.com/docs/en/plugins). The bare forms
+`/comms-prep` and `/comms-review` also work, and the skills refer to each other that way; if
+another installed skill uses the same bare name, use the namespaced form.
 
 **Codex CLI or IDE extension:** ask the built-in installer to install the three skill directories:
 
