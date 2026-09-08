@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.4.0 — 2026-09-08
+
+- Clarify that routine, low-stakes replies need quick preparation and self-review, without a
+  mandatory written brief or audience-review loop.
+- Remove the assumption that a second failed review requires a decision outside the author’s
+  authority; ask only when the fix actually needs someone else’s input.
+- Exempt cosmetic corrections from another audience review, while rechecking changes to meaning.
+- Tell the audience reviewer the terms the brief's knowledge model accepted, instead of restating
+  the evidence rules in the reviewer prompt.
+- Define low-stakes by cost of failure: a misunderstanding would be cheap to correct in the next
+  exchange.
+- Add a fourth router question about stakes and order the router's rows, so a routine reply has
+  one matching row.
+- Reopen audience review as a new first round when a change after a passed review affects meaning.
+- Split `comms-prep` and `comms-review` into a short entry point and reference files, so the
+  routine path loads only the decision text. `comms-prep` points to `references/brief.md` and
+  `references/structure.md`; `comms-review` points to `references/content-checks.md` and
+  `references/audience-review.md`.
+
 ## 0.3.0 — 2026-09-02
 
 Behavioral rewrite of all three skills. They are shorter, plainer, and test-driven: the previous

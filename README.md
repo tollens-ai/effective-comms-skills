@@ -13,9 +13,9 @@ than any others:
   described, and source meaning that drifts in a rewrite: a dropped ask, a reordered priority, a
   contradiction silently resolved.
 
-Effective Comms is a pack of three Claude Code skills that add a **prepare, write, review** pass
-targeting those failures. It fixes the content of a communication, not its style, and it works
-alongside any house style you already apply.
+Effective Comms is a pack of three skills that help agents write for their reader, preserve source
+meaning, and catch misleading or confusing content before delivery. It fixes the content of a
+communication, not its style, and it works alongside any house style you already apply.
 
 > **Status: alpha.** Expect rough edges. Please report confusing behavior or missed communication
 > failures through [GitHub issues](#feedback).
@@ -24,16 +24,19 @@ alongside any house style you already apply.
 
 | Skill | When | What it does |
 |---|---|---|
-| `/comms-prep` | Immediately before drafting, once the substance is known | Writes a short brief: the objective, the audience and context, a knowledge model of what they know and what the agent may be falsely assuming, the source meaning that must be preserved, the form factor, and the style conventions that apply. |
+| `/comms-prep` | Immediately before drafting, once the substance is known | Uses a quick check for routine, low-stakes replies; otherwise writes a short brief: the objective, the audience and context, a knowledge model of what they know and what the agent may be falsely assuming, the source meaning that must be preserved, the form factor, and the style conventions that apply. |
 | `/comms-review` | When a draft is complete and the brief called for review | Checks the draft against the brief and a set of content checks, then puts it in front of a fresh reader who knows only what the real reader knows. |
 | `/effective-comms` | When you want the pack to choose | Decides whether preparation, review, or nothing is due, and does it. |
 
 The brief and the review notes are working state. They stay with the agent and never appear in
 the delivered communication or the returned files.
 
-## How a pass works
+## Writing for the reader
 
-**Prepare.** Do the underlying work first. When the substance is ready and drafting is about to
+For routine, low-stakes replies, a quick check of the objective, audience and source meaning,
+followed by self-review, is enough. Other communications follow the guidance below.
+
+Do the underlying work first. When the substance is ready and drafting is about to
 start, the agent writes a short brief at a scale that fits the artifact: the objective and what
 should change for the reader; the audience, their attention budget, and their expectations; a
 knowledge model of what they need, want, and already know, and what the agent might be falsely
@@ -43,9 +46,9 @@ conventions and skills that apply. A small artifact may
 need four lines answered in seconds. A document needs a page. The brief is reused across replies
 while the conversation and objective stay the same.
 
-**Write.** The agent drafts from the brief, saying what it means in literal phrases.
+The agent drafts from the brief, saying what it means in literal phrases.
 
-**Review.** The agent reads the whole delivery as the reader will see it, including titles,
+The agent reads the whole delivery as the reader will see it, including titles,
 headings, and the chat message that accompanies a file, and fixes what it can see against these
 checks:
 
@@ -61,10 +64,10 @@ checks:
 
 Then a fresh subagent, told only who the reader is, what they know, what the communication is
 for, and the complete delivery, answers one question: does this reader achieve the objective? A
-failed round is fixed and reviewed again by a new reader. A second failure stops the loop: either
-the brief was wrong and is redone once, or the fix needs a decision the author does not own and
-is escalated with a proposal. Before returning, the agent checks every file and message it is
-about to return and removes anything that is not the requested communication.
+failed round is fixed and reviewed again by a new reader. A second failure prompts reassessment
+and one final round; the author asks for input only if a fix actually requires it. Cosmetic
+corrections need proofreading, while changes to meaning reopen review. Before returning, the agent
+checks every file and message it is about to return and removes anything that is not the requested communication.
 
 ## Install
 
@@ -75,10 +78,29 @@ Effective Comms is a public Claude Code plugin:
 /plugin install effective-comms@tollens-effective-comms
 ```
 
-Then invoke `/comms-prep` before drafting and, when the brief says so, `/comms-review` before
-delivery. If a bare skill name collides with another plugin, use the plugin's namespaced form.
-The skills also run under Codex: each carries the interface metadata Codex uses to list and
-invoke it.
+In Claude Code, use the router with your writing request, for example:
+
+```text
+/effective-comms:effective-comms Draft a customer update from these incident notes: …
+```
+
+The router chooses preparation and review at the right depth. To choose a step yourself, use
+`/effective-comms:comms-prep` before drafting or `/effective-comms:comms-review` with an existing
+draft. These are the plugin's fully namespaced commands, as described in
+[Claude Code's plugin guide](https://code.claude.com/docs/en/plugins). The bare forms
+`/comms-prep` and `/comms-review` also work, and the skills refer to each other that way; if
+another installed skill uses the same bare name, use the namespaced form.
+
+**Codex CLI or IDE extension:** ask the built-in installer to install the three skill directories:
+
+```text
+$skill-installer Install skills/comms-prep, skills/comms-review, and skills/effective-comms from the GitHub repository tollens-ai/effective-comms-skills.
+```
+
+Then include `$effective-comms` with your writing request, or choose `$comms-prep` before drafting
+and `$comms-review` for a draft. Codex detects newly installed skills automatically; restart if they
+do not appear. See [Codex's skill guide](https://learn.chatgpt.com/docs/build-skills) for local
+installation and discovery details.
 
 ## Roadmap
 

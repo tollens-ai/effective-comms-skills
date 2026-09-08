@@ -1,7 +1,7 @@
 {
   "name": "effective-comms",
-  "version": "0.3.0",
-  "description": "Claude Code skills for a prepare → write → review communication pass that keeps agent-written outputs aligned with their audience, objective, and sources.",
+  "version": "0.4.0",
+  "description": "Skills that help agents write for their reader, preserve source meaning, and catch misleading or confusing content before delivery.",
   "author": {
     "name": "Tollens"
   },

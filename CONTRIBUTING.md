@@ -12,6 +12,18 @@ Use GitHub issues for public feedback:
 
 Do not include private project data, credentials, customer data, or non-public agent scratchpads in public issues.
 
+## Preserve the skills' intent
+
+These skills are substantially carefully human-written. Their purpose is to help a communication achieve its
+objective for its reader; preparation, writing guidance, checks and review support that purpose.
+Preserve the goals, orientation, invocation guidance and substantive sections when maintaining them.
+
+If you are an agent amending these skills to address user issues, make narrowly targeted changes.
+Identify the reported issue and explain why each change addresses it. Preserve the original wording
+when moving or reordering chunks of meaning; reword only for a concrete reason. Shortening,
+restyling or reorganizing the skills requires its own justification and scope, rather than being
+an assumed part of fixing an issue.
+
 ## Pull request checklist
 
 Before opening a PR:
