@@ -2,26 +2,12 @@
 
 ## Unreleased
 
-- Shorten skill descriptions and entrypoints. Load the written-brief, structure-planning,
-  content-check, and audience-review guides only on the branches that need them; retain the
-  detailed guidance and all 16 content checks for substantial work.
-- Make completion explicit: when writing is requested, continue through drafting and review to
-  the finished communication. Preparation alone is the deliverable only when requested.
-
-- Give routine replies a quick audience-and-source check plus self-review, without a mandatory
-  written brief. Keep written briefs for substantial artifacts and consequential messages, and
-  independent audience review for long, public, or consequential writing.
-- Align preparation, routing, and review on the same review-depth decision. Keep the detailed
-  content rubric, source-meaning checks, house style, and long-document structure planning.
-- Base clarification on a material missing fact or choice requiring another person's input,
-  rather than the number of failed reviews. Fix writing defects within the requested scope and
-  reassess repeated reviews that make no progress.
-- Recheck later edits by their effect: proofread cosmetic corrections locally; verify changed
-  meaning against sources and repeat audience review when materially needed.
-- Use the same audience-knowledge evidence in preparation and review: reader usage, task context,
-  and ordinary knowledge for an evidenced role, with assumptions distinguished from observations.
-- Clarify that an audience reviewer tests comprehension; the author verifies source accuracy.
-  Use audience-perspective self-review when independent review is unavailable or not permitted.
+- Clarify that routine, low-stakes replies need quick preparation and self-review, without a
+  mandatory written brief or audience-review loop.
+- Remove the assumption that a second failed review requires a decision outside the author’s
+  authority; ask only when the fix actually needs someone else’s input.
+- Exempt cosmetic corrections from another audience review, while rechecking changes to meaning.
+- Align audience-review knowledge evidence with the existing preparation guidance.
 
 ## 0.3.0 — 2026-09-02
 

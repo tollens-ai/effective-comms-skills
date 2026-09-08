@@ -13,10 +13,9 @@ than any others:
   described, and source meaning that drifts in a rewrite: a dropped ask, a reordered priority, a
   contradiction silently resolved.
 
-Effective Comms helps agents write for their reader, preserve source meaning, and catch
-misleading or confusing content before delivery. Routine replies get a quick check; substantial
-or consequential writing gets a written brief and independent reader review. The three skills
-work alongside your house style.
+Effective Comms is a pack of three skills that help agents write for their reader, preserve source
+meaning, and catch misleading or confusing content before delivery. It fixes the content of a
+communication, not its style, and it works alongside any house style you already apply.
 
 > **Status: alpha.** Expect rough edges. Please report confusing behavior or missed communication
 > failures through [GitHub issues](#feedback).
@@ -25,29 +24,33 @@ work alongside your house style.
 
 | Skill | When | What it does |
 |---|---|---|
-| `/comms-prep` | Immediately before drafting, once the substance is known | Checks the audience and source meaning for routine replies; writes or reuses a brief for substantial artifacts. Chooses the review depth. |
-| `/comms-review` | When requested or preparation calls for it | Checks content against the audience, objective, and sources. Adds a fresh reader for long, public, or consequential writing. |
+| `/comms-prep` | Immediately before drafting, once the substance is known | Uses a quick check for routine, low-stakes replies; otherwise writes a short brief: the objective, the audience and context, a knowledge model of what they know and what the agent may be falsely assuming, the source meaning that must be preserved, the form factor, and the style conventions that apply. |
+| `/comms-review` | When a draft is complete and the brief called for review | Checks the draft against the brief and a set of content checks, then puts it in front of a fresh reader who knows only what the real reader knows. |
 | `/effective-comms` | When you want the pack to choose | Decides whether preparation, review, or nothing is due, and does it. |
 
 The brief and the review notes are working state. They stay with the agent and never appear in
 the delivered communication or the returned files.
 
-## How much checking a communication needs
+## Writing for the reader
 
-Do the underlying work first. For a routine reply, the agent checks who is reading,
-what they need to understand or do, what it might falsely assume they know, and what source meaning
-must survive. It uses those answers directly; a written brief is unnecessary. Detailed briefing,
-structure-planning, and review guides are loaded only for the tasks that need them.
+For routine, low-stakes replies, a quick check of the objective, audience and source meaning,
+followed by self-review, is enough. Other communications follow the guidance below.
 
-For a substantial artifact or consequential message, the agent writes or reuses a short brief:
-objective; audience and context; what the reader needs, wants, and knows, including possible false
-assumptions; source meaning to preserve; form and structure; and applicable house style. Related
-answers can be combined. Long documents get a structure plan before prose. A short approval
-request may need more care than a long informal reply. Preparation is reused while it still fits.
+Do the underlying work first. When the substance is ready and drafting is about to
+start, the agent writes a short brief at a scale that fits the artifact: the objective and what
+should change for the reader; the audience, their attention budget, and their expectations; a
+knowledge model of what they need, want, and already know, and what the agent might be falsely
+assuming they know; the source meaning that must be preserved in a rewrite; the form factor,
+including where uncertainty goes and whether a full review is worth running; and the house style
+conventions and skills that apply. A small artifact may
+need four lines answered in seconds. A document needs a page. The brief is reused across replies
+while the conversation and objective stay the same.
 
-The agent drafts from that context, then checks reader fit, source fidelity, and applicable style.
-For routine replies, that normally completes the work. The detailed `/comms-review` checks cover
-the whole delivery, including titles, headings, and the chat message accompanying a file:
+The agent drafts from the brief, saying what it means in literal phrases.
+
+The agent reads the whole delivery as the reader will see it, including titles,
+headings, and the chat message that accompanies a file, and fixes what it can see against these
+checks:
 
 - *Trustworthy:* every claim about a source comes from inspecting that source now; uncertainty
   is stated where it limits a claim.
@@ -59,24 +62,12 @@ the whole delivery, including titles, headings, and the chat message accompanyin
   structure matches how the reader will read, references are typed, and titles describe the
   effect for the reader.
 
-For long, public, or consequential writing, a fresh agent also reads the complete delivery with
-only the objective and supported audience context. Reader usage, task context, and ordinary
-knowledge for an evidenced role can support that context; local jargon needs its own explanation.
-The reviewer tests whether the reader can understand and use the communication. The author remains
-responsible for verifying facts against sources. If independent review is unavailable or not
-permitted, a careful self-review from the audience's perspective is the fallback.
-
-The author fixes writing defects within the requested scope. A missing fact or choice that needs
-someone else's input can prompt a concrete question; a second failed review does not itself
-require approval. Repeated reviews that make no progress prompt a reassessment of the reader's
-needs or a specific statement of the unresolved limit. Ordinary wording choices stay with the
-author.
-
-Later edits get checks proportionate to their effect. A typo needs proofreading; a changed claim,
-number, recommendation, or structure needs the affected content and source checks. Independent
-review repeats when the change could materially alter the reader's understanding or action and
-the communication warrants that depth. A one-character change to a number or negation can matter.
-Working notes stay outside the delivered files and messages.
+Then a fresh subagent, told only who the reader is, what they know, what the communication is
+for, and the complete delivery, answers one question: does this reader achieve the objective? A
+failed round is fixed and reviewed again by a new reader. A second failure prompts reassessment
+and one final round; the author asks for input only if a fix actually requires it. Cosmetic
+corrections need proofreading, while changes to meaning reopen review. Before returning, the agent
+checks every file and message it is about to return and removes anything that is not the requested communication.
 
 ## Install
 

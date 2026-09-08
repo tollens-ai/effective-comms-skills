@@ -12,6 +12,18 @@ Use GitHub issues for public feedback:
 
 Do not include private project data, credentials, customer data, or non-public agent scratchpads in public issues.
 
+## Preserve the skills' intent
+
+These skills are carefully human-written. Their purpose is to help a communication achieve its
+objective for its reader; preparation, writing guidance, checks and review support that purpose.
+Preserve the goals, orientation, invocation guidance and substantive sections when maintaining them.
+
+Astra-proofing means making narrowly targeted changes to instructions associated with a specific
+reported or observed Astra confusion. Identify that confusion and explain why each change addresses
+it. Preserve the original wording when moving or reordering chunks of meaning; reword only for a
+concrete reason. Shortening, restyling or reorganizing the skills requires its own justification
+and scope, rather than being an assumed part of model adaptation.
+
 ## Pull request checklist
 
 Before opening a PR:

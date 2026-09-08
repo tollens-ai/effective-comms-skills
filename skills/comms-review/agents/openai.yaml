@@ -1,4 +1,4 @@
 interface:
   display_name: "Comms Review"
   short_description: "Review communication for reader fit and trust"
-  default_prompt: "Use $comms-review to review this draft for its audience, objective, and source fidelity before delivery."
+  default_prompt: "Use $comms-review to review this draft against its communications brief and audience perspective before delivery."
