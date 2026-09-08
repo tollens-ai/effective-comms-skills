@@ -32,7 +32,8 @@ Blocking findings: <none, or a concise list>
 
 Then take exactly one of these options:
 
-- **PASS.** Finalize the communication as described below.
+- **PASS.** Finalize the communication as described in the skill's *After Phase 3 — finalize*
+  section.
 - **First FAIL.** Fold the findings through Phase 2, redo the source-meaning check, and run a NEW
   round.
 - **Second FAIL.** Reassess why the review is not converging. If the findings show the brief itself

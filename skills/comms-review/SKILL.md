@@ -50,7 +50,7 @@ revision.
 
 ## Phase 3 — Audience review
 
-It is very hard to self-review for some of the issues above consistently, because you already have
+It is very hard to self-review for some of the content checks consistently, because you already have
 in your head what the audience doesn't know. Therefore it is important to have an independent agent
 simulating the reader's perspective review the communication.
 

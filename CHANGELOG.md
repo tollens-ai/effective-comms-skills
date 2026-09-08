@@ -7,17 +7,17 @@
 - Remove the assumption that a second failed review requires a decision outside the author’s
   authority; ask only when the fix actually needs someone else’s input.
 - Exempt cosmetic corrections from another audience review, while rechecking changes to meaning.
-- Align audience-review knowledge evidence with the existing preparation guidance: the reviewer is
-  told the terms the brief's knowledge model accepted, rather than re-grading evidence.
-- Define low-stakes by cost of failure, the same test that decides whether a full review is
-  justified, and give the router a fourth question and ordered rows so the quick path does not
-  overlap the brief rows.
-- State that a post-PASS change to meaning reopens audience review as a new first round.
-- Split each gate into a short entry point and reference files, so the routine path loads only
-  the decision text: `comms-prep` keeps the reuse, quick-path, and review decisions and points to
-  `references/brief.md` and `references/structure.md`; `comms-review` keeps the phases and
-  finalization and points to `references/content-checks.md` and `references/audience-review.md`.
-  Moved text is unchanged.
+- Tell the audience reviewer the terms the brief's knowledge model accepted, instead of restating
+  the evidence rules in the reviewer prompt.
+- Define low-stakes by cost of failure: a misunderstanding would be cheap to correct in the next
+  exchange.
+- Add a fourth router question about stakes and order the router's rows, so a routine reply has
+  one matching row.
+- Reopen audience review as a new first round when a change after a passed review affects meaning.
+- Split `comms-prep` and `comms-review` into a short entry point and reference files, so the
+  routine path loads only the decision text. `comms-prep` points to `references/brief.md` and
+  `references/structure.md`; `comms-review` points to `references/content-checks.md` and
+  `references/audience-review.md`.
 
 ## 0.3.0 — 2026-09-02
 
