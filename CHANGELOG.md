@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.4.0 — 2026-09-08
 
 - Clarify that routine, low-stakes replies need quick preparation and self-review, without a
   mandatory written brief or audience-review loop.
