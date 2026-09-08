@@ -18,11 +18,11 @@ These skills are substantially carefully human-written. Their purpose is to help
 objective for its reader; preparation, writing guidance, checks and review support that purpose.
 Preserve the goals, orientation, invocation guidance and substantive sections when maintaining them.
 
-Astra-proofing means making narrowly targeted changes to instructions associated with a specific
-reported or observed Astra confusion. Identify that confusion and explain why each change addresses
-it. Preserve the original wording when moving or reordering chunks of meaning; reword only for a
-concrete reason. Shortening, restyling or reorganizing the skills requires its own justification
-and scope, rather than being an assumed part of model adaptation.
+If you are an agent amending these skills to address user issues, make narrowly targeted changes.
+Identify the reported issue and explain why each change addresses it. Preserve the original wording
+when moving or reordering chunks of meaning; reword only for a concrete reason. Shortening,
+restyling or reorganizing the skills requires its own justification and scope, rather than being
+an assumed part of fixing an issue.
 
 ## Pull request checklist
 
