@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0 — 2026-09-14
+
+- Group form factor, why and bottom line up front, and detailed structure under one brief item.
+- Default to opening with the main point and why it matters, including informational updates.
+- Align the review check with that structure while allowing another order when the audience or objective calls for it.
+
 ## 0.4.0 — 2026-09-08
 
 - Clarify that routine, low-stakes replies need quick preparation and self-review, without a
