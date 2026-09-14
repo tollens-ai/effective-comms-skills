@@ -34,15 +34,22 @@ marked *unknown — and how it resolves* (assume X / ask the user / flag as a ga
    contradictions, and uncertainties in the source; explicit exclusions; and the requested scope,
    so a writing task stays a writing task. This list is what the review rechecks after every
    revision.
-5. **Form factor.** What's the right form factor for this communication? Short message, checklist,
-   multi-section document, multiple documents? Every part of the communication is part of the form
-   factor — consider what attached text the reader will see (title, subject line, headings,
-   captions, labels, commit messages) and whether any of these have separate objectives or
-   audiences. If the communication is complex and requires a multi-section or multi-document form,
-   read [Structure plan](structure.md) before drafting prose. If communication *about* this communication is
-   required — for example, surfacing issues, uncertainties, or decisions — plan where it will
-   go. Working notes stay outside the communication and need not persist after the review unless
-   the user explicitly asks for a record.
+5. **Form factor and structure.**
+
+   - **Form factor.** What's the right form factor for this communication? Short message,
+     checklist, multi-section document, multiple documents? Consider all text the reader will
+     see (title, subject line, headings, captions, labels, commit messages) and whether any of
+     these have separate objectives or audiences. If communication *about* this communication
+     is required — for example, surfacing issues, uncertainties, or decisions — plan where it
+     will go. Working notes stay outside the communication and need not persist after the
+     review unless the user explicitly asks for a record.
+   - **Why and bottom line up front.** Open with the main answer, finding, recommendation, or ask
+     and why it matters to the reader, then give supporting explanation and evidence in the
+     order they need it. This applies to informational updates too; use another order when the
+     audience or objective calls for it.
+   - **Detailed structure.** For a complex, multi-section or multi-document communication,
+     read [Structure plan](structure.md) before drafting prose.
+
 6. **Style and conventions.** Which house style conventions, writing skills, and instructions in
    your prompts or project files apply to this communication? Find them before writing and name
    them here, so the draft follows them and the review checks against them.

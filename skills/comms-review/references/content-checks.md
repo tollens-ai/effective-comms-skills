@@ -44,7 +44,7 @@ avoid errors creeping in.
 | C3 | **No retained rejected ideas.** Rejected ideas are absent unless documenting provenance is part of the objective. | Options kept with rejection notes. |
 | C4 | **No process-history leakage.** Process history is absent unless it is important to the objective or audience. Provenance is stated as a fact about the thing ("verified against the repo"), not the author's activity. | Tool narration, retries, "I went and checked.", "This does not contain (irrelevant thing)" |
 | C5 | **Purpose/audience fit.** Content fits the objective and reader. | Stream of consciousness writing, text for the convenience of the author. |
-| C8 | **Starts with why.** Proposals and decision requests open with the problem and what changes if accepted, in the reader's terms. Purely informational pieces skip this. | Mechanisms and details introduced without the audience understanding why they matter. |
+| C8 | **Why and bottom line up front.** The opening gives the main answer, finding, recommendation, or ask and why it matters to the reader, including in informational updates. Supporting explanation and evidence follow in the order the reader needs them, unless the audience or objective calls for another order. | Details before the point; relevance left for the reader to infer. |
 | C15 | **Every clause is necessary.** Brevity comes from cutting what does not change understanding or action. | The same point in intro, body, and summary. Sentences-for-decoration that are irrelevant to the objective. |
 
 **Shaped for consumption** — *does the form serve how they will actually read it?*

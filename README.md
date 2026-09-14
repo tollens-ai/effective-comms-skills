@@ -57,7 +57,7 @@ checks:
 - *In the reader's language:* names lead and coordinates support; terms are ones the reader can
   use or are introduced in their words; literal phrases are used where they exist.
 - *The right content:* self-standing, no rejected ideas, no process history, fit for the
-  objective, opening with the problem when there is a proposal, every clause necessary.
+  objective, opening with the main point and why it matters to the reader, every clause necessary.
 - *Shaped for consumption:* the next action is easy to find, each list holds one kind of thing,
   structure matches how the reader will read, references are typed, and titles describe the
   effect for the reader.
